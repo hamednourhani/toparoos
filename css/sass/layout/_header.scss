@@ -31,7 +31,7 @@ nav.main-menu{
     max-width : 200px;
     a.site-link{
       display : block;
-      padding: 7px 10px;
+      padding: 7px 20px ;
       img{
 
       }
@@ -142,6 +142,38 @@ nav.main-menu{
           transition-delay:0s;
         }
 
+      }
+    }
+  }
+  .menu-search-area{
+    float : left ;
+    form.searchform {
+      position : absolute;
+      top : 5px;
+      left : 20px;
+      label {
+        display: none;
+      }
+      input[type="text"]{
+        border : 1px solid $grey2;
+        @include border-right-radius(5px);
+        border : 1px solid $grey2;
+        background-color: $white !important;
+        min-width : 25%;
+        padding : 6px !important;
+      }
+      i.fa.fa-search{
+        cursor: pointer;
+        display : inline-block !important;
+        &:before{
+          background-color: $grey2;
+          @include border-left-radius(5px);
+          border : 1px solid $grey2;
+          color : $grey3;
+          font-size : 110%;
+          padding: 10px;
+          vertical-align: middle;
+        }
       }
     }
   }

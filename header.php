@@ -78,7 +78,7 @@
 							</a>
 
 							<a class="responsive-logo" href="<?php echo get_bloginfo('url'); ?>">
-								<img src="<?php echo get_template_directory_uri();?>/images/sana-logo-fa.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+								<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 							</a>
 							<?php //$responsive_walker = new Viradeco_walker_nav_menu; ?>
 							<?php wp_nav_menu(array(
@@ -115,12 +115,14 @@
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
-
+						<div class="menu-search-area" id="menuSearchArea">
+							<?php echo get_search_form(); ?>
+						</div>
 
 					</nav>
 
 					
-				
+
 
 			</div>
 		</header>	

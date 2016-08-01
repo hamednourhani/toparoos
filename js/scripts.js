@@ -47,6 +47,11 @@ jQuery(document).ready(function($){
 		$('div#menuSearchArea').fadeToggle();
 	});
 	
+	$('.searchform i.fa-search').click(function(event){
+		console.log("search query");
+		$(this).parent().parent(".searchform").trigger("submit");
+	});
+	
 	$('a#menu-toggler').click(function(){
 		console.log('click on menu toggler');
 		var responsive_container = $('div#responsive-menu');

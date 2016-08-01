@@ -1700,7 +1700,8 @@ function itstar_search_form( $form ) {
   } else {
       $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
       <div><label class="screen-reader-text" for="s">' . __( 'Search for:' ) . '</label>
-      <input type="text" value="' . get_search_query() . '" name="s" id="s" '.__("Search...","itstar").'/>
+      <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.__("Search...","itstar").'"/>
+      <i class="fa fa-search" style="display:none;"></i>
       </div>
       </form>';
   }
