@@ -29,7 +29,7 @@
 	<?php // or, set /favicon.ico for IE10 win ?>
 	<meta name="msapplication-TileColor" content="#f01d4f">
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-        <meta name="theme-color" content="#121212">
+    <meta name="theme-color" content="#121212">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -58,50 +58,13 @@
 	<!-- ********************************************************************* -->
 
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-			<div class="top-bar">
-				<section class="layout">
-
-					<?php do_action('icl_language_selector'); ?>
-
-					<div class="header-follow-links">
-						
-						<ul>
-
-							<li>
-								<a href="#">
-									<img class="follow-telegram" src="<?php echo get_template_directory_uri();?>/images/icons/telegram.png"/>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fa fa-instagram" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fa fa-facebook" aria-hidden="true"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img class="follow-aparat" src="<?php echo get_template_directory_uri();?>/images/icons/aparat-white.png"/>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</section>
-			</div>
+			
 			<div class="hero">
 				<section class="layout">
 
 					<div class="logo-wrapper">
-						<!-- menu-toggler -->
-						<a id="menu-toggler" class="menu-toggler" >
-							<i class="fa fa-navicon"></i>
-						</a>
-
 						<a class="site-link" href="<?php echo get_bloginfo('url'); ?>">
-							<img src="<?php echo get_template_directory_uri();?>/images/sana-logo-fa.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+							<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
 						</a>
 
 					</div>
@@ -130,7 +93,7 @@
 				        			               'after' => '',                                  // after the menu
 				        			               'link_before' => '',                            // before each link
 				        			               'link_after' => '',                             // after each link
-				        			               'depth' => 5,                                   // limit the depth of the nav
+				        			               'depth' => 3,                                   // limit the depth of the nav
 				    					        'fallback_cb'     => '',
 				    					         
 				    					                                    // fallback function (if there is one)
@@ -149,7 +112,7 @@
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
         			               'link_after' => '',                             // after each link
-        			               'depth' => 5,                                   // limit the depth of the nav
+        			               'depth' => 3,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
@@ -157,14 +120,7 @@
 
 					</nav>
 
-					<a href="#search" id="searchToggler" class="search-toggler" >
-						<i class="fa fa-search"></i>
-					</a>
-
-					<div class="menu-search-area" id="menuSearchArea">
-						<?php echo get_search_form(); ?>
-					</div>
-
+					
 				</section>
 
 			</div>

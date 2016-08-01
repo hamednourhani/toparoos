@@ -1,10 +1,10 @@
 /* ------------susy-------- */
 $total-columns : 12;
-$column-width : 4.5em;
+$column-width : 4em;
 $gutter-width : 1em;
 $grid-padding : $gutter-width;
-$from-direction: left;
-$omega-float : right;
+$from-direction: right;
+$omega-float : left;
 
 $default-transition-delay    : 0s;
 @include border-box-sizing;
