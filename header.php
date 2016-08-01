@@ -60,18 +60,17 @@
 		<header class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 			
 			<div class="hero">
-				<section class="layout">
 
-					<div class="logo-wrapper">
-						<a class="site-link" href="<?php echo get_bloginfo('url'); ?>">
-							<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
-						</a>
-
-					</div>
 
 
 					<nav role="navigation" class="main-menu" itemscope="" itemtype="http://schema.org/SiteNavigationElement">
 
+						<div class="logo-wrapper">
+							<a class="site-link" href="<?php echo get_bloginfo('url'); ?>">
+								<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+							</a>
+
+						</div>
 
 						<div id="responsive-menu" class="responsive-menu">
 							<a id="close-responsive" class="close-responsive">
@@ -121,7 +120,7 @@
 					</nav>
 
 					
-				</section>
+				
 
 			</div>
 		</header>	

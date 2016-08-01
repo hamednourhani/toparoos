@@ -48,7 +48,7 @@ div#responsive-wrapper{
 	@include fa-icon;
 }
 a{
-	@extend .def-transition;
+	//@extend .def-transition;
 	text-decoration : none;
 	color : darken($brown,10%);
 	&:hover{

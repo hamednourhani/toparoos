@@ -695,7 +695,7 @@ p {
 /*------ colors -----------*/
 /*----------------transition-shadow----------------------*/
 /* line 96, ../sass/base/_variables.scss */
-.def-transition, .bottom-tooltip, a, input[type=submit], button, .feature-pages .feature-pages-wrapper .feature-pages-inner .page-grid {
+.def-transition, .bottom-tooltip, input[type=submit], button, .feature-pages .feature-pages-wrapper .feature-pages-inner .page-grid {
   -moz-transition: all 0.4s ease-in-out 0s;
   -o-transition: all 0.4s ease-in-out 0s;
   -webkit-transition: all 0.4s ease-in-out;
@@ -704,7 +704,7 @@ p {
 
 /*----------------box-shadow----------------------*/
 /* line 102, ../sass/base/_variables.scss */
-.def-box-shadow, .bottom-tooltip {
+.def-box-shadow, .bottom-tooltip, nav.main-menu, nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu {
   -moz-box-shadow: 0px 0px 7px #E6E7E7;
   -webkit-box-shadow: 0px 0px 7px #E6E7E7;
   box-shadow: 0px 0px 7px #E6E7E7; }
@@ -1225,26 +1225,204 @@ img.wp-smiley,
   left: auto;
   right: 0; }
 
-/* line 1, ../sass/layout/_header.scss */
+@-webkit-keyframes move-up {
+  0% {
+    filter: alpha(opacity=0);
+    display: none; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@-moz-keyframes move-up {
+  0% {
+    filter: alpha(opacity=0);
+    display: none; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@-o-keyframes move-up {
+  0% {
+    filter: alpha(opacity=0);
+    display: none; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@keyframes move-up {
+  0% {
+    filter: alpha(opacity=0);
+    display: none; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@-webkit-keyframes move-down {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=0);
+    display: none; } }
+@-moz-keyframes move-down {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=0);
+    display: none; } }
+@-o-keyframes move-down {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=0);
+    display: none; } }
+@keyframes move-down {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=0);
+    display: none; } }
+@-webkit-keyframes move-slow {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@-moz-keyframes move-slow {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@-o-keyframes move-slow {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+@keyframes move-slow {
+  0% {
+    filter: alpha(opacity=100);
+    display: inline-block; }
+  100% {
+    filter: alpha(opacity=100);
+    display: inline-block; } }
+/* line 15, ../sass/layout/_header.scss */
 .site-header {
   display: block;
   width: 100%; }
-  /* line 4, ../sass/layout/_header.scss */
+  /* line 18, ../sass/layout/_header.scss */
   .site-header .hero {
     position: relative;
-    width: 100%; }
-    /* line 7, ../sass/layout/_header.scss */
-    .site-header .hero .logo-wrapper {
-      float: right;
-      display: block;
-      max-width: 200px; }
-      /* line 11, ../sass/layout/_header.scss */
-      .site-header .hero .logo-wrapper a.site-link {
-        display: block; }
+    width: 100%;
+    background-color: #FFFFFF; }
 
-/* line 21, ../sass/layout/_header.scss */
-nav.main-menu div.responsive-menu {
-  display: none; }
+/* line 25, ../sass/layout/_header.scss */
+nav.main-menu {
+  width: 100%; }
+  /* line 28, ../sass/layout/_header.scss */
+  nav.main-menu .logo-wrapper {
+    float: right;
+    display: block;
+    max-width: 200px; }
+    /* line 32, ../sass/layout/_header.scss */
+    nav.main-menu .logo-wrapper a.site-link {
+      display: block;
+      padding: 7px 10px; }
+  /* line 40, ../sass/layout/_header.scss */
+  nav.main-menu div.responsive-menu {
+    display: none; }
+  /* line 43, ../sass/layout/_header.scss */
+  nav.main-menu ul.main-nav {
+    margin: 0px;
+    padding: 0px;
+    position: relative; }
+    /* line 48, ../sass/layout/_header.scss */
+    nav.main-menu ul.main-nav > li {
+      display: inline-block;
+      font-size: 18px;
+      color: #111; }
+      /* line 54, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li.menu-item-has-children > a:after {
+        content: "\f0d7";
+        font-family: "FontAwesome";
+        font-size: 68%;
+        padding: 5px 5px 5px 0px;
+        vertical-align: middle; }
+      /* line 63, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li a {
+        padding: 10px 8px;
+        display: inline-block; }
+        /* line 67, ../sass/layout/_header.scss */
+        nav.main-menu ul.main-nav > li a:hover {
+          background-color: #F2F2F2;
+          color: #FF3300; }
+      /* line 72, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li ul.sub-menu {
+        -moz-transition: opacity .45s linear, visibility .1s linear .1s;
+        -webkit-transition: opacity .25s linear, visibility .2s linear .1s;
+        -o-transition: opacity .45s linear, visibility .1s linear .1s;
+        transition: opacity .45s linear, visibility .1s linear .1s;
+        visibility: hidden;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        right: 0px;
+        padding: 0px;
+        margin: 0px;
+        z-index: 999; }
+      /* line 84, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li > ul.sub-menu {
+        background-color: #F2F2F2;
+        padding-right: 20px;
+        padding-left: 20px; }
+        /* line 90, ../sass/layout/_header.scss */
+        nav.main-menu ul.main-nav > li > ul.sub-menu > li {
+          display: inline-block; }
+          /* line 92, ../sass/layout/_header.scss */
+          nav.main-menu ul.main-nav > li > ul.sub-menu > li > a {
+            border-bottom: 2px solid transparent; }
+            /* line 94, ../sass/layout/_header.scss */
+            nav.main-menu ul.main-nav > li > ul.sub-menu > li > a:hover {
+              border-color: #FF3300; }
+      /* line 101, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li:hover > ul.sub-menu {
+        filter: alpha(opacity=100);
+        visibility: visible;
+        transition-delay: 0s; }
+      /* line 110, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu {
+        max-height: 200px;
+        border: 2px solid #F2F2F2;
+        border-top: 0px;
+        background-color: #FFFFFF;
+        top: 51px;
+        left: 15px;
+        right: 15px;
+        padding: 10px 5px;
+        -webkit-column-count: 4;
+        /* Chrome, Safari, Opera */
+        -moz-column-count: 4;
+        /* Firefox */
+        column-count: 4;
+        -webkit-column-fill: auto;
+        /* Chrome, Safari, Opera */
+        -moz-column-fill: auto;
+        /* Firefox */
+        column-fill: auto; }
+        /* line 127, ../sass/layout/_header.scss */
+        nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu li a {
+          padding: 7px 8px; }
+          /* line 130, ../sass/layout/_header.scss */
+          nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu li a:hover {
+            background-color: transparent; }
+      /* line 138, ../sass/layout/_header.scss */
+      nav.main-menu ul.main-nav > li ul.sub-menu li:hover > ul.sub-menu {
+        filter: alpha(opacity=100);
+        visibility: visible;
+        transition-delay: 0s; }
 
 /* main style */
 /* line 3, ../sass/layout/_main.scss */
@@ -1273,11 +1451,11 @@ body {
 /* line 13, ../sass/layout/_main.scss */
 .body-wrapper {
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #E6E7E7;
   margin: auto;
   overflow: hidden; }
 
-/* line 22, ../sass/layout/_main.scss */
+/* line 23, ../sass/layout/_main.scss */
 .primary {
   width: 100%;
   float: right;
@@ -1285,29 +1463,29 @@ body {
   display: inline;
   padding-top: 20px;
   padding-bottom: 20px; }
-  /* line 22, ../sass/layout/_main.scss */
+  /* line 23, ../sass/layout/_main.scss */
   .primary {
   width: 66.10169%;
   float: left;
   margin-left: 0; }
-  /* line 32, ../sass/layout/_main.scss */
+  /* line 33, ../sass/layout/_main.scss */
   .primary ul.projects-list li {
     width: 100%;
     padding: 8px 20px;
     background-color: #F8F8F8;
     border: 1px solid #E6E7E7;
     border-bottom: 0px; }
-    /* line 38, ../sass/layout/_main.scss */
+    /* line 39, ../sass/layout/_main.scss */
     .primary ul.projects-list li:nth-of-type(2n) {
       background-color: #e5e5e5; }
-    /* line 41, ../sass/layout/_main.scss */
+    /* line 42, ../sass/layout/_main.scss */
     .primary ul.projects-list li.project-link:hover {
       background-color: #d9d9d9; }
-    /* line 44, ../sass/layout/_main.scss */
+    /* line 45, ../sass/layout/_main.scss */
     .primary ul.projects-list li:last-child {
       border-bottom: 1px solid #E6E7E7; }
 
-/* line 51, ../sass/layout/_main.scss */
+/* line 52, ../sass/layout/_main.scss */
 .secondary {
   width: 100%;
   float: right;
@@ -1316,7 +1494,7 @@ body {
   display: block;
   padding-top: 20px;
   padding-bottom: 20px; }
-  /* line 51, ../sass/layout/_main.scss */
+  /* line 52, ../sass/layout/_main.scss */
   .secondary {
   width: 32.20339%;
   float: right;
