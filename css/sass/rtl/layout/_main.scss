@@ -1,0 +1,229 @@
+/* main style */
+
+.layout{
+  @include container;
+  position : relative;
+}
+
+//-------------site-content-------------------
+.primary{
+  @include span-columns(12,12);
+  @include at-breakpoint($medium){
+    @include span-columns(8,12);
+    margin-right : auto;
+  }
+
+}
+.without-sidebar{
+  .primary{
+    @include span-columns(12,12);
+    margin : auto;
+    article .featured-image{
+      @include span-columns(12,12);
+      @include at-breakpoint($medium){
+        @include span-columns(5,12);
+        margin-right : auto;
+      }
+    }
+    article .article-body{
+      @include span-columns(12,12);
+      @include at-breakpoint($medium){
+        @include span-columns(7 omega,12);
+        margin-right : auto;
+      }
+    }
+
+  }
+
+}
+article,.hentry{
+  .featured-image.single-image{
+    float : right;
+    padding-left : 10px;
+    padding-right : 1px;
+
+  }
+
+  background-position: 0% 100%;
+  .article-title{
+    h3{
+      &::after{
+        right: 0px;
+        left : auto;
+      }
+
+    }
+  }
+  .avatar-container{
+    float : right;
+  }
+  .profile-container {
+    padding-right : 30px;
+    padding-left : 1px;
+  }
+  .forms_buttons{
+    .login-show{
+      &:before{
+        margin-right : auto;
+        margin-left : 10px;
+      }
+
+    }
+    .register-show{
+      &:before{
+        margin-left: 10px;
+        margin-right : auto;
+      }
+
+    }
+  }
+  .register-container{
+    form.register_form{
+      table{
+        th{
+          text-align: right;
+        }
+      }
+    }
+  }
+  .manual-title{
+    &::after{
+      right: 0;
+      left : auto;
+    }
+  }
+}
+body.archive{
+  article {
+    @include span-columns(12,12);
+  }
+}
+
+.secondary{
+  @include span-columns(12,12);
+  @include at-breakpoint($medium){
+    @include span-columns(4 omega,12);
+    margin-right : auto;
+  }
+}
+.widget{
+  h4.widgettitle{
+    &:before{
+      right: 0px;
+      left : auto;
+    }
+
+
+  }
+
+  i.fa:before{
+    padding-left: 10px;
+    padding-right : 1px;
+  }
+}
+
+
+
+ul.widget-list{
+  li{
+    img{
+      margin : 5px 5px 5px 12px;
+    }
+
+  }
+}
+.all-products{
+  article {
+    @include span-columns(12,12);
+    @include at-breakpoint($medium){
+      @include span-columns(6,12);
+      margin-right : auto;
+      &:nth-of-type(2n){
+        @include span-columns(6 omega ,12);
+        margin-right : auto;
+      }
+    }
+
+  }
+  .single-cat-title{
+    @include clearfix;
+    h3,h4,h2{
+      &::after{
+        @include single-transition(all 0.2s ease-out);
+        right: 0;
+        left : auto;
+      }
+
+    }
+  }
+
+}
+.comment-area{
+  .comment-metadata{
+    float : left;
+  }
+  .reply{
+    float : left;
+  }
+  .depth-1{
+    @include at-breakpoint($medium) {
+      margin-left : auto;
+      margin-right : 0px;
+    }
+  }
+  .depth-2{
+    @include at-breakpoint($medium) {
+      margin-left : auto;
+      margin-right : 20px;
+    }
+  }
+  .depth-3{
+    @include at-breakpoint($medium) {
+      margin-left : auto;
+      margin-right : 40px;
+    }
+  }
+  .depth-4{
+    @include at-breakpoint($medium) {
+      margin-left : auto;
+      margin-right : 60px;
+    }
+  }
+}
+#commentform{
+  label{
+    float: right;
+  }
+
+}
+
+/*-----------------page templates correction ----------------*/
+.site-main{
+  &.full-weight {
+    .primary {
+      width: 100% !important;
+      margin: 0px !important;
+      padding: 0px !important;
+      article, .hentry {
+        width: 100% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+      }
+    }
+    .secondary{
+      display : none;
+    }
+  }
+  &.without-sidebar{
+    .primary {
+      @include span-columns(12, 12);
+      article.hentry{
+        overflow: hidden;
+        @include span-columns(12,12);
+      }
+    }
+    .secondary{
+      display : none;
+    }
+  }
+}
