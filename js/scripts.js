@@ -52,7 +52,10 @@ jQuery(document).ready(function($){
 		$(this).parent().parent(".searchform").trigger("submit");
 	});
 	
-	$('a#menu-toggler').click(function(){
+	$('a#menu-toggler').click(function(event){
+		event.preventDefault();
+		// event.stopPropagation();
+		var menu_toggler = $(this);
 		console.log('click on menu toggler');
 		var responsive_container = $('div#responsive-menu');
 		var close_button = responsive_container.children('a#close-responsive');
@@ -69,11 +72,11 @@ jQuery(document).ready(function($){
 		body.css({
 			'overflow' : 'hidden',
 		});
-
+		menu_toggler.hide();
 		
 
 		close_button.click(function(event){
-			//event.stopPropagination();
+			// event.stopPropagination();
 			
 			body.css({
 					'overflow' : 'auto',
@@ -81,10 +84,12 @@ jQuery(document).ready(function($){
 			responsive_container.css({
 										'width' : menu_width,
 									}).removeClass('show-menu');
-			
+
+			menu_toggler.show();
 	
 
 		});
+
 
 		// body_wrapper.click(function(event){
 		// 	event.stopPropagination();

@@ -695,7 +695,7 @@ p {
 /*------ colors -----------*/
 /*----------------transition-shadow----------------------*/
 /* line 96, sass/base/_variables.scss */
-.def-transition, .bottom-tooltip, input[type=submit], button, .feature-pages .feature-pages-wrapper .feature-pages-inner .page-grid {
+.def-transition, .bottom-tooltip, nav.main-menu div.responsive-menu, nav.main-menu a.menu-toggler i:before, nav.main-menu .search-toggler i:before, input[type=submit], button, .feature-pages .feature-pages-wrapper .feature-pages-inner .page-grid {
   -moz-transition: all 0.4s ease-in-out 0s;
   -o-transition: all 0.4s ease-in-out 0s;
   -webkit-transition: all 0.4s ease-in-out;
@@ -1321,45 +1321,109 @@ img.wp-smiley,
 
 /* line 25, sass/layout/_header.scss */
 nav.main-menu {
-  width: 100%; }
-  /* line 28, sass/layout/_header.scss */
+  width: 100%;
+  min-height: 50px; }
+  /* line 29, sass/layout/_header.scss */
   nav.main-menu .logo-wrapper {
     float: right;
     display: block;
     max-width: 200px; }
-    /* line 32, sass/layout/_header.scss */
+    /* line 33, sass/layout/_header.scss */
     nav.main-menu .logo-wrapper a.site-link {
       display: block;
       padding: 7px 20px; }
-  /* line 40, sass/layout/_header.scss */
+  /* line 42, sass/layout/_header.scss */
   nav.main-menu div.responsive-menu {
-    display: none; }
-  /* line 43, sass/layout/_header.scss */
+    position: absolute;
+    overflow-y: auto;
+    top: 0px;
+    right: 0px;
+    width: 240px;
+    max-width: 100%;
+    transform: translateX(240px);
+    background-color: #58585d;
+    color: #FFFFFF;
+    z-index: 999;
+    display: block; }
+    /* line 54, sass/layout/_header.scss */
+    nav.main-menu div.responsive-menu a {
+      color: #FFFFFF; }
+      /* line 56, sass/layout/_header.scss */
+      nav.main-menu div.responsive-menu a:hover {
+        color: #FF3300; }
+    @media (min-width: 45em) {
+      /* line 42, sass/layout/_header.scss */
+      nav.main-menu div.responsive-menu {
+        display: none; } }
+    /* line 65, sass/layout/_header.scss */
+    nav.main-menu div.responsive-menu.show-menu {
+      transform: translateX(0px); }
+    /* line 68, sass/layout/_header.scss */
+    nav.main-menu div.responsive-menu a.close-responsive {
+      float: left;
+      display: inline-block;
+      padding: 10px; }
+      /* line 72, sass/layout/_header.scss */
+      nav.main-menu div.responsive-menu a.close-responsive i {
+        cursor: pointer; }
+        /* line 74, sass/layout/_header.scss */
+        nav.main-menu div.responsive-menu a.close-responsive i:before {
+          font-size: 160%; }
+    /* line 79, sass/layout/_header.scss */
+    nav.main-menu div.responsive-menu a.responsive-logo {
+      float: right;
+      display: inline-block;
+      width: 85%;
+      padding: 10px; }
+      /* line 84, sass/layout/_header.scss */
+      nav.main-menu div.responsive-menu a.responsive-logo img {
+        margin: auto; }
+    /* line 89, sass/layout/_header.scss */
+    nav.main-menu div.responsive-menu ul.responsive-nav {
+      padding: 10px; }
+      /* line 91, sass/layout/_header.scss */
+      nav.main-menu div.responsive-menu ul.responsive-nav li {
+        display: block; }
+        /* line 93, sass/layout/_header.scss */
+        nav.main-menu div.responsive-menu ul.responsive-nav li a {
+          padding: 10px;
+          font-size: 110%; }
+        /* line 97, sass/layout/_header.scss */
+        nav.main-menu div.responsive-menu ul.responsive-nav li ul.sub-menu {
+          margin: 0px;
+          margin-right: 30px;
+          padding: 0px; }
+  /* line 105, sass/layout/_header.scss */
   nav.main-menu ul.main-nav {
+    display: none;
     margin: 0px;
     padding: 0px;
     position: relative; }
-    /* line 48, sass/layout/_header.scss */
+    @media (min-width: 45em) {
+      /* line 105, sass/layout/_header.scss */
+      nav.main-menu ul.main-nav {
+        display: block; } }
+    /* line 114, sass/layout/_header.scss */
     nav.main-menu ul.main-nav > li {
       display: inline-block;
       font-size: 18px;
       color: #111; }
-      /* line 54, sass/layout/_header.scss */
+      /* line 120, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li.menu-item-has-children > a::after {
         content: "\f0d7";
         font-family: "FontAwesome";
         font-size: 68%;
         padding: 5px 5px 5px 0px;
         vertical-align: middle; }
-      /* line 63, sass/layout/_header.scss */
+      /* line 129, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li a {
         padding: 10px 8px;
         display: inline-block; }
-        /* line 67, sass/layout/_header.scss */
+        /* line 133, sass/layout/_header.scss */
         nav.main-menu ul.main-nav > li a:hover {
           background-color: #F2F2F2;
           color: #FF3300; }
-      /* line 72, sass/layout/_header.scss */
+      /* line 138, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li ul.sub-menu {
         -moz-transition: opacity .45s linear, visibility .1s linear .1s;
         -webkit-transition: opacity .25s linear, visibility .2s linear .1s;
@@ -1373,26 +1437,26 @@ nav.main-menu {
         padding: 0px;
         margin: 0px;
         z-index: 999; }
-      /* line 84, sass/layout/_header.scss */
+      /* line 150, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li > ul.sub-menu {
         background-color: #F2F2F2;
         padding-right: 20px;
         padding-left: 20px; }
-        /* line 90, sass/layout/_header.scss */
+        /* line 156, sass/layout/_header.scss */
         nav.main-menu ul.main-nav > li > ul.sub-menu > li {
           display: inline-block; }
-          /* line 92, sass/layout/_header.scss */
+          /* line 158, sass/layout/_header.scss */
           nav.main-menu ul.main-nav > li > ul.sub-menu > li > a {
             border-bottom: 2px solid transparent; }
-            /* line 94, sass/layout/_header.scss */
+            /* line 160, sass/layout/_header.scss */
             nav.main-menu ul.main-nav > li > ul.sub-menu > li > a:hover {
               border-color: #FF3300; }
-      /* line 101, sass/layout/_header.scss */
+      /* line 167, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li:hover > ul.sub-menu {
         opacity: 1;
         visibility: visible;
         transition-delay: 0s; }
-      /* line 110, sass/layout/_header.scss */
+      /* line 176, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu {
         max-height: 200px;
         border: 2px solid #F2F2F2;
@@ -1412,59 +1476,132 @@ nav.main-menu {
         -moz-column-fill: auto;
         /* Firefox */
         column-fill: auto; }
-        /* line 127, sass/layout/_header.scss */
+        /* line 193, sass/layout/_header.scss */
         nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu li a {
           padding: 7px 8px; }
-          /* line 130, sass/layout/_header.scss */
+          /* line 196, sass/layout/_header.scss */
           nav.main-menu ul.main-nav > li ul.sub-menu li ul.sub-menu li a:hover {
             background-color: transparent; }
-      /* line 138, sass/layout/_header.scss */
+      /* line 204, sass/layout/_header.scss */
       nav.main-menu ul.main-nav > li ul.sub-menu li:hover > ul.sub-menu {
         opacity: 1;
         visibility: visible;
         transition-delay: 0s; }
-  /* line 148, sass/layout/_header.scss */
+  /* line 214, sass/layout/_header.scss */
+  nav.main-menu a.menu-toggler {
+    position: absolute;
+    top: 12px;
+    left: 10px; }
+    @media (min-width: 45em) {
+      /* line 214, sass/layout/_header.scss */
+      nav.main-menu a.menu-toggler {
+        display: none; } }
+    /* line 223, sass/layout/_header.scss */
+    nav.main-menu a.menu-toggler i:before {
+      cursor: pointer;
+      font-size: 180%;
+      border: 1px dashed #bfc2c2;
+      padding: 3px 7px; }
+    /* line 231, sass/layout/_header.scss */
+    nav.main-menu a.menu-toggler i:hover:before {
+      color: #FF3300;
+      border-color: #FF3300; }
+  /* line 239, sass/layout/_header.scss */
+  nav.main-menu .search-toggler {
+    position: absolute;
+    top: 12px;
+    left: 55px;
+    display: inline-block; }
+    @media (min-width: 30em) {
+      /* line 239, sass/layout/_header.scss */
+      nav.main-menu .search-toggler {
+        display: none; } }
+    /* line 249, sass/layout/_header.scss */
+    nav.main-menu .search-toggler i:before {
+      cursor: pointer;
+      font-size: 180%;
+      border: 1px dashed #bfc2c2;
+      padding: 3px 7px; }
+    /* line 257, sass/layout/_header.scss */
+    nav.main-menu .search-toggler i:hover:before {
+      color: #FF3300;
+      border-color: #FF3300; }
+  /* line 264, sass/layout/_header.scss */
   nav.main-menu .menu-search-area {
-    float: left; }
-    /* line 150, sass/layout/_header.scss */
-    nav.main-menu .menu-search-area form.searchform {
-      position: absolute;
-      top: 5px;
-      left: 20px; }
-      /* line 154, sass/layout/_header.scss */
-      nav.main-menu .menu-search-area form.searchform label {
-        display: none; }
-      /* line 157, sass/layout/_header.scss */
-      nav.main-menu .menu-search-area form.searchform input[type="text"] {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    display: none;
+    overflow: hidden;
+    background-color: #F8F8F8;
+    z-index: 999; }
+    @media (min-width: 30em) {
+      /* line 264, sass/layout/_header.scss */
+      nav.main-menu .menu-search-area {
+        top: 5px;
+        left: 65px;
+        right: auto;
+        width: auto;
+        background-color: transparent; } }
+    @media (min-width: 45em) {
+      /* line 264, sass/layout/_header.scss */
+      nav.main-menu .menu-search-area {
+        left: 20px; } }
+    /* line 287, sass/layout/_header.scss */
+    nav.main-menu .menu-search-area form.searchform label {
+      display: none; }
+    /* line 290, sass/layout/_header.scss */
+    nav.main-menu .menu-search-area form.searchform input[type="text"] {
+      border: 1px solid #E6E7E7;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      border: 1px solid #E6E7E7;
+      background-color: #FFFFFF !important;
+      max-width: 100%;
+      width: 98%;
+      margin: 1%;
+      padding: 6px !important; }
+      @media (min-width: 30em) {
+        /* line 290, sass/layout/_header.scss */
+        nav.main-menu .menu-search-area form.searchform input[type="text"] {
+          -moz-border-radius-topleft: 0px;
+          -webkit-border-top-left-radius: 0px;
+          border-top-left-radius: 0px;
+          -moz-border-radius-bottomleft: 0px;
+          -webkit-border-bottom-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+          max-width: 180px;
+          margin: auto;
+          width: 180px; } }
+    /* line 306, sass/layout/_header.scss */
+    nav.main-menu .menu-search-area form.searchform i.fa.fa-search, nav.main-menu .menu-search-area form.searchform .comment-area .comment-metadata i.fa-search.edit-link:before, .comment-area .comment-metadata nav.main-menu .menu-search-area form.searchform i.fa-search.edit-link:before, nav.main-menu .menu-search-area form.searchform .comment-area i.fa-search.reply:before, .comment-area nav.main-menu .menu-search-area form.searchform i.fa-search.reply:before {
+      cursor: pointer;
+      display: none;
+      margin-right: -4px; }
+      @media (min-width: 30em) {
+        /* line 306, sass/layout/_header.scss */
+        nav.main-menu .menu-search-area form.searchform i.fa.fa-search, nav.main-menu .menu-search-area form.searchform .comment-area .comment-metadata i.fa-search.edit-link:before, .comment-area .comment-metadata nav.main-menu .menu-search-area form.searchform i.fa-search.edit-link:before, nav.main-menu .menu-search-area form.searchform .comment-area i.fa-search.reply:before, .comment-area nav.main-menu .menu-search-area form.searchform i.fa-search.reply:before {
+          display: inline-block !important; } }
+      /* line 313, sass/layout/_header.scss */
+      nav.main-menu .menu-search-area form.searchform i.fa.fa-search:before, nav.main-menu .menu-search-area form.searchform .comment-area .comment-metadata i.fa-search.edit-link:before, .comment-area .comment-metadata nav.main-menu .menu-search-area form.searchform i.fa-search.edit-link:before, nav.main-menu .menu-search-area form.searchform .comment-area i.fa-search.reply:before, .comment-area nav.main-menu .menu-search-area form.searchform i.fa-search.reply:before {
+        background-color: #E6E7E7;
+        -moz-border-radius-topleft: 5px;
+        -webkit-border-top-left-radius: 5px;
+        border-top-left-radius: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        border-bottom-left-radius: 5px;
         border: 1px solid #E6E7E7;
-        -moz-border-radius-topright: 5px;
-        -webkit-border-top-right-radius: 5px;
-        border-top-right-radius: 5px;
-        -moz-border-radius-bottomright: 5px;
-        -webkit-border-bottom-right-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border: 1px solid #E6E7E7;
-        background-color: #FFFFFF !important;
-        min-width: 25%;
-        padding: 6px !important; }
-      /* line 165, sass/layout/_header.scss */
-      nav.main-menu .menu-search-area form.searchform i.fa.fa-search, nav.main-menu .menu-search-area form.searchform .comment-area .comment-metadata i.fa-search.edit-link:before, .comment-area .comment-metadata nav.main-menu .menu-search-area form.searchform i.fa-search.edit-link:before, nav.main-menu .menu-search-area form.searchform .comment-area i.fa-search.reply:before, .comment-area nav.main-menu .menu-search-area form.searchform i.fa-search.reply:before {
-        cursor: pointer;
-        display: inline-block !important; }
-        /* line 168, sass/layout/_header.scss */
-        nav.main-menu .menu-search-area form.searchform i.fa.fa-search:before, nav.main-menu .menu-search-area form.searchform .comment-area .comment-metadata i.fa-search.edit-link:before, .comment-area .comment-metadata nav.main-menu .menu-search-area form.searchform i.fa-search.edit-link:before, nav.main-menu .menu-search-area form.searchform .comment-area i.fa-search.reply:before, .comment-area nav.main-menu .menu-search-area form.searchform i.fa-search.reply:before {
-          background-color: #E6E7E7;
-          -moz-border-radius-topleft: 5px;
-          -webkit-border-top-left-radius: 5px;
-          border-top-left-radius: 5px;
-          -moz-border-radius-bottomleft: 5px;
-          -webkit-border-bottom-left-radius: 5px;
-          border-bottom-left-radius: 5px;
-          border: 1px solid #E6E7E7;
-          color: #333336;
-          font-size: 110%;
-          padding: 10px;
-          vertical-align: middle; }
+        color: #58585d;
+        font-size: 110%;
+        padding: 10px;
+        vertical-align: middle; }
+      /* line 325, sass/layout/_header.scss */
+      nav.main-menu .menu-search-area form.searchform i.fa.fa-search:hover:before, nav.main-menu .menu-search-area form.searchform .comment-area .comment-metadata i.fa-search.edit-link:hover:before, .comment-area .comment-metadata nav.main-menu .menu-search-area form.searchform i.fa-search.edit-link:hover:before, nav.main-menu .menu-search-area form.searchform .comment-area i.fa-search.reply:hover:before, .comment-area nav.main-menu .menu-search-area form.searchform i.fa-search.reply:hover:before {
+        color: #333336; }
 
 /* main style */
 /* line 3, sass/layout/_main.scss */

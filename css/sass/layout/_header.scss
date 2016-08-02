@@ -25,6 +25,7 @@
 nav.main-menu{
   @extend .def-box-shadow;
   width : 100%;
+  min-height : 50px;
   .logo-wrapper {
     float : right;
     display : block;
@@ -37,11 +38,76 @@ nav.main-menu{
       }
     }
   }
+
   div.responsive-menu{
-    display: none;
+    @extend .def-transition;
+    position : absolute;
+    overflow-y: auto;
+    top : 0px;
+    right : 0px;
+    width : 240px;
+    max-width : 100%;
+    transform : translateX(240px);
+    background-color: lighten($grey3,15%);
+    color : $white;
+    z-index : 999;
+    a{
+      color : $white;
+      &:hover{
+        color : $red;
+      }
+    }
+
+    display : block;
+    @include at-breakpoint($medium){
+      display : none;
+    }
+    &.show-menu{
+      transform : translateX(0px);
+    }
+    a.close-responsive{
+      float : left;
+      display : inline-block;
+      padding : 10px;
+      i{
+        cursor: pointer;
+        &:before{
+          font-size : 160%;
+        }
+      }
+    }
+    a.responsive-logo{
+      float : right;
+      display : inline-block;
+      width : 85%;
+      padding : 10px;
+      img{
+        margin : auto;
+      }
+    }
+
+    ul.responsive-nav{
+      padding : 10px;
+      li{
+        display : block;
+        a{
+          padding : 10px;
+          font-size : 110%;
+        }
+        ul.sub-menu{
+          margin : 0px;
+          margin-right : 30px;
+          padding :0px;
+        }
+      }
+    }
   }
   ul.main-nav{
 
+    display: none;
+    @include at-breakpoint($medium){
+      display : block;
+    }
     margin : 0px;
     padding : 0px;
     position : relative;
@@ -145,34 +211,120 @@ nav.main-menu{
       }
     }
   }
+  a.menu-toggler{
+    position : absolute;
+    top : 12px;
+    left : 10px;
+    @include at-breakpoint($medium){
+      display : none;
+    }
+    i{
+
+      &:before{
+        @extend .def-transition;
+        cursor: pointer;
+        font-size: 180%;
+        border: 1px dashed darken($grey2,15%);
+        padding: 3px 7px;
+      }
+      &:hover{
+        &:before{
+          color : $red;
+          border-color : $red;
+        }
+      }
+    }
+
+  }
+  .search-toggler{
+    position : absolute;
+    top : 12px;
+    left : 55px;
+    display : inline-block;
+    @include at-breakpoint($small){
+      display :none;
+    }
+    i{
+
+      &:before{
+        @extend .def-transition;
+        cursor: pointer;
+        font-size: 180%;
+        border: 1px dashed darken($grey2,15%);
+        padding: 3px 7px;
+      }
+      &:hover{
+        &:before{
+          color : $red;
+          border-color : $red;
+        }
+      }
+    }
+  }
   .menu-search-area{
-    float : left ;
-    form.searchform {
-      position : absolute;
+    width : 100%;
+    position : absolute;
+    top : 50px;
+    left : 0px;
+    right : 0px;
+    display : none;
+    overflow:hidden;
+    background-color: $white2;
+    z-index : 999;
+    @include at-breakpoint($small){
       top : 5px;
+      left : 65px;
+      right : auto;
+      width : auto;
+      background-color: transparent;
+    }
+    @include at-breakpoint($medium){
       left : 20px;
+    }
+    form.searchform {
+
+
       label {
         display: none;
       }
       input[type="text"]{
         border : 1px solid $grey2;
-        @include border-right-radius(5px);
+        @include border-radius(5px);
         border : 1px solid $grey2;
         background-color: $white !important;
-        min-width : 25%;
+        max-width :100%;
+        width: 98%;
+        margin: 1%;
         padding : 6px !important;
+        @include at-breakpoint($small){
+          @include border-left-radius(0px);
+          max-width : 180px;
+          margin : auto;
+          width : 180px;
+        }
       }
       i.fa.fa-search{
         cursor: pointer;
-        display : inline-block !important;
+        display : none;
+        margin-right : -4px;
+        @include at-breakpoint($small){
+          display : inline-block !important;
+        }
         &:before{
           background-color: $grey2;
           @include border-left-radius(5px);
           border : 1px solid $grey2;
-          color : $grey3;
+          color : lighten($grey3,15%);
           font-size : 110%;
           padding: 10px;
           vertical-align: middle;
+
+
+        }
+        &:hover{
+          &:before{
+            color : $grey3;
+          }
         }
       }
     }

@@ -119,6 +119,14 @@
 							<?php echo get_search_form(); ?>
 						</div>
 
+						<a href="#search" id="searchToggler" class="search-toggler" >
+							<i class="fa fa-search"></i>
+						</a>
+						
+						<a id="menu-toggler" class="menu-toggler" >
+							<i class="fa fa-navicon"></i>
+						</a>
+
 					</nav>
 
 					
