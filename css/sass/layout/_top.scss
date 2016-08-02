@@ -1,0 +1,31 @@
+//--------------top sidebar == ads -----------
+.top-ad-area{
+  @extend .white-box;
+  margin-top : 20px;
+  padding: 15px 15px 0px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+
+  .top-ad.widget{
+    text-align: center;
+    padding: 0px 10px;
+    a{
+      margin-top: -5px;
+      display : inline-block;
+    }
+    img{
+      max-width : 100%;
+      text-align: center;
+    }
+    @include span-columns(12,12);
+    @include at-breakpoint($medium){
+      @include span-columns(6,12);
+    }
+    &:nth-of-type(2n){
+      @include at-breakpoint($medium){
+        @include span-columns(6 omega,12);
+      }
+    }
+  }
+}

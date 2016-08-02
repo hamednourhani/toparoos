@@ -9,35 +9,35 @@ jQuery(document).ready(function($){
 	// 	minWidth : 945,
 	// });
 
-    $('aside,article').onScreen({
-	   container: window,
-	   direction: 'vertical',
-	  
-	   doIn: function() {
-	     // Do something to the matched elements as they come in
-	   },
-	   doOut: function() {
-	    // Do something to the matched elements as they get off scren
-	   },
-	   tolerance: 0,
-	   throttle: 250,
-	   toggleClass: 'onScreen',
-	   lazyAttr: null,
-	   lazyPlaceholder: 'someImage.jpg',
-	   debug: false
-	});
+    // $('aside,article').onScreen({
+	//    container: window,
+	//    direction: 'vertical',
+	//
+	//    doIn: function() {
+	//      // Do something to the matched elements as they come in
+	//    },
+	//    doOut: function() {
+	//     // Do something to the matched elements as they get off scren
+	//    },
+	//    tolerance: 0,
+	//    throttle: 250,
+	//    toggleClass: 'onScreen',
+	//    lazyAttr: null,
+	//    lazyPlaceholder: 'someImage.jpg',
+	//    debug: false
+	// });
 
-	$('a#register-show').click(function(event){
-		event.preventDefault();
-		$('.register-container').toggleClass('form-display');
-		$('.login-container').removeClass('form-display');
-	});
-
-	$('a#login-show').click(function(event){
-		event.preventDefault();
-		$('.login-container').toggleClass('form-display');
-		$('.register-container').removeClass('form-display');
-	});
+	// $('a#register-show').click(function(event){
+	// 	event.preventDefault();
+	// 	$('.register-container').toggleClass('form-display');
+	// 	$('.login-container').removeClass('form-display');
+	// });
+    //
+	// $('a#login-show').click(function(event){
+	// 	event.preventDefault();
+	// 	$('.login-container').toggleClass('form-display');
+	// 	$('.register-container').removeClass('form-display');
+	// });
 
 	// setTimeout(function(){
 	// 	window.loading_screen.finish();

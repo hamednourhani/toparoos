@@ -95,7 +95,36 @@ function itstar_before_row_if_2( $field_args, $field ) {
 	}
 }
 
+/******************************************************************/
+/*--------------------Video Features-------------------------------*/
+/******************************************************************/
+add_action('cmb2_init','itstar_register_video_metabox');
+// add_action('cmb2_init','itstar_register_tour_information_metabox');
+function itstar_register_video_metabox(){
 
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_itstar_';
+
+	/**
+	 * Sample metabox to demonstrate each field type included
+	 */
+	$cmb_demo = new_cmb2_box(array(
+		'id' => $prefix . 'video',
+		'title' => __('Video Features', 'itstar'),
+		'object_types' => array('video'), // Post type
+
+	));
+
+
+	$cmb_demo->add_field(array(
+		'name' => __('video url', 'itstar'),
+		'desc' => __('Video Link', 'itstar'),
+		'id' => $prefix . 'video_link',
+		'type' => 'text_url',
+
+	));
+
+}
 
 
 /******************************************************************/

@@ -8,9 +8,6 @@ body,html{
 	min-height : 100%;
 	display : block;
 	@include single-transition(all 0.4s);
-
-
-
 }
 body {
 
@@ -19,18 +16,32 @@ body {
 	font-size : 100%;
 	line-height : 180%;
 	font-weight: normal;
+	width : 100%;
+	background-color : $grey2;
+	margin : auto;
+	z-index : 1;
 	form{
 		direction: rtl;
 		text-align: right;
 	}
 	p{
 		text-align : justify;
-		color : $grey3;
+		color : $grey4;
 	}
 
 	
 }
+.body-wrapper{
 
+	width : 100%;
+	background-color: $grey2;
+	margin:auto;
+	overflow : hidden;
+}
+.layout{
+	@include container;
+	position : relative;
+}
 
 div#responsive-wrapper{
 	width : 100%;
@@ -82,7 +93,7 @@ dl, menu, ol, ul,dir {
  	opacity : 1;
 }
 article,aside{
-	opacity : 0.3;
+	//opacity : 0.3;
 }
 
 

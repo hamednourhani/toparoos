@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Top Aroos 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2016-08-02 06:39:11+00:00\n"
+"POT-Creation-Date: 2016-08-02 13:31:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -45,432 +45,428 @@ msgstr ""
 msgid "TopArous © 2016. All rights reserved."
 msgstr ""
 
-#: functions.php:94
-msgid "Slider Size"
-msgstr ""
-
 #: functions.php:95
-msgid "Slider Thumb"
-msgstr ""
-
-#: functions.php:123
 msgid "1200px by 500px"
 msgstr ""
 
-#: functions.php:124
-msgid "30px by 30px"
+#: functions.php:96
+msgid "800px by 500px"
 msgstr ""
 
-#: functions.php:125
-msgid "53px by 53px"
+#: functions.php:97
+msgid "150px by 100px"
 msgstr ""
 
-#: functions.php:126
-msgid "130px by 130px"
+#: functions.php:98
+msgid "240px by 180px"
 msgstr ""
 
-#: functions.php:127
-msgid "300px by 200px"
+#: functions.php:99
+msgid "150px by 150px"
 msgstr ""
 
-#: functions.php:182
+#: functions.php:119
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:183
+#: functions.php:120
 msgid "The first (primary) sidebar."
 msgstr ""
 
-#: functions.php:191
+#: functions.php:128
 msgid "Footer First"
 msgstr ""
 
-#: functions.php:192 functions.php:201 functions.php:210 functions.php:219
+#: functions.php:129 functions.php:138 functions.php:147 functions.php:156
 msgid "The first footer widget area"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:137
 msgid "Footer First Col2"
 msgstr ""
 
-#: functions.php:209
+#: functions.php:146
 msgid "Footer First Col3"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:155
 msgid "Footer First Col4"
 msgstr ""
 
-#: functions.php:227
-msgid "Footer Second"
+#: functions.php:164
+msgid "Ad Sidebar"
 msgstr ""
 
-#: functions.php:228
-msgid "The second footer widget area"
+#: functions.php:165
+msgid "sidebar for ads"
 msgstr ""
 
-#: functions.php:283
+#: functions.php:196
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr ""
 
-#: functions.php:283
+#: functions.php:196
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:284
+#: functions.php:197
 msgid "F jS, Y"
 msgstr ""
 
-#: functions.php:289
+#: functions.php:202
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:312
+#: functions.php:225
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
-#: functions.php:313
+#: functions.php:226
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
-#: functions.php:372
-msgid "Last Products Widget"
+#: functions.php:270
+msgid "Last video Widget"
 msgstr ""
 
-#: functions.php:375
+#: functions.php:273
 msgid "Display Last Products"
 msgstr ""
 
-#: functions.php:424
-msgid "Last Products"
+#: functions.php:306
+msgid "more videos"
 msgstr ""
 
-#: functions.php:439 functions.php:548 functions.php:656 functions.php:766
-#: functions.php:903
+#: functions.php:328
+msgid "Last Video"
+msgstr ""
+
+#: functions.php:343 functions.php:452 functions.php:560 functions.php:670
+#: functions.php:807
 msgid "Title:"
 msgstr ""
 
-#: functions.php:443
-msgid "product Numbers :"
+#: functions.php:347
+msgid "video Numbers :"
 msgstr ""
 
-#: functions.php:447
-msgid "Product Category :"
+#: functions.php:351
+msgid "video Category :"
 msgstr ""
 
-#: functions.php:482
+#: functions.php:386
 msgid "Last Projects Widget"
 msgstr ""
 
-#: functions.php:485
+#: functions.php:389
 msgid "Display Last Projects"
 msgstr ""
 
-#: functions.php:533
+#: functions.php:437
 msgid "Last Projects"
 msgstr ""
 
-#: functions.php:552
+#: functions.php:456
 msgid "Project Numbers :"
 msgstr ""
 
-#: functions.php:556
+#: functions.php:460
 msgid "Project Category :"
 msgstr ""
 
-#: functions.php:588
+#: functions.php:492
 msgid "Last Posts By Category Widget"
 msgstr ""
 
-#: functions.php:591
+#: functions.php:495
 msgid "Display Last Posts in Category"
 msgstr ""
 
-#: functions.php:641 functions.php:736
+#: functions.php:545 functions.php:640
 msgid "Last Posts"
 msgstr ""
 
-#: functions.php:660
+#: functions.php:564
 msgid "Post Numbers :"
 msgstr ""
 
-#: functions.php:664
+#: functions.php:568
 msgid "Post Category :"
 msgstr ""
 
-#: functions.php:695
+#: functions.php:599
 msgid "Contact Informaion Widget"
 msgstr ""
 
-#: functions.php:698
+#: functions.php:602
 msgid "Display Contact Information"
 msgstr ""
 
-#: functions.php:715
+#: functions.php:619
 msgid "Address : "
 msgstr ""
 
-#: functions.php:716
+#: functions.php:620
 msgid "Phone : "
 msgstr ""
 
-#: functions.php:717
+#: functions.php:621
 msgid "Fax : "
 msgstr ""
 
-#: functions.php:718
+#: functions.php:622
 msgid "Email : "
 msgstr ""
 
-#: functions.php:770
+#: functions.php:674
 msgid "Address :"
 msgstr ""
 
-#: functions.php:774
+#: functions.php:678
 msgid "Phone Number :"
 msgstr ""
 
-#: functions.php:779
+#: functions.php:683
 msgid "Fax Number :"
 msgstr ""
 
-#: functions.php:784
+#: functions.php:688
 msgid "Email Address :"
 msgstr ""
 
-#: functions.php:811
+#: functions.php:715
 msgid "Social Networks Widget"
 msgstr ""
 
-#: functions.php:814
+#: functions.php:718
 msgid "Social Networks and Important links"
 msgstr ""
 
-#: functions.php:839
+#: functions.php:743
 msgid "Download Cataloge"
 msgstr ""
 
-#: functions.php:840
+#: functions.php:744
 msgid "Send Email"
 msgstr ""
 
-#: functions.php:841
+#: functions.php:745
 msgid "Login"
 msgstr ""
 
-#: functions.php:859
+#: functions.php:763
 msgid "Social Links"
 msgstr ""
 
-#: functions.php:907
+#: functions.php:811
 msgid "Google Plus Url :"
 msgstr ""
 
-#: functions.php:911
+#: functions.php:815
 msgid "Facebook Url :"
 msgstr ""
 
-#: functions.php:915
+#: functions.php:819
 msgid "Linkedin Url :"
 msgstr ""
 
-#: functions.php:919
+#: functions.php:823
 msgid "Instagram Url :"
 msgstr ""
 
-#: functions.php:923
+#: functions.php:827
 msgid "Catalog Download url :"
 msgstr ""
 
-#: functions.php:927
+#: functions.php:831
 msgid "Send Email Url :"
 msgstr ""
 
-#: functions.php:931
+#: functions.php:835
 msgid "Login Url :"
 msgstr ""
 
-#: functions.php:1232
+#: functions.php:1136
 msgid "Another user have been registered by this User Name or Email"
 msgstr ""
 
-#: functions.php:1236
+#: functions.php:1140
 msgid "Anti Spam is Not correct!"
 msgstr ""
 
-#: functions.php:1240
+#: functions.php:1144
 msgid "Please fill the required fields : User Name - Email - Password"
 msgstr ""
 
-#: functions.php:1286
+#: functions.php:1190
 msgid "Vira Club Registeration"
 msgstr ""
 
-#: functions.php:1287
+#: functions.php:1191
 msgid "Login to Site"
 msgstr ""
 
-#: functions.php:1294
+#: functions.php:1198
 msgid "First Name"
 msgstr ""
 
-#: functions.php:1295
+#: functions.php:1199
 msgid "Last Name"
 msgstr ""
 
-#: functions.php:1296
+#: functions.php:1200
 msgid "UserName"
 msgstr ""
 
-#: functions.php:1297
+#: functions.php:1201
 msgid "Birthday"
 msgstr ""
 
-#: functions.php:1299 functions.php:1491
+#: functions.php:1203 functions.php:1395
 msgid "Birth Month"
 msgstr ""
 
-#: functions.php:1301 functions.php:1499
+#: functions.php:1205 functions.php:1403
 msgid "Birth Year"
 msgstr ""
 
-#: functions.php:1303 functions.php:1515
+#: functions.php:1207 functions.php:1419
 msgid "Job"
 msgstr ""
 
-#: functions.php:1304 functions.php:1507 functions.php:1624
+#: functions.php:1208 functions.php:1411 functions.php:1528
 msgid "Phone"
 msgstr ""
 
-#: functions.php:1306 functions.php:1625
+#: functions.php:1210 functions.php:1529
 msgid "Email"
 msgstr ""
 
-#: functions.php:1307
+#: functions.php:1211
 msgid "Password"
 msgstr ""
 
-#: functions.php:1308
+#: functions.php:1212
 msgid "At least 6 character."
 msgstr ""
 
-#: functions.php:1311
+#: functions.php:1215
 msgid "Submit"
 msgstr ""
 
-#: functions.php:1346
+#: functions.php:1250
 msgid "User Profile"
 msgstr ""
 
-#: functions.php:1350
+#: functions.php:1254
 msgid "first name: "
 msgstr ""
 
-#: functions.php:1351
+#: functions.php:1255
 msgid "last name: "
 msgstr ""
 
-#: functions.php:1352 functions.php:1576 functions.php:1608
+#: functions.php:1256 functions.php:1480 functions.php:1512
 msgid "Username: "
 msgstr ""
 
-#: functions.php:1354
+#: functions.php:1258
 msgid "Birthday: "
 msgstr ""
 
-#: functions.php:1355
+#: functions.php:1259
 msgid "Phone: "
 msgstr ""
 
-#: functions.php:1356
+#: functions.php:1260
 msgid "Email: "
 msgstr ""
 
-#: functions.php:1357
+#: functions.php:1261
 msgid "Job: "
 msgstr ""
 
-#: functions.php:1359
+#: functions.php:1263
 msgid "Vira Club ID: "
 msgstr ""
 
-#: functions.php:1362
+#: functions.php:1266
 msgid "Logout"
 msgstr ""
 
-#: functions.php:1393
+#: functions.php:1297
 msgid "Title"
 msgstr ""
 
-#: functions.php:1480
+#: functions.php:1384
 msgid "Extra profile information"
 msgstr ""
 
-#: functions.php:1483
+#: functions.php:1387
 msgid "birthday"
 msgstr ""
 
-#: functions.php:1487
+#: functions.php:1391
 msgid "Please enter your Birthday."
 msgstr ""
 
-#: functions.php:1495
+#: functions.php:1399
 msgid "Please enter your Birth Month."
 msgstr ""
 
-#: functions.php:1503
+#: functions.php:1407
 msgid "Please enter your Birth Year."
 msgstr ""
 
-#: functions.php:1511
+#: functions.php:1415
 msgid "Please enter your phone."
 msgstr ""
 
-#: functions.php:1519
+#: functions.php:1423
 msgid "Please enter your Job."
 msgstr ""
 
-#: functions.php:1523
+#: functions.php:1427
 msgid "Vira club ID"
 msgstr ""
 
-#: functions.php:1574
+#: functions.php:1478
 msgid "New User Have Registered "
 msgstr ""
 
-#: functions.php:1578 functions.php:1610
+#: functions.php:1482 functions.php:1514
 msgid "Password: "
 msgstr ""
 
-#: functions.php:1580 functions.php:1612
+#: functions.php:1484 functions.php:1516
 msgid "ViraClub ID: "
 msgstr ""
 
-#: functions.php:1603
+#: functions.php:1507
 msgid "Welcome to "
 msgstr ""
 
-#: functions.php:1604
+#: functions.php:1508
 msgid "Hello,"
 msgstr ""
 
-#: functions.php:1606
+#: functions.php:1510
 msgid "Welcome to Our Site"
 msgstr ""
 
-#: functions.php:1623
+#: functions.php:1527
 msgid "ViraClub ID"
 msgstr ""
 
-#: functions.php:1695 functions.php:1702 searchform.php:3
+#: functions.php:1599 functions.php:1606 searchform.php:3
 msgid "Search for:"
 msgstr ""
 
-#: functions.php:1696 functions.php:1703
+#: functions.php:1600 functions.php:1607
 msgid "Search..."
 msgstr ""
 
-#: functions.php:1735
+#: functions.php:1639
 msgid " -- Only registered Users can Download the Catalog -- "
 msgstr ""
 
@@ -480,10 +476,6 @@ msgstr ""
 
 #: header.php:106
 msgid "Main Menu"
-msgstr ""
-
-#: library/banner-maker.php:20
-msgid "Search Results for: %s"
 msgstr ""
 
 #: library/cmb/example-functions.php:82
@@ -652,8 +644,8 @@ msgstr ""
 msgid "Multiple Files"
 msgstr ""
 
-#: library/cmb/example-functions.php:330 library/cmb-functions.php:151
-#: library/cmb-functions.php:281
+#: library/cmb/example-functions.php:330 library/cmb-functions.php:180
+#: library/cmb-functions.php:310
 msgid "Upload or add multiple images/attachments."
 msgstr ""
 
@@ -910,183 +902,195 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: library/cmb-functions.php:112
-msgid "Product Features"
+#: library/cmb-functions.php:113
+msgid "Video Features"
 msgstr ""
 
 #: library/cmb-functions.php:120
-msgid "Add Product features"
+msgid "video url"
 msgstr ""
 
-#: library/cmb-functions.php:122 library/cmb-functions.php:222
-msgid "feature {#}"
-msgstr ""
-
-#: library/cmb-functions.php:123 library/cmb-functions.php:223
-msgid "Add Another feature"
-msgstr ""
-
-#: library/cmb-functions.php:124 library/cmb-functions.php:224
-msgid "Remove feature"
-msgstr ""
-
-#: library/cmb-functions.php:132 library/cmb-functions.php:232
-msgid "Feature Name"
-msgstr ""
-
-#: library/cmb-functions.php:133 library/cmb-functions.php:233
-msgid "write the feature name "
+#: library/cmb-functions.php:121
+msgid "Video Link"
 msgstr ""
 
 #: library/cmb-functions.php:141
+msgid "Product Features"
+msgstr ""
+
+#: library/cmb-functions.php:149
+msgid "Add Product features"
+msgstr ""
+
+#: library/cmb-functions.php:151 library/cmb-functions.php:251
+msgid "feature {#}"
+msgstr ""
+
+#: library/cmb-functions.php:152 library/cmb-functions.php:252
+msgid "Add Another feature"
+msgstr ""
+
+#: library/cmb-functions.php:153 library/cmb-functions.php:253
+msgid "Remove feature"
+msgstr ""
+
+#: library/cmb-functions.php:161 library/cmb-functions.php:261
+msgid "Feature Name"
+msgstr ""
+
+#: library/cmb-functions.php:162 library/cmb-functions.php:262
+msgid "write the feature name "
+msgstr ""
+
+#: library/cmb-functions.php:170
 msgid "Feature Description "
 msgstr ""
 
-#: library/cmb-functions.php:142
+#: library/cmb-functions.php:171
 msgid "write the feature Description if needed"
 msgstr ""
 
-#: library/cmb-functions.php:150 library/cmb-functions.php:280
+#: library/cmb-functions.php:179 library/cmb-functions.php:309
 msgid "Images"
 msgstr ""
 
-#: library/cmb-functions.php:177
+#: library/cmb-functions.php:206
 msgid "Project Date"
 msgstr ""
 
-#: library/cmb-functions.php:190
+#: library/cmb-functions.php:219
 msgid "Date"
 msgstr ""
 
-#: library/cmb-functions.php:191
+#: library/cmb-functions.php:220
 msgid "Enter Project Date"
 msgstr ""
 
-#: library/cmb-functions.php:212
+#: library/cmb-functions.php:241
 msgid "Project Features"
 msgstr ""
 
-#: library/cmb-functions.php:220
+#: library/cmb-functions.php:249
 msgid "Add Project features"
 msgstr ""
 
-#: library/cmb-functions.php:241
+#: library/cmb-functions.php:270
 msgid "Feature Value"
 msgstr ""
 
-#: library/cmb-functions.php:242
+#: library/cmb-functions.php:271
 msgid "write the feature Value "
 msgstr ""
 
-#: library/cmb-functions.php:267
+#: library/cmb-functions.php:296
 msgid "Project Images"
 msgstr ""
 
-#: library/cmb-functions.php:309
+#: library/cmb-functions.php:338
 msgid "Page Banner"
 msgstr ""
 
-#: library/cmb-functions.php:322
+#: library/cmb-functions.php:351
 msgid "Banner"
 msgstr ""
 
-#: library/cmb-functions.php:323
+#: library/cmb-functions.php:352
 msgid "Choose Banner Mod, SlideShow , Image Banner or Nothing"
 msgstr ""
 
-#: library/cmb-functions.php:328
+#: library/cmb-functions.php:357
 msgid "Slider"
 msgstr ""
 
-#: library/cmb-functions.php:329
+#: library/cmb-functions.php:358
 msgid "Image"
 msgstr ""
 
-#: library/cmb-functions.php:330
+#: library/cmb-functions.php:359
 msgid "Map"
 msgstr ""
 
-#: library/cmb-functions.php:343
+#: library/cmb-functions.php:372
 msgid "Slider Shortcode"
 msgstr ""
 
-#: library/cmb-functions.php:344
+#: library/cmb-functions.php:373
 msgid "write this page Revolotion Slider shortcode with alis name here"
 msgstr ""
 
-#: library/cmb-functions.php:351
+#: library/cmb-functions.php:380
 msgid "Banner Image"
 msgstr ""
 
-#: library/cmb-functions.php:352
+#: library/cmb-functions.php:381
 msgid "Upload an image to show as the banner"
 msgstr ""
 
-#: library/cmb-functions.php:359
+#: library/cmb-functions.php:388
 msgid "Google Map"
 msgstr ""
 
-#: library/cmb-functions.php:360
+#: library/cmb-functions.php:389
 msgid "Enter Google Map embed code"
 msgstr ""
 
-#: library/cmb-functions.php:386
+#: library/cmb-functions.php:415
 msgid "First Page links"
 msgstr ""
 
-#: library/cmb-functions.php:394 page-templates/first-page.php:95
+#: library/cmb-functions.php:423 page-templates/first-page.php:91
 msgid "Contact Us"
 msgstr ""
 
-#: library/cmb-functions.php:395
+#: library/cmb-functions.php:424
 msgid "Contact Us Link"
 msgstr ""
 
-#: library/cmb-functions.php:402 page-templates/first-page.php:105
+#: library/cmb-functions.php:431 page-templates/first-page.php:101
 msgid "Products"
 msgstr ""
 
-#: library/cmb-functions.php:403
+#: library/cmb-functions.php:432
 msgid "Products Link"
 msgstr ""
 
-#: library/cmb-functions.php:410 page-templates/first-page.php:115
+#: library/cmb-functions.php:439 page-templates/first-page.php:111
 msgid "Cataloges"
 msgstr ""
 
-#: library/cmb-functions.php:411
+#: library/cmb-functions.php:440
 msgid "Cataloges Link"
 msgstr ""
 
-#: library/cmb-functions.php:418 page-templates/first-page.php:125
+#: library/cmb-functions.php:447 page-templates/first-page.php:121
 msgid "About 3mm"
 msgstr ""
 
-#: library/cmb-functions.php:419
+#: library/cmb-functions.php:448
 msgid "About 3mm Link"
 msgstr ""
 
-#: library/cmb-functions.php:446
+#: library/cmb-functions.php:475
 msgid "Feature Page"
 msgstr ""
 
-#: library/cmb-functions.php:458
+#: library/cmb-functions.php:487
 msgid "Feature"
 msgstr ""
 
-#: library/cmb-functions.php:459
+#: library/cmb-functions.php:488
 msgid "is this page a feature one?"
 msgstr ""
 
-#: library/cmb-functions.php:464
+#: library/cmb-functions.php:493
 msgid "Yes"
 msgstr ""
 
-#: library/cmb-functions.php:465
+#: library/cmb-functions.php:494
 msgid "no"
 msgstr ""
 
-#: library/cmb-functions.php:477 library/cmb-functions.php:478
+#: library/cmb-functions.php:506 library/cmb-functions.php:507
 msgid "Page Excerpt"
 msgstr ""
 

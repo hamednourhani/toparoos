@@ -82,93 +82,30 @@ add_action( 'after_setup_theme', 'itstar_ahoy' );
 
 // Thumbnail sizes
 add_image_size( 'banner', 1200, 500, array( 'center', 'center' ) );
-add_image_size( 'product-thumb', 30, 30, array( 'center', 'center' ) );
-add_image_size( 'detail-thumb', 53, 53, array( 'center', 'center' ) );
-add_image_size( 'project-thumb', 130, 130, array( 'center', 'center' ) );
-add_image_size( 'page-thumb', 300, 200, array( 'center', 'center' ) );
+add_image_size( 'slide', 800, 500, array( 'center', 'center' ) );
+add_image_size( 'video-thumb', 150, 100, array( 'center', 'center' ) );
+add_image_size( 'video-larg-thumb', 240, 180, array( 'center', 'center' ) );
+add_image_size( 'thumbnail', 150, 150, array( 'center', 'center' ) );
 
-add_filter( 'image_size_names_choose', 'itstar_custom_sizes' );
- 
-function itstar_custom_sizes( $sizes ) {
-    return array_merge( $sizes, array(
-        'slider' => __( 'Slider Size' ),
-        'slider-thumb' => __( 'Slider Thumb' ),
-    ) );
-}
-
-/*
-to add more sizes, simply copy a line from above
-and change the dimensions & name. As long as you
-upload a "featured image" as large as the biggest
-set width or height, all the other sizes will be
-auto-cropped.
-
-To call a different size, simply change the text
-inside the thumbnail function.
-
-For example, to call the 300 x 100 sized image,
-we would use the function:
-<?php the_post_thumbnail( 'itstar-thumb-300' ); ?>
-for the 600 x 150 image:
-<?php the_post_thumbnail( 'itstar-thumb-600' ); ?>
-
-You can change the names and dimensions to whatever
-you like. Enjoy!
-*/
 
 add_filter( 'image_size_names_choose', 'itstar_custom_image_sizes' );
 
 function itstar_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'banner' => __('1200px by 500px'),
-        'product-thumb' => __('30px by 30px'),
-        'detail-thumb' => __('53px by 53px'),
-        'project-thumb' => __('130px by 130px'),
-        'page-thumb' => __('300px by 200px'),
+        'slide' => __('800px by 500px'),
+        'video-thumb' => __('150px by 100px'),
+        'video-larg-thumb' => __('240px by 180px'),
+        'thumbnail' => __('150px by 150px'),
+
     ) );
 }
 
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
 
 /************* THEME CUSTOMIZE *********************/
 
-/* 
-  A good tutorial for creating your own Sections, Controls and Settings:
-  http://code.tutsplus.com/series/a-guide-to-the-wordpress-theme-customizer--wp-33722
-  
-  Good articles on modifying the default options:
-  http://natko.com/changing-default-wordpress-theme-customization-api-sections/
-  http://code.tutsplus.com/tutorials/digging-into-the-theme-customizer-components--wp-27162
-  
-  To do:
-  - Create a js for the postmessage transport method
-  - Create some sanitize functions to sanitize inputs
-  - Create some boilerplate Sections, Controls and Settings
-*/
 
 function itstar_theme_customizer($wp_customize) {
-  // $wp_customize calls go here.
-  //
-  // Uncomment the below lines to remove the default customize sections 
-
-  // $wp_customize->remove_section('title_tagline');
-  // $wp_customize->remove_section('colors');
-  // $wp_customize->remove_section('background_image');
-  // $wp_customize->remove_section('static_front_page');
-  // $wp_customize->remove_section('nav');
-
-  // Uncomment the below lines to remove the default controls
-  // $wp_customize->remove_control('blogdescription');
-  
-  // Uncomment the following to change the default section titles
-  // $wp_customize->get_section('colors')->title = __( 'Theme Colors' );
-  // $wp_customize->get_section('background_image')->title = __( 'Images' );
 }
 
 add_action( 'customize_register', 'itstar_theme_customizer' );
@@ -223,40 +160,16 @@ function itstar_register_sidebars() {
     'after_title' => '</h4>',
   ));
   register_sidebar(array(
-    'id' => 'footer-second',
-    'name' => __( 'Footer Second', 'itstar' ),
-    'description' => __( 'The second footer widget area', 'itstar' ),
-    'before_widget' => '<aside id="%1$s" class="footer-second widget %2$s">',
+    'id' => 'ad-sidebar',
+    'name' => __( 'Ad Sidebar', 'itstar' ),
+    'description' => __( 'sidebar for ads', 'itstar' ),
+    'before_widget' => '<aside id="%1$s" class="top-ad widget %2$s">',
     'after_widget' => '</aside>',
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
   ));
 
-  /*
-  to add more sidebars or widgetized areas, just copy
-  and edit the above sidebar code. In order to call
-  your new sidebar just use the following code:
-
-  Just change the name to whatever your new
-  sidebar's id is, for example:
-
-  register_sidebar(array(
-    'id' => 'sidebar2',
-    'name' => __( 'Sidebar 2', 'itstar' ),
-    'description' => __( 'The second (secondary) sidebar.', 'itstar' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
-    'after_title' => '</h4>',
-  ));
-
-  To call the sidebar in your template, you can just copy
-  the sidebar.php file and rename it to your sidebar's name.
-  So using the above example, it would be:
-  sidebar-sidebar2.php
-
-  */
-} // don't remove this bracket!
+}
 
 
 /************* COMMENT LAYOUT *********************/
@@ -331,22 +244,7 @@ function itstar_add_query_vars_filter( $vars ){
 }
 add_filter( 'query_vars', 'itstar_add_query_vars_filter' );
 
-// add_filter( 'the_content', 'itstar_remove_br_gallery', 11, 2);
-// function itstar_remove_br_gallery($output) {
-//     return preg_replace('/<br style=(.*)>/mi','',$output);
-// }
-/*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
-and be up and running in seconds.
-*/
-// function itstar_fonts() {
-//   wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
-// }
 
-//add_action('wp_enqueue_scripts', 'itstar_fonts');
 
 // Enable support for HTML5 markup.
   add_theme_support( 'html5', array(
@@ -361,15 +259,15 @@ and be up and running in seconds.
 /*---------------Widgets----------------------*/
 
 // Creating the widget 
-class last_products_widget extends WP_Widget {
+class last_video_widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
         // Base ID of your widget
-        'last_products_widget', 
+        'last_video_widget',
 
         // Widget name will appear in UI
-        __('Last Products Widget', 'itstar'), 
+        __('Last video Widget', 'itstar'),
 
         // Widget description
         array( 'description' => __( 'Display Last Products', 'itstar' ), ) 
@@ -383,24 +281,30 @@ class last_products_widget extends WP_Widget {
 
         $title = apply_filters( 'widget_title', $instance['title'] );
         $number = $instance['number'];
-        $term = get_term($instance['cat'],'product_cat');
+        $term = get_term($instance['cat'],'video_cat');
 
         //var_dump($instance);
-        $products = get_posts(array(
-            'post_type' => 'product',
+        $videos = get_posts(array(
+            'post_type' => 'video',
             'posts_per_page' => $number,
-            'product_cat'         => $term->slug,
+            'video_cat'         => $term->slug,
             )
         );
-       
+//        var_dump($term);
+        $category_link = get_category_link( $term->term_id );
+
         $content = '<ul class="widget-list">';
-        foreach($products as $product) : setup_postdata( $product );
-          $url = get_the_permalink($product->ID);
-          $thumb = get_the_post_thumbnail($product->ID,'product-thumb');
-          $name = $product->post_title;
-          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a><li>';
+        foreach($videos as $video) : setup_postdata( $video );
+//          $url = get_the_permalink($video->ID);
+          $url = get_post_meta($video->ID,'_itstar_video_link')[0];
+          $thumb = get_the_post_thumbnail($video->ID,'video-thumb');
+          $name = $video->post_title;
+          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a></li>';
         endforeach;
         $content .= '</ul>';
+        $content .='<a class="more-video" href="'.$category_link.'">';
+        $content .= __("more videos","itstar").'<i class="fa fa-angle-double-left" aria-hidden="true"></i></a>';
+
 
       
        
@@ -421,7 +325,7 @@ class last_products_widget extends WP_Widget {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Last Products', 'itstar' );
+            $title = __( 'Last Video', 'itstar' );
         }
         if ( isset( $instance[ 'number' ] ) ) {
             $number = $instance[ 'number' ];
@@ -440,16 +344,16 @@ class last_products_widget extends WP_Widget {
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'product Numbers :','itstar' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'video Numbers :','itstar' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Product Category :','itstar' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'video Category :','itstar' ); ?></label>
            <?php wp_dropdown_categories(array(
                   'name'               => $this->get_field_name( 'cat' ),
                   'id'                 => $this->get_field_id( 'cat' ),
                   'class'              => 'widefat',
-                  'taxonomy'           => 'product_cat',
+                  'taxonomy'           => 'video_cat',
                   'echo'               => '1',
                   'selected'          =>esc_attr( $cat ),
             )); ?>
@@ -957,7 +861,7 @@ class social_widget extends WP_Widget {
 
 // Register and load the widget
 function itstar_widget() {
-//  register_widget( 'last_products_widget' );
+  register_widget( 'last_video_widget' );
 //  register_widget( 'last_projects_widget' );
   register_widget( 'last_posts_by_cat_widget' );
   register_widget( 'contact_info_widget' );

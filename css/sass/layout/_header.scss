@@ -48,7 +48,7 @@ nav.main-menu{
     width : 240px;
     max-width : 100%;
     transform : translateX(240px);
-    background-color: lighten($grey3,15%);
+    background-color: lighten($grey4,15%);
     color : $white;
     z-index : 999;
     a{
@@ -277,9 +277,11 @@ nav.main-menu{
       right : auto;
       width : auto;
       background-color: transparent;
+      display : inline-block;
     }
     @include at-breakpoint($medium){
       left : 20px;
+
     }
     form.searchform {
 
@@ -295,7 +297,8 @@ nav.main-menu{
         max-width :100%;
         width: 98%;
         margin: 1%;
-        padding : 6px !important;
+        padding: 3px 10px !important;
+        font-size: 120%;
         @include at-breakpoint($small){
           @include border-left-radius(0px);
           max-width : 180px;
@@ -314,7 +317,7 @@ nav.main-menu{
           background-color: $grey2;
           @include border-left-radius(5px);
           border : 1px solid $grey2;
-          color : lighten($grey3,15%);
+          color : lighten($grey4,15%);
           font-size : 110%;
           padding: 10px;
           vertical-align: middle;
@@ -323,7 +326,7 @@ nav.main-menu{
         }
         &:hover{
           &:before{
-            color : $grey3;
+            color : $grey4;
           }
         }
       }

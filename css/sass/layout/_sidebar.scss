@@ -1,0 +1,168 @@
+.secondary{
+  @include span-columns(12,12);
+  @include at-breakpoint($medium){
+    @include span-columns(3 ,12);
+  }
+  display : block;
+
+  padding:{
+    top :20px;
+    bottom : 20px;
+  }
+
+  aside.widget{
+    @extend .white-box;
+    padding : 0px;
+    width : 100%;
+    margin-bottom : 15px;
+    font-size : 90%;
+    overflow: hidden;
+    .widgettitle{
+      font-size : 110%;
+      position: relative;
+      margin:0px;
+      padding : 5px 10px;
+      color : $red;
+      border-bottom : 1px solid $grey2;
+      display : block;
+      &:after{
+        @include single-transition(all 0.2s ease-out);
+        display : block;
+        content : "";
+        width : 35%;
+        height : 1px;
+        background-color : $red;
+        position : absolute;
+        bottom : 0px;
+        right : 0;
+      }
+    }
+    a{
+      @extend .def-transition;
+      &.advance-search-button{
+        width : 80%;
+        text-align: center;
+        display : block;
+        padding : 5px 10px;
+        font-size : 110%;
+        background-color: $red;
+        color : $white;
+        border : 1px solid $red;
+        @include border-radius(4px);
+        margin : 10px auto;
+        &:hover{
+          color : $red;
+          background-color: $white2;
+        }
+      }
+    }
+    p{
+      padding : 10px;
+    }
+    img{
+      max-width:100%;
+    }
+    ul{
+      margin : 0px;
+      padding : 0px;
+      li{
+       @extend .def-transition;
+        position : relative;
+        padding : 5px 10px;
+        border-bottom : 1px solid $grey2;
+        &:last-child{
+          border-bottom: 0px;
+        }
+        &:before{
+          display : inline-block;
+          font-family : FontAwesome;
+          vertical-align: middle;
+          right : 0px;
+          color : darken($grey3,10%);
+          content:"\f046";
+          padding-left: 8px;
+          font-size : 110%;
+        }
+        &:hover{
+          background-color: $grey1;
+          &:before{
+            color : $red2;
+          }
+        }
+
+      }
+    }
+    &.widget_sp_image{
+      background-color: transparent;
+      @include border-radius(0px);
+      @include box-shadow(0px 0px 0px transparent);
+      border : 0px;
+      margin-bottom : 5px;
+    }
+    &.widget_last_video_widget{
+      ul{
+        li{
+          @extend .def-transition;
+          display: block;
+          width : 100%;
+          overflow: hidden;
+          padding : 5px 10px 0px;
+          border-bottom: 0px;
+          &:nth-of-type(2n){
+            background-color: $grey1;
+          }
+          &:hover{
+            background-color: $red;
+          }
+          &:before{
+            content:"";
+            display : none;
+          }
+          a{
+            display : inline-block;
+
+            img{
+              float : right;
+              max-width : 45%;
+              background-color: $grey1;
+              padding : 3px;
+            }
+            span{
+              max-width : 50%;
+              float : left ;
+              font-size : 110%;
+            }
+            &:hover{
+              color : $white;
+            }
+            
+          }
+
+        }
+      }
+      a.more-video{
+        @extend .def-transition;
+        display : block;
+        width : 90%;
+        margin : 5px 5% 10px;
+        background-color: $red;
+        border : 1px solid $red;
+        padding : 5px 10px;
+        text-align: center;
+        @include border-radius(4px);
+        color : $white;
+        font-size : 110%;
+        i:before{
+          padding-right : 8px;
+          vertical-align: middle;
+          font-size : 120%;
+        }
+        &:hover{
+          color : $red;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+}

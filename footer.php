@@ -3,8 +3,8 @@
 	<!-- ********************************************************************* -->
 
 
-			<?php get_sidebar('footer-first'); ?>
-			<?php get_sidebar('footer-second'); ?>
+			<?php get_sidebar('footer'); ?>
+			
 
 			<footer class="site-footer">
 				<section class="layout">

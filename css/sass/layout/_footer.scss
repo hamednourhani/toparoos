@@ -1,0 +1,54 @@
+.footer-widget-area{
+  background-color: lighten($grey4, 10%);
+  width : 100%;
+  padding : 10px;
+  color : $white;
+  .footer-widget-col{
+    @include span-columns(12,12);
+    @include at-breakpoint($medium){
+      @include span-columns(3,12);
+      margin-right: auto;
+    }
+    &:nth-of-type(4n){
+      @include at-breakpoint($medium){
+        @include span-columns(3 omega,12);
+        margin-right: auto;
+      }
+    }
+  }
+  aside.widget{
+    @extend .def-transition;
+    padding : 10px 10px 20px;
+    font-size : 90%;
+    .widgettitle{
+      border-bottom : 1px dashed darken($grey2,10%);
+      font-size : 130%;
+      padding : 5px;
+      margin : 0px;
+      color : $white;
+      margin-bottom : 10px;
+    }
+    ul{
+      padding : 0px;
+      margin : 0px;
+    }
+    a{
+      @extend .def-transition;
+      color : darken($grey2,10%);
+      &:hover{
+        color : $red;
+      }
+    }
+  }
+}
+.site-footer{
+  width : 100%;
+  background-color: $grey4;
+  text-align: center;
+  span.site-credit{
+    display : inline-block;
+    padding : 10px;
+    color : $grey2;
+    font-size : 80%;
+  }
+}

@@ -1,14 +1,12 @@
 <?php get_header(); ?>
 	
 	<main class="site-main">
-		<div class="banner-wrapper">
-			
-				<?php get_template_part('library/banner','maker'); ?>
-				
-		</div><!-- banner-wrapper -->
+
 		
 		<div class="site-content">
 			<section class="layout">
+
+				<?php get_sidebar("top"); ?>
 				
 				<div class="primary">
 					<?php if(have_posts()){ ?>
