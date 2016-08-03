@@ -128,15 +128,20 @@ jQuery(document).ready(function($){
 			}
 		});
 	}
+
 	$('#NextPageBtn').click(function(e) {
 		e.preventDefault();
 		owl.trigger('next.owl.carousel');
 	});
-// Go to the previous item
+	// Go to the previous item
 	$('#PrevPageBtn').click(function(e) {
 		e.preventDefault();
 		owl.trigger('prev.owl.carousel', [300]);
 	});
+
+
+		
+
 
 
 

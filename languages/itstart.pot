@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Top Aroos 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2016-08-02 13:31:01+00:00\n"
+"POT-Creation-Date: 2016-08-03 13:44:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -46,19 +46,19 @@ msgid "TopArous © 2016. All rights reserved."
 msgstr ""
 
 #: functions.php:95
-msgid "1200px by 500px"
+msgid "960px by 500px"
 msgstr ""
 
 #: functions.php:96
-msgid "800px by 500px"
-msgstr ""
-
-#: functions.php:97
 msgid "150px by 100px"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:97
 msgid "240px by 180px"
+msgstr ""
+
+#: functions.php:98
+msgid "200px by 200px"
 msgstr ""
 
 #: functions.php:99
@@ -470,12 +470,16 @@ msgstr ""
 msgid " -- Only registered Users can Download the Catalog -- "
 msgstr ""
 
-#: header.php:87 library/itstar.php:289
+#: header.php:87 library/itstar.php:293
 msgid "The Main Menu"
 msgstr ""
 
 #: header.php:106
 msgid "Main Menu"
+msgstr ""
+
+#: library/best-articles.php:9 library/last-articles.php:9
+msgid "Best Articles"
 msgstr ""
 
 #: library/cmb/example-functions.php:82
@@ -644,8 +648,7 @@ msgstr ""
 msgid "Multiple Files"
 msgstr ""
 
-#: library/cmb/example-functions.php:330 library/cmb-functions.php:180
-#: library/cmb-functions.php:310
+#: library/cmb/example-functions.php:330
 msgid "Upload or add multiple images/attachments."
 msgstr ""
 
@@ -914,184 +917,100 @@ msgstr ""
 msgid "Video Link"
 msgstr ""
 
-#: library/cmb-functions.php:141
-msgid "Product Features"
+#: library/cmb-functions.php:144
+msgid "Post Features"
 msgstr ""
 
-#: library/cmb-functions.php:149
-msgid "Add Product features"
-msgstr ""
-
-#: library/cmb-functions.php:151 library/cmb-functions.php:251
-msgid "feature {#}"
-msgstr ""
-
-#: library/cmb-functions.php:152 library/cmb-functions.php:252
-msgid "Add Another feature"
-msgstr ""
-
-#: library/cmb-functions.php:153 library/cmb-functions.php:253
-msgid "Remove feature"
-msgstr ""
-
-#: library/cmb-functions.php:161 library/cmb-functions.php:261
-msgid "Feature Name"
-msgstr ""
-
-#: library/cmb-functions.php:162 library/cmb-functions.php:262
-msgid "write the feature name "
-msgstr ""
-
-#: library/cmb-functions.php:170
-msgid "Feature Description "
-msgstr ""
-
-#: library/cmb-functions.php:171
-msgid "write the feature Description if needed"
-msgstr ""
-
-#: library/cmb-functions.php:179 library/cmb-functions.php:309
-msgid "Images"
-msgstr ""
-
-#: library/cmb-functions.php:206
-msgid "Project Date"
-msgstr ""
-
-#: library/cmb-functions.php:219
-msgid "Date"
-msgstr ""
-
-#: library/cmb-functions.php:220
-msgid "Enter Project Date"
-msgstr ""
-
-#: library/cmb-functions.php:241
-msgid "Project Features"
-msgstr ""
-
-#: library/cmb-functions.php:249
-msgid "Add Project features"
-msgstr ""
-
-#: library/cmb-functions.php:270
-msgid "Feature Value"
-msgstr ""
-
-#: library/cmb-functions.php:271
-msgid "write the feature Value "
-msgstr ""
-
-#: library/cmb-functions.php:296
-msgid "Project Images"
-msgstr ""
-
-#: library/cmb-functions.php:338
-msgid "Page Banner"
-msgstr ""
-
-#: library/cmb-functions.php:351
-msgid "Banner"
-msgstr ""
-
-#: library/cmb-functions.php:352
-msgid "Choose Banner Mod, SlideShow , Image Banner or Nothing"
-msgstr ""
-
-#: library/cmb-functions.php:357
-msgid "Slider"
-msgstr ""
-
-#: library/cmb-functions.php:358
-msgid "Image"
-msgstr ""
-
-#: library/cmb-functions.php:359
-msgid "Map"
-msgstr ""
-
-#: library/cmb-functions.php:372
-msgid "Slider Shortcode"
-msgstr ""
-
-#: library/cmb-functions.php:373
-msgid "write this page Revolotion Slider shortcode with alis name here"
-msgstr ""
-
-#: library/cmb-functions.php:380
-msgid "Banner Image"
-msgstr ""
-
-#: library/cmb-functions.php:381
-msgid "Upload an image to show as the banner"
-msgstr ""
-
-#: library/cmb-functions.php:388
-msgid "Google Map"
-msgstr ""
-
-#: library/cmb-functions.php:389
-msgid "Enter Google Map embed code"
-msgstr ""
-
-#: library/cmb-functions.php:415
-msgid "First Page links"
-msgstr ""
-
-#: library/cmb-functions.php:423 page-templates/first-page.php:91
-msgid "Contact Us"
-msgstr ""
-
-#: library/cmb-functions.php:424
-msgid "Contact Us Link"
-msgstr ""
-
-#: library/cmb-functions.php:431 page-templates/first-page.php:101
-msgid "Products"
-msgstr ""
-
-#: library/cmb-functions.php:432
-msgid "Products Link"
-msgstr ""
-
-#: library/cmb-functions.php:439 page-templates/first-page.php:111
-msgid "Cataloges"
-msgstr ""
-
-#: library/cmb-functions.php:440
-msgid "Cataloges Link"
-msgstr ""
-
-#: library/cmb-functions.php:447 page-templates/first-page.php:121
-msgid "About 3mm"
-msgstr ""
-
-#: library/cmb-functions.php:448
-msgid "About 3mm Link"
-msgstr ""
-
-#: library/cmb-functions.php:475
-msgid "Feature Page"
-msgstr ""
-
-#: library/cmb-functions.php:487
+#: library/cmb-functions.php:151 library/cmb-functions.php:261
 msgid "Feature"
 msgstr ""
 
-#: library/cmb-functions.php:488
-msgid "is this page a feature one?"
+#: library/cmb-functions.php:152
+msgid "is this post a feature one?"
 msgstr ""
 
-#: library/cmb-functions.php:493
-msgid "Yes"
-msgstr ""
-
-#: library/cmb-functions.php:494
+#: library/cmb-functions.php:158 library/cmb-functions.php:172
+#: library/cmb-functions.php:268 library/cmb-functions.php:286
+#: library/cmb-functions.php:331
 msgid "no"
 msgstr ""
 
-#: library/cmb-functions.php:506 library/cmb-functions.php:507
-msgid "Page Excerpt"
+#: library/cmb-functions.php:159 library/cmb-functions.php:171
+#: library/cmb-functions.php:269 library/cmb-functions.php:287
+#: library/cmb-functions.php:332
+msgid "Yes"
+msgstr ""
+
+#: library/cmb-functions.php:164
+msgid "Article"
+msgstr ""
+
+#: library/cmb-functions.php:165
+msgid "is this post an Article?"
+msgstr ""
+
+#: library/cmb-functions.php:192
+msgid "slide Features"
+msgstr ""
+
+#: library/cmb-functions.php:198
+msgid "Link"
+msgstr ""
+
+#: library/cmb-functions.php:199
+msgid "Slide Link"
+msgstr ""
+
+#: library/cmb-functions.php:222
+msgid "item Features"
+msgstr ""
+
+#: library/cmb-functions.php:229
+msgid "item url"
+msgstr ""
+
+#: library/cmb-functions.php:230
+msgid "item Link"
+msgstr ""
+
+#: library/cmb-functions.php:254
+msgid "Page Features"
+msgstr ""
+
+#: library/cmb-functions.php:262
+msgid "is this page a feature page?"
+msgstr ""
+
+#: library/cmb-functions.php:279
+msgid "Slider"
+msgstr ""
+
+#: library/cmb-functions.php:280
+msgid "Show slider?"
+msgstr ""
+
+#: library/cmb-functions.php:312
+msgid "Slider Category"
+msgstr ""
+
+#: library/cmb-functions.php:313
+msgid "Select Slider Category"
+msgstr ""
+
+#: library/cmb-functions.php:324
+msgid "Items"
+msgstr ""
+
+#: library/cmb-functions.php:325
+msgid "Show Items?"
+msgstr ""
+
+#: library/cmb-functions.php:353 library/temp.php:19
+msgid "item Category"
+msgstr ""
+
+#: library/cmb-functions.php:354 library/temp.php:20
+msgid "Select item Category"
 msgstr ""
 
 #: library/comment-form.php:8
@@ -1176,7 +1095,8 @@ msgstr ""
 msgid "All videos"
 msgstr ""
 
-#: library/custom-post-type.php:34
+#: library/custom-post-type.php:34 library/custom-post-type.php:136
+#: library/custom-post-type.php:206
 msgid "Add New"
 msgstr ""
 
@@ -1184,7 +1104,8 @@ msgstr ""
 msgid "Add New videos"
 msgstr ""
 
-#: library/custom-post-type.php:36
+#: library/custom-post-type.php:36 library/custom-post-type.php:138
+#: library/custom-post-type.php:208
 msgid "Edit"
 msgstr ""
 
@@ -1204,11 +1125,13 @@ msgstr ""
 msgid "Search videos"
 msgstr ""
 
-#: library/custom-post-type.php:41
+#: library/custom-post-type.php:41 library/custom-post-type.php:143
+#: library/custom-post-type.php:213
 msgid "Nothing found in the Database."
 msgstr ""
 
-#: library/custom-post-type.php:42
+#: library/custom-post-type.php:42 library/custom-post-type.php:144
+#: library/custom-post-type.php:214
 msgid "Nothing found in Trash"
 msgstr ""
 
@@ -1216,103 +1139,251 @@ msgstr ""
 msgid "This is a video"
 msgstr ""
 
-#: library/custom-post-type.php:83
+#: library/custom-post-type.php:71
 msgid "video Categories"
 msgstr ""
 
-#: library/custom-post-type.php:84
+#: library/custom-post-type.php:72
 msgid "video Category"
 msgstr ""
 
-#: library/custom-post-type.php:85
+#: library/custom-post-type.php:73
 msgid "Search video Categories"
 msgstr ""
 
-#: library/custom-post-type.php:86
+#: library/custom-post-type.php:74
 msgid "All video Categories"
 msgstr ""
 
-#: library/custom-post-type.php:87
+#: library/custom-post-type.php:75
 msgid "Parent video Category"
 msgstr ""
 
-#: library/custom-post-type.php:88
+#: library/custom-post-type.php:76
 msgid "Parent video Category:"
 msgstr ""
 
-#: library/custom-post-type.php:89
+#: library/custom-post-type.php:77
 msgid "Edit video Category"
 msgstr ""
 
-#: library/custom-post-type.php:90
+#: library/custom-post-type.php:78
 msgid "Update video Category"
 msgstr ""
 
-#: library/custom-post-type.php:91
+#: library/custom-post-type.php:79
 msgid "Add New video Category"
 msgstr ""
 
-#: library/custom-post-type.php:92
+#: library/custom-post-type.php:80
 msgid "New video Category Name"
 msgstr ""
 
-#: library/custom-post-type.php:108
+#: library/custom-post-type.php:96
 msgid "video Tags"
 msgstr ""
 
-#: library/custom-post-type.php:109
+#: library/custom-post-type.php:97
 msgid "video Tag"
 msgstr ""
 
-#: library/custom-post-type.php:110
+#: library/custom-post-type.php:98
 msgid "Search video Tags"
 msgstr ""
 
-#: library/custom-post-type.php:111
+#: library/custom-post-type.php:99
 msgid "All video Tags"
 msgstr ""
 
-#: library/custom-post-type.php:112
+#: library/custom-post-type.php:100
 msgid "Parent video Tag"
 msgstr ""
 
-#: library/custom-post-type.php:113
+#: library/custom-post-type.php:101
 msgid "Parent video Tag:"
 msgstr ""
 
-#: library/custom-post-type.php:114
+#: library/custom-post-type.php:102
 msgid "Edit video Tag"
 msgstr ""
 
-#: library/custom-post-type.php:115
+#: library/custom-post-type.php:103
 msgid "Update video Tag"
 msgstr ""
 
-#: library/custom-post-type.php:116
+#: library/custom-post-type.php:104
 msgid "Add New video Tag"
 msgstr ""
 
-#: library/custom-post-type.php:117
+#: library/custom-post-type.php:105
 msgid "New video Tag Name"
+msgstr ""
+
+#: library/custom-post-type.php:133 library/custom-post-type.php:134
+msgid "slide"
+msgstr ""
+
+#: library/custom-post-type.php:135
+msgid "All slides"
+msgstr ""
+
+#: library/custom-post-type.php:137
+msgid "Add New slides"
+msgstr ""
+
+#: library/custom-post-type.php:139
+msgid "Edit slide"
+msgstr ""
+
+#: library/custom-post-type.php:140
+msgid "New slide"
+msgstr ""
+
+#: library/custom-post-type.php:141
+msgid "View slide"
+msgstr ""
+
+#: library/custom-post-type.php:142
+msgid "Search slides"
+msgstr ""
+
+#: library/custom-post-type.php:147
+msgid "This is a slide"
+msgstr ""
+
+#: library/custom-post-type.php:179
+msgid "slide Categories"
+msgstr ""
+
+#: library/custom-post-type.php:180
+msgid "slide slide"
+msgstr ""
+
+#: library/custom-post-type.php:181
+msgid "Search slide Categories"
+msgstr ""
+
+#: library/custom-post-type.php:182
+msgid "All slide Categories"
+msgstr ""
+
+#: library/custom-post-type.php:183
+msgid "Parent slide Category"
+msgstr ""
+
+#: library/custom-post-type.php:184
+msgid "Parent slide Category:"
+msgstr ""
+
+#: library/custom-post-type.php:185
+msgid "Edit slide Category"
+msgstr ""
+
+#: library/custom-post-type.php:186
+msgid "Update slide Category"
+msgstr ""
+
+#: library/custom-post-type.php:187
+msgid "Add New slide Category"
+msgstr ""
+
+#: library/custom-post-type.php:188
+msgid "New slide Category Name"
+msgstr ""
+
+#: library/custom-post-type.php:203 library/custom-post-type.php:204
+msgid "item"
+msgstr ""
+
+#: library/custom-post-type.php:205
+msgid "All items"
+msgstr ""
+
+#: library/custom-post-type.php:207
+msgid "Add New items"
+msgstr ""
+
+#: library/custom-post-type.php:209
+msgid "Edit item"
+msgstr ""
+
+#: library/custom-post-type.php:210
+msgid "New item"
+msgstr ""
+
+#: library/custom-post-type.php:211
+msgid "View item"
+msgstr ""
+
+#: library/custom-post-type.php:212
+msgid "Search items"
+msgstr ""
+
+#: library/custom-post-type.php:217
+msgid "This is a item"
+msgstr ""
+
+#: library/custom-post-type.php:248
+msgid "item Categories"
+msgstr ""
+
+#: library/custom-post-type.php:249
+msgid "item item"
+msgstr ""
+
+#: library/custom-post-type.php:250
+msgid "Search item Categories"
+msgstr ""
+
+#: library/custom-post-type.php:251
+msgid "All item Categories"
+msgstr ""
+
+#: library/custom-post-type.php:252
+msgid "Parent item Category"
+msgstr ""
+
+#: library/custom-post-type.php:253
+msgid "Parent item Category:"
+msgstr ""
+
+#: library/custom-post-type.php:254
+msgid "Edit item Category"
+msgstr ""
+
+#: library/custom-post-type.php:255
+msgid "Update item Category"
+msgstr ""
+
+#: library/custom-post-type.php:256
+msgid "Add New item Category"
+msgstr ""
+
+#: library/custom-post-type.php:257
+msgid "New item Category Name"
+msgstr ""
+
+#: library/featured-page.php:28
+msgid "Our Services"
 msgstr ""
 
 #: library/itstar.php:87
 msgid "Page %s"
 msgstr ""
 
-#: library/itstar.php:290
+#: library/itstar.php:294
 msgid "Responsive Menu"
 msgstr ""
 
-#: library/itstar.php:323
+#: library/itstar.php:327
 msgid "No Related Posts Yet!"
 msgstr ""
 
-#: library/itstar.php:368
+#: library/itstar.php:372
 msgid "Read "
 msgstr ""
 
-#: library/itstar.php:368
+#: library/itstar.php:372
 msgid "Read more &raquo;"
 msgstr ""
 
@@ -1354,6 +1425,10 @@ msgstr ""
 
 #: library/related-links.php:20
 msgid "related sites"
+msgstr ""
+
+#: page-templates/first-page.php:30
+msgid "Top Arous"
 msgstr ""
 
 #: searchform.php:6

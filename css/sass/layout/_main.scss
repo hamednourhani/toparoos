@@ -11,7 +11,112 @@
 		bottom : 20px;
 	}
 
+	.section-title{
+		margin : 0px;
+		margin-bottom : 5px;
+		padding : 5px 10px;
+		font-size : 110%;
+		color : $grey4;
+		display : inline-block;
+		position: relative;
+		&:before{
+			display : block;
+			content : "";
+			width : 1000%;
+			height : 3px;
+			background-color : $grey2;
+			position : absolute;
+			top : 43%;
+			right : 100%;
+		}
+		&:after{
+			display : block;
+			content : "";
+			width : 30px;
+			height : 3px;
+			background-color : $red;
+			position : absolute;
+			top : 43%;
+			right : 100%;
+		}
 
+	}
 }
 
-/*-----------------site-main ----------------*/
+/*-----------------featured pages ----------------*/
+.featured-pages-wrap{
+	@extend .white-box;
+	margin-bottom: 20px;
+
+	section.layout{
+		padding : 0px;
+		margin-top : 10px;
+	}
+	a.page-grid{
+		@extend .def-transition;
+		background-color: $grey2;
+		margin-bottom : 10px;
+		text-align : center;
+		padding-top : 10px;
+		@include border-radius(3px);
+		@include span-columns(12,12);
+		@include at-breakpoint($small $medium){
+			padding-top : 0px;
+			@include span-columns(4,12);
+			&:nth-of-type(3n){
+				@include omega;
+			}
+		}
+		@include at-breakpoint($medium){
+			padding-top : 0px;
+			@include span-columns(3,12);
+			&:nth-of-type(4n){
+				@include omega;
+			}
+		}
+		.page-grid-thumbnail{
+
+			img{
+				max-width : 100%;
+				height : auto;
+
+			}
+		}
+		.page-grid-title{
+			position: relative;
+			text-align: center;
+			padding-bottom: 3px;
+			display: block;
+			margin-top : -3px;
+			&::after{
+				@extend .def-transition;
+				display : block;
+				content : "";
+				width : 0px;
+				height : 2px;
+				background-color : $red;
+				position : absolute;
+				bottom : 0px;
+				right : 0;
+			}
+		}
+
+		&:hover{
+			.page-grid-title::after{
+				width : 100%;
+				left : 0px;
+			}
+		}
+
+	}
+}
+
+//---------------page content desc---------------
+.page-content-desc{
+	@extend .white-box;
+	margin-bottom : 20px;
+
+	p{
+		margin : 10px;
+	}
+}

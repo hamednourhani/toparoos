@@ -1,93 +1,121 @@
 <?php
-$args = array (
-		'post_type'              => array( 'news' ),
-		'posts_per_page'         => '15',
-		// 'category'         => 'news_cat',
-		'news_cat'    => 'featured',
-	);
-// The Query
-	$news_list = get_posts( $args );
-	$slider_show = get_post_meta(get_the_ID(),'_itstar_slider_show');
-	
- ?>
 
-<div class="slider-wrap">
-	<?php if(!empty($news_list) && $slider_show == true){ ?>
-		<div id="news-slider" class="slider-pro">
-		
-			<div class="sp-slides">
-			<?php foreach ( $news_list as $news ) : 
-				$slide_url = wp_get_attachment_image_src( get_post_thumbnail_id($news->ID), 'slider');
-			?>
-				<div class="sp-slide">
-					<a href="<?php echo post_permalink( $news->ID ); ?> " >
-						<img class="sp-image" src="<?php echo get_template_directory_uri();?>/images/blank.gif"
-							data-src="<?php echo $slide_url[0]; ?>"
-							data-retina="<?php echo $slide_url[0]; ?>"/>
-					</a>
+$show_slide_boolean = get_post_meta( get_the_ID(), '_itstar_show_slider_radio',1 );
+//var_dump($show_slide_boolean);
+if($show_slide_boolean == "yes"){
 
-					<div class="sp-caption">
-						<a href="<?php echo post_permalink( $news->ID ); ?> " >
-							<?php echo $news->post_title; ?>
-						</a>
-					</div>
-				</div>
-			<?php endforeach; ?>
-		        
-			</div>
-			
-			<div class="sp-thumbnails">
-				<?php foreach ( $news_list as $news ) :
-					$thumb_url = wp_get_attachment_image_src( get_post_thumbnail_id($news->ID), 'slider');
-					
+	$slide_cat_id = get_post_meta( get_the_ID(), '_itstar_slide_term_id',1 );
+
+
+	$args = array (
+		'numberposts' => -1,
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'slide_cat',
+				'field'    => 'term_id',
+				'terms'    => $slide_cat_id,
+			)
+		),
+		'sort_order' => 'asc',
+		'sort_column' => 'post_title',
+		'hierarchical' => 1,
+		'exclude' => '',
+		'include' => '',
+		'authors' => '',
+		'child_of' => 0,
+		'parent' => -1,
+		'exclude_tree' => '',
+		'number' => '',
+		'offset' => 0,
+		'post_type' => 'slide',
+		'post_status' => 'publish',
+		'suppress_filters' => false
+		);
+	// The Query
+		$page_list = get_posts( $args );
+
+//		?>
+<!--			<pre>-->
+<!--				--><?php //var_dump($page_list); ?>
+<!--			</pre>-->
+<!--		--><?php
+
+	 ?>
+
+
+		<?php if(!empty($page_list) ){ ?>
+		<div class="slider-wrap">
+			<div id="page-slider" class="slider-pro">
+
+				<div class="sp-slides">
+				<?php foreach ( $page_list as $page ) :
+					$slide_url = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'slider');
 				?>
-				<div class="sp-thumbnail">
-					<div class="sp-thumbnail-image-container">
-						<img class="sp-thumbnail-image" src="<?php echo $thumb_url[0]; ?>"/>
-					</div>
-					<div class="sp-thumbnail-text">
-						<div class="sp-thumbnail-title">
-							<?php echo $news->post_title; ?>
-						</div>
-						<div class="sp-thumbnail-description">
-							
-						</div>
-					</div>
-				</div>
-				<?php endforeach; ?>
-			</div>
-	    </div>
-	    <script type="text/javascript" >
-	    	jQuery( document ).ready(function( $ ) {
-	        $( '#news-slider' ).sliderPro({
-	            width: 840,
-	            height: 440,
-	            orientation: 'vertical',
-	            loop: false,
-	            arrows: true,
-	            buttons: false,
-	            thumbnailsPosition: 'left',
-	            thumbnailPointer: true,
-	            thumbnailWidth: 290,
-	            breakpoints: {
-	                800: {
-	                    thumbnailsPosition: 'bottom',
-	                    thumbnailWidth: 270,
-	                    thumbnailHeight: 100
-	                },
-	                500: {
-	                    thumbnailsPosition: 'bottom',
-	                    thumbnailWidth: 120,
-	                    thumbnailHeight: 50
-	                }
-	            }
-	        });
-	    });
-	    
-	    </script>
-	 <?php 
-	}
-	wp_reset_postdata();
-?>
- </div>
+					<div class="sp-slide">
+						<a href="<?php echo get_permalink( $page->ID ); ?> " >
+							<img class="sp-image" src="<?php echo get_template_directory_uri();?>/images/blank.gif"
+								data-src="<?php echo $slide_url[0]; ?>"
+								data-retina="<?php echo $slide_url[0]; ?>"/>
+						</a>
 
+
+					</div>
+				<?php endforeach; ?>
+
+				</div>
+
+				<div class="sp-thumbnails">
+					<?php foreach ( $page_list as $page ): ?>
+
+						<div class="sp-thumbnail">
+							<div class="sp-thumbnail-title">
+								<a href="<?php echo get_permalink( $page->ID ); ?> " >
+									<?php echo $page->post_title; ?>
+								</a>
+							</div>
+						</div>
+
+					<?php endforeach; ?>
+				</div>
+			</div>
+			<script type="text/javascript" >
+				jQuery( document ).ready(function( $ ) {
+					if(typeof $.fn.sliderPro !== 'undefined') {
+						$('#page-slider').sliderPro({
+							width: 960,
+							height: 500,
+							arrows: true,
+							fade: true,
+							buttons: false,
+							waitForLayers: true,
+							thumbnailWidth: 200,
+							thumbnailHeight: 100,
+							thumbnailPointer: true,
+							autoplay: true,
+							loop:true,
+							autoScaleLayers: false,
+							breakpoints: {
+								1200: {
+									thumbnailsPosition: 'bottom',
+									thumbnailWidth: 80,
+									thumbnailHeight: 80
+								},
+	//							500: {
+	//								thumbnailsPosition: 'bottom',
+	//								thumbnailWidth: 50,
+	//								thumbnailHeight: 50
+	//							}
+							}
+						});
+					}
+				});
+
+			</script>
+		</div>
+		 <?php
+		}
+		wp_reset_postdata();
+	?>
+
+
+<?php } ?>
