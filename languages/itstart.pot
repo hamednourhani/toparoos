@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Top Aroos 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2016-08-03 13:44:22+00:00\n"
+"POT-Creation-Date: 2016-08-04 07:29:25+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -478,7 +478,7 @@ msgstr ""
 msgid "Main Menu"
 msgstr ""
 
-#: library/best-articles.php:9 library/last-articles.php:9
+#: library/best-articles.php:31
 msgid "Best Articles"
 msgstr ""
 
@@ -1005,11 +1005,15 @@ msgstr ""
 msgid "Show Items?"
 msgstr ""
 
-#: library/cmb-functions.php:353 library/temp.php:19
+#: library/cmb-functions.php:337 library/cmb-functions.php:338
+msgid "Items Title"
+msgstr ""
+
+#: library/cmb-functions.php:361 library/temp.php:19
 msgid "item Category"
 msgstr ""
 
-#: library/cmb-functions.php:354 library/temp.php:20
+#: library/cmb-functions.php:362 library/temp.php:20
 msgid "Select item Category"
 msgstr ""
 
@@ -1387,6 +1391,10 @@ msgstr ""
 msgid "Read more &raquo;"
 msgstr ""
 
+#: library/last-articles.php:31
+msgid "Last Articles"
+msgstr ""
+
 #: library/notifications.php:15
 msgid "New user registration in %s:"
 msgstr ""
@@ -1427,7 +1435,7 @@ msgstr ""
 msgid "related sites"
 msgstr ""
 
-#: page-templates/first-page.php:30
+#: page-templates/first-page.php:33
 msgid "Top Arous"
 msgstr ""
 

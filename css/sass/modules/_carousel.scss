@@ -1,32 +1,35 @@
 .feature-posts{
   @extend .white-box;
   position: relative;
-  min-height : 250px;
+  min-height : 300px;
   margin-bottom : 20px;
-  #NextPageBtn,#PrevPageBtn{
+  #NextPageBtnLast,#PrevPageBtnLast,
+  #NextPageBtnBest,#PrevPageBtnBest{
     position: absolute;
     top : 120px;
     i{
       &:before{
         display : inline-block;
-        padding : 10px 20px;
-        font-size : 180%;
-        background-color: $glassyBlack;
-        color: $white;
+        padding : 3px 10px;
+        font-size : 160%;
+        background-color: $white;
+        color: $grey3;
         @include border-radius(30px);
       }
     }
     &:hover{
       i:before{
-        background-color: #FF3300;
+        color : $red;
       }
     }
   }
-  #NextPageBtn{
-    right : 2%;
+  #NextPageBtnLast,
+  #NextPageBtnBest{
+    right : -1%;
   }
-  #PrevPageBtn{
-    left : 2%;
+  #PrevPageBtnLast,
+  #PrevPageBtnBest{
+    left : -1%;
   }
   .feature-posts-wrapper {
     direction: ltr;
@@ -45,18 +48,29 @@
         @extend .def-transition;
         text-align: center;
         display: block;
-
-        background-color: $glassyBlack;
-        border-top: 2px solid $red;
+        position: relative;
+        background-color: $grey2;
+        &:after{
+          @extend .def-transition;
+          content : "";
+          display : block;
+          position : absolute;
+          bottom : 0px;
+          right : 0px;
+          left : auto;
+          height : 2px;
+          width : 0px;
+          background-color: $red;
+        }
         h3 {
-          color: $red;
-          padding: 25px 15px 5px;
-          font-size: 120%;
+          color: $grey4;
+          padding: 20px 15px 0px;
           margin: 0px;
-          min-height: 80px;
+          min-height: 60px;
+          font-size : 80%;
         }
         span {
-          color: $white;
+          color: $grey4;
           padding: 5px 15px 20px;
           font-size: 110%;
           display: block;
@@ -70,10 +84,12 @@
           }
         }
         &:hover {
-          background-color: $glassyRed;
-          border-top-color: $white;
+          &:after{
+            width : 100%;
+            left : 0px;
+          }
           h3 {
-            color: $white;
+            color: $red;
           }
 
         }
@@ -81,3 +97,4 @@
     }
   }
 }
+

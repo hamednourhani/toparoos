@@ -689,7 +689,7 @@ p {
 /*------ colors -----------*/
 /*----------------transition-shadow----------------------*/
 /* line 97, sass/base/_variables.scss */
-.def-transition, .bottom-tooltip, nav.main-menu div.responsive-menu, nav.main-menu a.menu-toggler i:before, nav.main-menu .search-toggler i:before, .secondary aside.widget a, .secondary aside.widget ul li, .secondary aside.widget.widget_last_video_widget ul li, .secondary aside.widget.widget_last_video_widget a.more-video, .featured-pages-wrap a.page-grid, .featured-pages-wrap a.page-grid .page-grid-title::after, .footer-widget-area aside.widget, .footer-widget-area aside.widget a, input[type=submit], button, .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid {
+.def-transition, .bottom-tooltip, nav.main-menu div.responsive-menu, nav.main-menu a.menu-toggler i:before, nav.main-menu .search-toggler i:before, .secondary aside.widget a, .secondary aside.widget ul li, .secondary aside.widget.widget_last_video_widget ul li, .secondary aside.widget.widget_last_video_widget a.more-video, .featured-pages-wrap a.page-grid, .featured-pages-wrap a.page-grid .page-grid-title::after, .footer-widget-area aside.widget, .footer-widget-area aside.widget a, input[type=submit], button, .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid, .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid:after {
   -moz-transition: all 0.4s ease-in-out 0s;
   -o-transition: all 0.4s ease-in-out 0s;
   -webkit-transition: all 0.4s ease-in-out;
@@ -2401,74 +2401,90 @@ nav.pagination {
 /* line 1, sass/modules/_carousel.scss */
 .feature-posts {
   position: relative;
-  min-height: 250px;
+  min-height: 300px;
   margin-bottom: 20px; }
   /* line 6, sass/modules/_carousel.scss */
-  .feature-posts #NextPageBtn, .feature-posts #PrevPageBtn {
+  .feature-posts #NextPageBtnLast, .feature-posts #PrevPageBtnLast,
+  .feature-posts #NextPageBtnBest, .feature-posts #PrevPageBtnBest {
     position: absolute;
     top: 120px; }
-    /* line 10, sass/modules/_carousel.scss */
-    .feature-posts #NextPageBtn i:before, .feature-posts #PrevPageBtn i:before {
+    /* line 11, sass/modules/_carousel.scss */
+    .feature-posts #NextPageBtnLast i:before, .feature-posts #PrevPageBtnLast i:before,
+    .feature-posts #NextPageBtnBest i:before, .feature-posts #PrevPageBtnBest i:before {
       display: inline-block;
-      padding: 10px 20px;
-      font-size: 180%;
-      background-color: rgba(44, 35, 40, 0.85);
-      color: #FFFFFF;
+      padding: 3px 10px;
+      font-size: 160%;
+      background-color: #FFFFFF;
+      color: #d1d1d1;
       -moz-border-radius: 30px;
       -webkit-border-radius: 30px;
       border-radius: 30px; }
-    /* line 20, sass/modules/_carousel.scss */
-    .feature-posts #NextPageBtn:hover i:before, .feature-posts #PrevPageBtn:hover i:before {
-      background-color: #FF3300; }
-  /* line 25, sass/modules/_carousel.scss */
-  .feature-posts #NextPageBtn {
-    right: 2%; }
-  /* line 28, sass/modules/_carousel.scss */
-  .feature-posts #PrevPageBtn {
-    left: 2%; }
-  /* line 31, sass/modules/_carousel.scss */
+    /* line 21, sass/modules/_carousel.scss */
+    .feature-posts #NextPageBtnLast:hover i:before, .feature-posts #PrevPageBtnLast:hover i:before,
+    .feature-posts #NextPageBtnBest:hover i:before, .feature-posts #PrevPageBtnBest:hover i:before {
+      color: #FF585B; }
+  /* line 26, sass/modules/_carousel.scss */
+  .feature-posts #NextPageBtnLast,
+  .feature-posts #NextPageBtnBest {
+    right: -1%; }
+  /* line 30, sass/modules/_carousel.scss */
+  .feature-posts #PrevPageBtnLast,
+  .feature-posts #PrevPageBtnBest {
+    left: -1%; }
+  /* line 34, sass/modules/_carousel.scss */
   .feature-posts .feature-posts-wrapper {
     direction: ltr;
     position: absolute;
     width: 97%; }
-    /* line 36, sass/modules/_carousel.scss */
+    /* line 39, sass/modules/_carousel.scss */
     .feature-posts .feature-posts-wrapper .feature-posts-inner ul {
       margin: 0px;
       padding: 0px; }
-    /* line 43, sass/modules/_carousel.scss */
+    /* line 46, sass/modules/_carousel.scss */
     .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid {
       text-align: center;
       display: block;
-      background-color: rgba(44, 35, 40, 0.85);
-      border-top: 2px solid #FF585B; }
-      /* line 51, sass/modules/_carousel.scss */
+      position: relative;
+      background-color: #E6E7E7; }
+      /* line 53, sass/modules/_carousel.scss */
+      .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        left: auto;
+        height: 2px;
+        width: 0px;
+        background-color: #FF585B; }
+      /* line 65, sass/modules/_carousel.scss */
       .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid h3 {
-        color: #FF585B;
-        padding: 25px 15px 5px;
-        font-size: 120%;
+        color: #333336;
+        padding: 20px 15px 0px;
         margin: 0px;
-        min-height: 80px; }
-      /* line 58, sass/modules/_carousel.scss */
+        min-height: 60px;
+        font-size: 80%; }
+      /* line 72, sass/modules/_carousel.scss */
       .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid span {
-        color: #FFFFFF;
+        color: #333336;
         padding: 5px 15px 20px;
         font-size: 110%;
         display: block; }
-      /* line 64, sass/modules/_carousel.scss */
+      /* line 78, sass/modules/_carousel.scss */
       .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid .page-thumb-container {
         width: 100%; }
-        /* line 66, sass/modules/_carousel.scss */
+        /* line 80, sass/modules/_carousel.scss */
         .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid .page-thumb-container img {
           width: 100%;
           height: auto;
           margin-bottom: -8px; }
-      /* line 72, sass/modules/_carousel.scss */
-      .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid:hover {
-        background-color: rgba(255, 51, 0, 0.8);
-        border-top-color: #FFFFFF; }
-        /* line 75, sass/modules/_carousel.scss */
-        .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid:hover h3 {
-          color: #FFFFFF; }
+      /* line 87, sass/modules/_carousel.scss */
+      .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid:hover:after {
+        width: 100%;
+        left: 0px; }
+      /* line 91, sass/modules/_carousel.scss */
+      .feature-posts .feature-posts-wrapper .feature-posts-inner .page-grid:hover h3 {
+        color: #FF585B; }
 
 /* setting style */
 /* utilities style */

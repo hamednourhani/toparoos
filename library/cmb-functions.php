@@ -333,6 +333,14 @@ function itstar_register_is_feature_page_metabox()
 		),
 	));
 
+	$cmb_demo->add_field(array(
+		'name' => __('Items Title', 'itstar'),
+		'desc' => __('Items Title', 'itstar'),
+		'id' => $prefix . 'items_title',
+		'type' => 'text',
+
+	));
+
 	$item_terms = get_terms('item_cat',
 		array(
 			'orderby'    => 'count',

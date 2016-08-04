@@ -25,21 +25,24 @@ get_header();
                         <?php get_template_part('library/slider','area'); ?>
                         <?php get_template_part('library/featured','page');?>
 
-                        <div class="page-content-desc">
-                            <h4 class="section-title">
-                                <?php echo __("Top Arous","itstar");?>
-                            </h4>
+
                             <?php
-                                if(have_posts()){
-                                    while(have_posts()) { the_post();
-                                        the_content();
-                                    }
-                                }
-                            ?>
-                        </div>
+                                if(have_posts()){ ?>
+                                <div class="page-content-desc">
+                                    <h4 class="section-title">
+                                        <?php echo __("Top Arous","itstar");?>
+                                    </h4>
+                                        <?php
+                                            while(have_posts()) { the_post();
+                                                the_content();
+                                            }
+                                        ?>
+                                </div>
+                            <?php  }  ?>
 
 
-                       <?php get_template_part("library/best", "articles"); ?>
+
+                        <?php get_template_part("library/best", "articles"); ?>
                         <?php get_template_part("library/last","articles");?>
 
 
