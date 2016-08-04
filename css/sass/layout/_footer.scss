@@ -18,15 +18,39 @@
   }
   aside.widget{
     @extend .def-transition;
+    overflow: hidden;
     padding : 10px 10px 20px;
     font-size : 90%;
     .widgettitle{
-      border-bottom : 1px dashed darken($grey2,10%);
+
+      display : inline-block;
       font-size : 130%;
       padding : 5px;
       margin : 0px;
       color : $white;
+      position: relative;
       margin-bottom : 10px;
+      &:before{
+        content: "";
+        display : block;
+        right : 100%;
+        width : 300%;
+        position: absolute;
+        top : 47%;
+        height : 2px;
+        background-color: $grey2;
+      }
+      &:after{
+        @include single-transition(all ,0.7s , ease-in-out);
+        content: "";
+        display : block;
+        right : 100%;
+        width : 25px;
+        position: absolute;
+        top : 47%;
+        height : 2px;
+        background-color: $red;
+      }
     }
     ul{
       padding : 0px;
@@ -37,6 +61,11 @@
       color : darken($grey2,10%);
       &:hover{
         color : $red;
+      }
+    }
+    &:hover{
+      .widgettitle:after{
+        width : 300%;
       }
     }
   }

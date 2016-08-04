@@ -10,7 +10,7 @@ sidebars, comments, ect.
 
 // LOAD itstar CORE (if you remove this, the theme will break)
 require_once( 'library/itstar.php' );
-require_once( 'library/notifications.php' );
+
 
 //Include and setup custom metaboxes and fields.
 if( !class_exists("CMB2") ){
@@ -86,6 +86,7 @@ add_image_size( 'video-thumb', 150, 100, array( 'center', 'center' ) );
 add_image_size( 'video-larg-thumb', 240, 180, array( 'center', 'center' ) );
 add_image_size( 'page-thumb', 200, 200, array( 'center', 'center' ) );
 add_image_size( 'post-thumb', 150, 150, array( 'center', 'center' ) );
+add_image_size( 'item-thumb', 80, 80, array( 'center', 'center' ) );
 
 
 add_filter( 'image_size_names_choose', 'itstar_custom_image_sizes' );
@@ -97,6 +98,7 @@ function itstar_custom_image_sizes( $sizes ) {
         'video-larg-thumb' => __('240px by 180px'),
         'page-thumb' => __('200px by 200px'),
         'post-thumb' => __('150px by 150px'),
+        'item-thumb' => __('80px by 80px'),
 
     ) );
 }

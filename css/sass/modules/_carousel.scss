@@ -1,7 +1,11 @@
 .feature-posts{
   @extend .white-box;
   position: relative;
-  min-height : 300px;
+  min-height : 400px;
+
+  @include at-breakpoint($xmedium){
+    min-height : 300px;
+  }
   margin-bottom : 20px;
   #NextPageBtnLast,#PrevPageBtnLast,
   #NextPageBtnBest,#PrevPageBtnBest{
@@ -63,6 +67,7 @@
           background-color: $red;
         }
         h3 {
+          @extend .def-transition;
           color: $grey4;
           padding: 20px 15px 0px;
           margin: 0px;

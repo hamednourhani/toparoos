@@ -220,11 +220,18 @@ function itstar_register_item_metabox(){
 	$cmb_demo = new_cmb2_box(array(
 		'id' => $prefix . 'item',
 		'title' => __('item Features', 'itstar'),
-		'object_types' => array('video'), // Post type
+		'object_types' => array('item'), // Post type
 
 	));
 
 
+	$cmb_demo->add_field(array(
+		'name' => __('item priority', 'itstar'),
+		'desc' => __('item priority', 'itstar'),
+		'id' => $prefix . 'item_pri',
+		'type' => 'text_small',
+
+	));
 	$cmb_demo->add_field(array(
 		'name' => __('item url', 'itstar'),
 		'desc' => __('item Link', 'itstar'),

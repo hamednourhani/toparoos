@@ -1,54 +1,62 @@
-<?php get_header(); ?>
-	
+<?php
+/**
+ * Template Name: First Page
+ *
+ *
+ */
+
+
+get_header();
+
+?>
+
+
 	<main class="site-main">
-		<?php if(have_posts()){ ?>
-			<?php while(have_posts()) { the_post(); ?>
 
-				<div class="banner-wrapper">
+
+
+		<div class="site-content">
+			<section class="layout">
+
+				<?php get_sidebar("top"); ?>
+
+				<div class="primary">
+
+					<?php get_template_part('library/slider','area'); ?>
+					<?php get_template_part('library/items','block'); ?>
 					
-							<?php get_template_part('library/banner','maker'); ?>
-						
-				</div><!-- banner-wrapper -->
-				
-				<div class="site-content">
-					<section class="layout">
-						
-						<div class="primary">
-							
-								
-							<article class="hentry">
-								<header class="article-title">
-									<a href="<?php the_permalink(); ?>">
-										<h3><?php the_title(); ?></h3>
-									</a>
-								</header>
-								<main class="article-body">
-									<?php the_content(); ?>
-									
-								</main>
-							</article>
-											
-						</div><!-- primary -->
 
-						<div class="secondary">
-							<?php get_sidebar(); ?>
-						</div><!-- secondary -->
-					</section>
-				</div>
-			<?php } ?>
 
-		<?php } else { ?>	
-			
-			<div class="site-content">
-				<section class="layout">
-					<div class="secondary">
-						<?php get_sidebar(); ?>
-					</div><!-- secondary -->
-				</section>
-			</div>
+					<?php
+					if(have_posts()){ ?>
+						<div class="page-content-desc">
+							<h4 class="section-title">
+								<?php echo __("Top Arous","itstar");?>
+							</h4>
+							<?php
+							while(have_posts()) { the_post();
+								the_content();
+							}
+							?>
+						</div>
+					<?php  }  ?>
 
-		<?php } ?>
-		
+
+
+					<?php get_template_part("library/best", "articles"); ?>
+					<?php get_template_part("library/last","articles");?>
+
+
+				</div><!-- primary -->
+
+				<div class="secondary">
+					<?php get_sidebar(); ?>
+				</div><!-- secondary -->
+
+			</section>
+		</div>
+
+
 	</main>
 
 <?php get_footer(); ?>
