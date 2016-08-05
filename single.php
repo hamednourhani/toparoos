@@ -4,15 +4,11 @@
 		<?php if(have_posts()){ ?>
 			<?php while(have_posts()) { the_post(); ?>
 
-				<div class="banner-wrapper">
-					
-							<?php get_template_part('library/banner','maker'); ?>
-						
-				</div><!-- banner-wrapper -->
+
 				
 				<div class="site-content">
 					<section class="layout">
-						
+						<?php get_sidebar("top"); ?>
 						<div class="primary">
 							
 								
