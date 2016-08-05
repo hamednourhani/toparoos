@@ -264,4 +264,18 @@ register_taxonomy( 'item_cat',
 	)
 );
 
+
+add_action( 'pre_get_posts', 'items_orderby' ,1);
+
+function items_orderby( $query )
+{
+	if(  !$query->is_main_query() || 'item' != $query->get( 'post_type' )  )
+		return;
+
+	$query->set('meta_key', '_itstar_item_pri' );
+	$query->set('orderby', array('meta_value' => 'DESC', 'date' => 'DESC'));
+
+	return $query;
+
+}
 ?>

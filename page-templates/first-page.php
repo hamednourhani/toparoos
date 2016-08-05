@@ -23,8 +23,8 @@ get_header();
                     <div class="primary">
 
                         <?php get_template_part('library/slider','area'); ?>
-                       
                         <?php get_template_part('library/featured','page');?>
+                        <?php get_template_part('library/items','block'); ?>
 
 
                             <?php

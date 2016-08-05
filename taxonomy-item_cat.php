@@ -1,11 +1,40 @@
 <?php get_header(); ?>
-	
+
+<?php
+$item_cat_id = get_queried_object()->term_id;
+$args = array(
+	'posts_per_page' => 20,
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'item_cat',
+			'field'    => 'term_id',
+			'terms'    => $item_cat_id,
+		)
+	),
+	'meta_key' => '_itstar_item_pri',
+	'orderby' => 'meta_value',
+	'order'   => 'DESC',
+	'hierarchical' => 1,
+	'exclude' => '',
+	'include' => '',
+//    'meta_key' => '_itstar_feature_post_radio',
+//    'meta_value' => 'yes',
+	'authors' => '',
+	'child_of' => 0,
+	'parent' => -1,
+	'exclude_tree' => '',
+	'number' => '',
+	'offset' => 0,
+	'post_type' => 'item',
+	'post_status' => 'publish',
+	'suppress_filters' => false
+);
+$items = query_posts($args);
+?>
+
+
 	<main class="site-main">
-		<div class="banner-wrapper">
-			
-				<?php get_template_part('library/banner','maker'); ?>
-			
-		</div><!-- banner-wrapper -->
+
 		
 		<div class="site-content ">
 			<section class="layout">
@@ -17,9 +46,14 @@
 					<div class="items-block">
 						<?php if(have_posts()){ ?>
 							<ul class="items-list">
-								<?php while(have_posts()) { the_post(); ?>
+								<?php while(have_posts()) { the_post();
+									$item_link = get_post_meta( get_the_ID(), '_itstar_item_link',1 );
+									if($item_link == ""){
+										$item_link =  get_the_permalink();
+									}
+									?>
 									<li>
-											<a href="<?php echo get_the_permalink(); ?>">
+											<a href="<?php echo $item_link; ?>">
 												<div class="item-thumb">
 													<?php echo get_the_post_thumbnail(get_the_ID(),'post-thumb');?>
 												</div>

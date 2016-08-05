@@ -42,9 +42,14 @@ if(!empty($items) && $show_item == "yes"){
 
 
                     <ul class="items-list">
-                        <?php foreach( $items as $item ) {?>
+                        <?php foreach( $items as $item ) {
+                            $item_link = get_post_meta( $item->ID, '_itstar_item_link',1 );
+                            if($item_link == ""){
+                               $item_link =  get_permalink($item->ID);
+                            }
+                            ?>
                             <li>
-                                <a href="<?php echo get_permalink($item->ID); ?>">
+                                <a href="<?php echo $item_link; ?>">
                                     <div class="item-thumb">
                                         <?php echo get_the_post_thumbnail($item->ID,'post-thumb');?>
                                     </div>

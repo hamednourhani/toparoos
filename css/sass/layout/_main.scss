@@ -130,7 +130,6 @@
 		padding : 0px;
 		li{
 			@extend .def-transition;
-			border-bottom: 1px solid $grey2;
 			padding : 5px;
 			a{
 
@@ -166,12 +165,13 @@
 				}
 
 			}
+			&:nth-of-type(2n){
+				background-color: lighten($grey1,2%);
+			}
 			&:hover{
 				background-color: $grey1;
 			}
-			&:last-child{
-				border : 0px;
-			}
+
 		}
 	}
 	.more-items-container {

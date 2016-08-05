@@ -1967,43 +1967,42 @@ nav.main-menu {
     padding: 0px; }
     /* line 131, sass/layout/_main.scss */
     .items-block ul.items-list li {
-      border-bottom: 1px solid #E6E7E7;
       padding: 5px; }
-      /* line 135, sass/layout/_main.scss */
+      /* line 134, sass/layout/_main.scss */
       .items-block ul.items-list li a {
         display: block;
         overflow: hidden; }
-        /* line 139, sass/layout/_main.scss */
+        /* line 138, sass/layout/_main.scss */
         .items-block ul.items-list li a .item-thumb {
           display: inline-block;
           max-height: 80px;
           max-width: 80px;
           float: right; }
-          /* line 144, sass/layout/_main.scss */
+          /* line 143, sass/layout/_main.scss */
           .items-block ul.items-list li a .item-thumb img {
             padding: 3px;
             background-color: #E6E7E7;
             max-width: 80px;
             max-height: 80px;
             height: auto; }
-        /* line 152, sass/layout/_main.scss */
+        /* line 151, sass/layout/_main.scss */
         .items-block ul.items-list li a .item-detail {
           display: inline-block;
           padding-right: 8px;
           width: calc(100% - 100px); }
-          /* line 156, sass/layout/_main.scss */
+          /* line 155, sass/layout/_main.scss */
           .items-block ul.items-list li a .item-detail .item-title {
             padding: 5px 10px;
             margin: 0px; }
-          /* line 162, sass/layout/_main.scss */
+          /* line 161, sass/layout/_main.scss */
           .items-block ul.items-list li a .item-detail .item-desc p {
             margin: 0px; }
-      /* line 169, sass/layout/_main.scss */
+      /* line 168, sass/layout/_main.scss */
+      .items-block ul.items-list li:nth-of-type(2n) {
+        background-color: #f7f7f7; }
+      /* line 171, sass/layout/_main.scss */
       .items-block ul.items-list li:hover {
         background-color: #F2F2F2; }
-      /* line 172, sass/layout/_main.scss */
-      .items-block ul.items-list li:last-child {
-        border: 0px; }
   /* line 177, sass/layout/_main.scss */
   .items-block .more-items-container {
     overflow: hidden; }
