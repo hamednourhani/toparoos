@@ -26,6 +26,229 @@ LAUNCH itstar
 Let's get everything up and running.
 *********************/
 
+/**
+ * This file represents an example of the code that themes would use to register
+ * the required plugins.
+ *
+ * It is expected that theme authors would copy and paste this code into their
+ * functions.php file, and amend to suit.
+ *
+ * @see http://tgmpluginactivation.com/configuration/ for detailed documentation.
+ *
+ * @package    TGM-Plugin-Activation
+ * @subpackage Example
+ * @version    2.6.1 for parent theme Itstar
+ * @author     Thomas Griffin, Gary Jones, Juliette Reinders Folmer
+ * @copyright  Copyright (c) 2011, Thomas Griffin
+ * @license    http://opensource.org/licenses/gpl-2.0.php GPL v2 or later
+ * @link       https://github.com/TGMPA/TGM-Plugin-Activation
+ */
+
+/**
+ * Include the TGM_Plugin_Activation class.
+ *
+ * Depending on your implementation, you may want to change the include call:
+ *
+ * Parent Theme:
+ * require_once get_template_directory() . '/path/to/class-tgm-plugin-activation.php';
+ *
+ * Child Theme:
+ * require_once get_stylesheet_directory() . '/path/to/class-tgm-plugin-activation.php';
+ *
+ * Plugin:
+ * require_once dirname( __FILE__ ) . '/path/to/class-tgm-plugin-activation.php';
+ */
+require_once get_template_directory() . '/library/class-tgm-plugin-activation.php';
+
+add_action( 'tgmpa_register', 'itstar_register_required_plugins' );
+
+/**
+ * Register the required plugins for this theme.
+ *
+ * In this example, we register five plugins:
+ * - one included with the TGMPA library
+ * - two from an external source, one from an arbitrary source, one from a GitHub repository
+ * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
+ *
+ * The variables passed to the `tgmpa()` function should be:
+ * - an array of plugin arrays;
+ * - optionally a configuration array.
+ * If you are not changing anything in the configuration array, you can remove the array and remove the
+ * variable from the function call: `tgmpa( $plugins );`.
+ * In that case, the TGMPA default settings will be used.
+ *
+ * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
+ */
+function itstar_register_required_plugins() {
+	/*
+	 * Array of plugin arrays. Required keys are name and slug.
+	 * If the source is NOT from the .org repo, then source is also required.
+	 */
+	$plugins = array(
+
+		// This is an example of how to include a plugin bundled with a theme.
+		array(
+			'name'               => 'Image Widget Plugin', // The plugin name.
+			'slug'               => 'image-widget', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/image-widget.4.2.2.zip', // The plugin source.
+			'required'           => true
+			),
+//		array(
+//			'name'               => 'TGM Example Plugin', // The plugin name.
+//			'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
+//			'source'             => get_template_directory() . '/plugins/tgm-example-plugin.zip', // The plugin source.
+//			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+//			'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+//			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+//			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
+//			'external_url'       => '', // If set, overrides default API URL and points to an external URL.
+//			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
+//		),
+
+		// This is an example of how to include a plugin from an arbitrary external source in your theme.
+//		array(
+//			'name'         => 'TGM New Media Plugin', // The plugin name.
+//			'slug'         => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
+//			'source'       => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
+//			'required'     => true, // If false, the plugin is only 'recommended' instead of required.
+//			'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
+//			'required'           => false,
+//		),
+//
+//		// This is an example of how to include a plugin from a GitHub repository in your theme.
+//		// This presumes that the plugin code is based in the root of the GitHub repository
+//		// and not in a subdirectory ('/src') of the repository.
+//		array(
+//			'name'      => 'Adminbar Link Comments to Pending',
+//			'slug'      => 'adminbar-link-comments-to-pending',
+//			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
+//			'required'  => false,
+//		),
+//
+//		// This is an example of how to include a plugin from the WordPress Plugin Repository.
+//		array(
+//			'name'      => 'BuddyPress',
+//			'slug'      => 'buddypress',
+//			'required'  => false,
+//		),
+//
+//		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
+//		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
+//		// 'wordpress-seo-premium'.
+//		// By setting 'is_callable' to either a function from that plugin or a class method
+//		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
+//		// recognize the plugin as being installed.
+//		array(
+//			'name'        => 'WordPress SEO by Yoast',
+//			'slug'        => 'wordpress-seo',
+//			'is_callable' => 'wpseo_init',
+//			'required'  => false,
+//		),
+
+	);
+
+	/*
+	 * Array of configuration settings. Amend each line as needed.
+	 *
+	 * TGMPA will start providing localized text strings soon. If you already have translations of our standard
+	 * strings available, please help us make TGMPA even better by giving us access to these translations or by
+	 * sending in a pull-request with .po file(s) with the translations.
+	 *
+	 * Only uncomment the strings in the config array if you want to customize the strings.
+	 */
+	$config = array(
+		'id'           => 'itstar',                 // Unique ID for hashing notices for multiple instances of TGMPA.
+		'default_path' => '',                      // Default absolute path to bundled plugins.
+		'menu'         => 'tgmpa-install-plugins', // Menu slug.
+		'parent_slug'  => 'themes.php',            // Parent menu slug.
+		'capability'   => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+		'has_notices'  => true,                    // Show admin notices or not.
+		'dismissable'  => true,                    // If false, a user cannot dismiss the nag message.
+		'dismiss_msg'  => '',                      // If 'dismissable' is false, this message will be output at top of nag.
+		'is_automatic' => false,                   // Automatically activate plugins after installation or not.
+		'message'      => '',                      // Message to output right before the plugins table.
+
+		/*
+		'strings'      => array(
+			'page_title'                      => __( 'Install Required Plugins', 'itstar' ),
+			'menu_title'                      => __( 'Install Plugins', 'itstar' ),
+			/* translators: %s: plugin name. * /
+			'installing'                      => __( 'Installing Plugin: %s', 'itstar' ),
+			/* translators: %s: plugin name. * /
+			'updating'                        => __( 'Updating Plugin: %s', 'itstar' ),
+			'oops'                            => __( 'Something went wrong with the plugin API.', 'itstar' ),
+			'notice_can_install_required'     => _n_noop(
+				/* translators: 1: plugin name(s). * /
+				'This theme requires the following plugin: %1$s.',
+				'This theme requires the following plugins: %1$s.',
+				'itstar'
+			),
+			'notice_can_install_recommended'  => _n_noop(
+				/* translators: 1: plugin name(s). * /
+				'This theme recommends the following plugin: %1$s.',
+				'This theme recommends the following plugins: %1$s.',
+				'itstar'
+			),
+			'notice_ask_to_update'            => _n_noop(
+				/* translators: 1: plugin name(s). * /
+				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
+				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
+				'itstar'
+			),
+			'notice_ask_to_update_maybe'      => _n_noop(
+				/* translators: 1: plugin name(s). * /
+				'There is an update available for: %1$s.',
+				'There are updates available for the following plugins: %1$s.',
+				'itstar'
+			),
+			'notice_can_activate_required'    => _n_noop(
+				/* translators: 1: plugin name(s). * /
+				'The following required plugin is currently inactive: %1$s.',
+				'The following required plugins are currently inactive: %1$s.',
+				'itstar'
+			),
+			'notice_can_activate_recommended' => _n_noop(
+				/* translators: 1: plugin name(s). * /
+				'The following recommended plugin is currently inactive: %1$s.',
+				'The following recommended plugins are currently inactive: %1$s.',
+				'itstar'
+			),
+			'install_link'                    => _n_noop(
+				'Begin installing plugin',
+				'Begin installing plugins',
+				'itstar'
+			),
+			'update_link' 					  => _n_noop(
+				'Begin updating plugin',
+				'Begin updating plugins',
+				'itstar'
+			),
+			'activate_link'                   => _n_noop(
+				'Begin activating plugin',
+				'Begin activating plugins',
+				'itstar'
+			),
+			'return'                          => __( 'Return to Required Plugins Installer', 'itstar' ),
+			'plugin_activated'                => __( 'Plugin activated successfully.', 'itstar' ),
+			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'itstar' ),
+			/* translators: 1: plugin name. * /
+			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'itstar' ),
+			/* translators: 1: plugin name. * /
+			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'itstar' ),
+			/* translators: 1: dashboard link. * /
+			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'itstar' ),
+			'dismiss'                         => __( 'Dismiss this notice', 'itstar' ),
+			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'itstar' ),
+			'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'itstar' ),
+
+			'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
+		),
+		*/
+	);
+
+	tgmpa( $plugins, $config );
+}
+
 function itstar_ahoy() {
 
   //Allow editor style.
@@ -377,112 +600,6 @@ class last_video_widget extends WP_Widget {
     }
 } // Class wpb_widget ends here
 
-class last_projects_widget extends WP_Widget {
-
-    function __construct() {
-        parent::__construct(
-        // Base ID of your widget
-        'last_projects_widget', 
-
-        // Widget name will appear in UI
-        __('Last Projects Widget', 'itstar'), 
-
-        // Widget description
-        array( 'description' => __( 'Display Last Projects', 'itstar' ), ) 
-        );
-    }
-
-    // Creating widget front-end
-    // This is where the action happens
-    public function widget( $args, $instance ) {
-        global $wp_query;
-
-        $title = apply_filters( 'widget_title', $instance['title'] );
-        $number = $instance['number'];
-        $term = get_term($instance['cat'],'project_cat');
-
-        $projects = get_posts(array(
-            'post_type' => 'project',
-            'posts_per_page' => $number,
-            'project_cat' => $term->slug,
-            )
-        );
-        //var_dump($notifies);
-        $content = '<ul class="widget-list">';
-        foreach($projects as $project) : setup_postdata( $project );
-          $url = get_the_permalink($project->ID);
-          $thumb = get_the_post_thumbnail($project->ID,'product-thumb');
-          $name = $project->post_title;
-          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a><li>';
-        endforeach;
-        $content .= '</ul>';
-
-      
-       
-
-        
-        // before and after widget arguments are defined by themes
-        echo $args['before_widget'];
-        
-        if ( ! empty( $title ) )
-          echo $args['before_title'] . $title . $args['after_title'];
-          echo $content;
-        // This is where you run the code and display the output
-          echo $args['after_widget'];
-    }
-        
-    // Widget Backend 
-    public function form( $instance ) {
-        if ( isset( $instance[ 'title' ] ) ) {
-            $title = $instance[ 'title' ];
-        }else {
-            $title = __( 'Last Projects', 'itstar' );
-        }
-        if ( isset( $instance[ 'number' ] ) ) {
-            $number = $instance[ 'number' ];
-        }else {
-            $number = 5;
-        }
-        if ( isset( $instance[ 'cat' ] ) ) {
-            $cat = $instance[ 'cat' ];
-        }else {
-            $cat = "";
-        }
-        // Widget admin form
-        ?>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-        </p>
-         <p>
-            <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Project Numbers :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'cat' ); ?>"><?php _e( 'Project Category :','itstar' ); ?></label> 
-           <?php wp_dropdown_categories(array(
-                  'name'               => $this->get_field_name( 'cat' ),
-                  'id'                 => $this->get_field_id( 'cat' ),
-                  'class'              => 'widefat',
-                  'taxonomy'           => 'project_cat',
-                  'echo'               => '1',
-                  'selected'          =>esc_attr( $cat ),
-            )); ?>
-        </p>
-        <?php 
-    }
-      
-    // Updating widget replacing old instances with new
-    public function update( $new_instance, $old_instance ) {
-        $instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['number'] = ( ! empty( $new_instance['number'] ) ) ? strip_tags( $new_instance['number'] ) : '';
-        $instance['cat'] = ( ! empty( $new_instance['cat'] ) ) ? strip_tags( $new_instance['cat'] ) : '';
-        return $instance;
-    }
-} // Class wpb_widget ends here
-
-
 class last_posts_by_cat_widget extends WP_Widget {
 
     function __construct() {
@@ -589,19 +706,18 @@ class last_posts_by_cat_widget extends WP_Widget {
         return $instance;
     }
 } // Class wpb_widget ends here
-
-class contact_info_widget extends WP_Widget {
+class simple_button_widget extends WP_Widget {
 
     function __construct() {
         parent::__construct(
         // Base ID of your widget
-        'contact_info_widget', 
+        'simple_button_widget',
 
         // Widget name will appear in UI
-        __('Contact Informaion Widget', 'itstar'), 
+        __('Simple Button Widget', 'itstar'),
 
         // Widget description
-        array( 'description' => __( 'Display Contact Information', 'itstar' ), ) 
+        array( 'description' => __( 'make simple button', 'itstar' ), )
         );
     }
 
@@ -611,263 +727,72 @@ class contact_info_widget extends WP_Widget {
         global $wp_query;
 
         $title = apply_filters( 'widget_title', $instance['title'] );
-        $address = $instance['address'];
-        $phone = $instance['phone'];
-        $fax = $instance['fax'];
-        $email = $instance['email'];
-        
-                
-        $content = '<main class="widgetbody">';
-        $content .='<p><i class="fa fa-map-marker"></i>'.__('Address : ','itstar').$address.'</p>';
-        $content .='<p><i class="fa fa-phone"></i>'.__('Phone : ','itstar').$phone.'</p>';
-        $content .='<p><i class="fa fa-fax"></i>'.__('Fax : ','itstar').$fax.'</p>';
-        $content .='<p><i class="fa fa-envelope"></i>'.__('Email : ','itstar').$email.'</p>';
-        $content .= '</main>';
-      
+        $text = $instance['text'];
+        $link = $instance['link'];
+
+        $content = '<a class="advance-search-button" href='.$link.'>'.$text.'</a>';
+
         // before and after widget arguments are defined by themes
         echo $args['before_widget'];
-        
+
         if ( ! empty( $title ) )
           echo $args['before_title'] . $title . $args['after_title'];
           echo $content;
         // This is where you run the code and display the output
           echo $args['after_widget'];
     }
-        
-    // Widget Backend 
+
+    // Widget Backend
     public function form( $instance ) {
         if ( isset( $instance[ 'title' ] ) ) {
             $title = $instance[ 'title' ];
         }else {
-            $title = __( 'Last Posts', 'itstar' );
+            $title = '';
         }
-
-        if ( isset( $instance[ 'address' ] ) ) {
-            $address = $instance[ 'address' ];
+        if ( isset( $instance[ 'text' ] ) ) {
+            $text = $instance[ 'text' ];
         }else {
-            $address = "No. ----";
+            $text = __("Advance Search Button","itstar");
         }
-
-        if ( isset( $instance[ 'phone' ] ) ) {
-            $phone = $instance[ 'phone' ];
+        if ( isset( $instance[ 'link' ] ) ) {
+            $link = $instance[ 'link' ];
         }else {
-            $phone = "+98 ----";
+            $link = "";
         }
-
-        if ( isset( $instance[ 'fax' ] ) ) {
-            $fax = $instance[ 'fax' ];
-        }else {
-            $fax = "+98 ----";
-        }
-
-        if ( isset( $instance[ 'email' ] ) ) {
-            $email = $instance[ 'email' ];
-        }else {
-            $email = "info@email.com";
-        }
-        
         // Widget admin form
         ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
          <p>
-            <label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Address :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo esc_attr( $address ); ?>" />
-        </p>
-         <p>
-            <label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone Number :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo esc_attr( $phone ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'text' ); ?>"><?php _e( 'Button Title :','itstar' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'text' ); ?>" name="<?php echo $this->get_field_name( 'text' ); ?>" type="text" value="<?php echo esc_attr( $text ); ?>" />
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id( 'fax' ); ?>"><?php _e( 'Fax Number :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'fax' ); ?>" name="<?php echo $this->get_field_name( 'fax' ); ?>" type="text" value="<?php echo esc_attr( $fax ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'link' ); ?>"><?php _e( 'Button Link :','itstar' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'link' ); ?>" name="<?php echo $this->get_field_name( 'link' ); ?>" type="text" value="<?php echo esc_attr( $number ); ?>" />
         </p>
 
-        <p>
-            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email Address :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>" />
-        </p>
-        
-        <?php 
+        <?php
     }
-      
+
     // Updating widget replacing old instances with new
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['address'] = ( ! empty( $new_instance['address'] ) ) ? strip_tags( $new_instance['address'] ) : '';
-        $instance['phone'] = ( ! empty( $new_instance['phone'] ) ) ? strip_tags( $new_instance['phone'] ) : '';
-        $instance['fax'] = ( ! empty( $new_instance['fax'] ) ) ? strip_tags( $new_instance['fax'] ) : '';
-        $instance['email'] = ( ! empty( $new_instance['email'] ) ) ? strip_tags( $new_instance['email'] ) : '';
+        $instance['text'] = ( ! empty( $new_instance['text'] ) ) ? strip_tags( $new_instance['text'] ) : '';
+        $instance['link'] = ( ! empty( $new_instance['link'] ) ) ? strip_tags( $new_instance['link'] ) : '';
         return $instance;
     }
 } // Class wpb_widget ends here
-
-class social_widget extends WP_Widget {
-
-    function __construct() {
-        parent::__construct(
-        // Base ID of your widget
-        'social_widget', 
-
-        // Widget name will appear in UI
-        __('Social Networks Widget', 'itstar'), 
-
-        // Widget description
-        array( 'description' => __( 'Social Networks and Important links', 'itstar' ), ) 
-        );
-    }
-
-    // Creating widget front-end
-    // This is where the action happens
-    public function widget( $args, $instance ) {
-        global $wp_query;
-
-        $title = apply_filters( 'widget_title', $instance['title'] );
-        $google = $instance['google'];
-        $facebook = $instance['facebook'];
-        $linkedin = $instance['linkedin'];
-        $instagram = $instance['instagram'];
-        $catalog = $instance['catalog'];
-        $email = $instance['email'];
-        $login = $instance['login'];
-        
-        
-                
-        $content = '<ul class="social-links">';
-        $content .='<li><a class="sicon google-plus" href="'.esc_url($google).'">Google Plus</a></li>';
-        $content .='<li><a class="sicon facebook" href="'.esc_url($facebook).'">Facebook</a></li>';
-        $content .='<li><a class="sicon linkedin" href="'.esc_url($linkedin).'">Linkedin</a></li>';
-        $content .='<li><a class="sicon instagram" href="'.esc_url($instagram).'">Instagram</a></li>';
-        $content .='<li><a class="sicon catalog" href="'.esc_url($catalog).'">'.__('Download Cataloge','itstar').'</a></li>';
-        $content .='<li><a class="sicon envelope" href="'.esc_url($email).'">'.__('Send Email','itstar').'</a></li>';
-        $content .='<li><a class="sicon unlock" href="'.esc_url($login).'">'.__('Login','itstar').'</li>';
-        $content .= '</ul>';
-      
-        // before and after widget arguments are defined by themes
-        echo $args['before_widget'];
-        
-        if ( ! empty( $title ) )
-          echo $args['before_title'] . $title . $args['after_title'];
-          echo $content;
-        // This is where you run the code and display the output
-          echo $args['after_widget'];
-    }
-        
-    // Widget Backend 
-    public function form( $instance ) {
-        if ( isset( $instance[ 'title' ] ) ) {
-            $title = $instance[ 'title' ];
-        }else {
-            $title = __( 'Social Links', 'itstar' );
-        }
-
-        
-
-        if ( isset( $instance[ 'google' ] ) ) {
-            $google = $instance[ 'google' ];
-        }else {
-            $google = "";
-        }
-        if ( isset( $instance[ 'facebook' ] ) ) {
-            $facebook = $instance[ 'facebook' ];
-        }else {
-            $facebook = "";
-        }
-        if ( isset( $instance[ 'linkedin' ] ) ) {
-            $linkedin = $instance[ 'linkedin' ];
-        }else {
-            $linkedin = "";
-        }
-        if ( isset( $instance[ 'instagram' ] ) ) {
-            $instagram = $instance[ 'instagram' ];
-        }else {
-            $instagram = "";
-        }
-        if ( isset( $instance[ 'catalog' ] ) ) {
-            $catalog = $instance[ 'catalog' ];
-        }else {
-            $catalog = "";
-        }
-        if ( isset( $instance[ 'email' ] ) ) {
-            $email = $instance[ 'email' ];
-        }else {
-            $email = "";
-        }
-        if ( isset( $instance[ 'login' ] ) ) {
-            $login = $instance[ 'login' ];
-        }else {
-            $login = wp_login_url();
-        }
-        
-        // Widget admin form
-        ?>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-        </p>
-         <p>
-            <label for="<?php echo $this->get_field_id( 'google' ); ?>"><?php _e( 'Google Plus Url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'google' ); ?>" name="<?php echo $this->get_field_name( 'google' ); ?>" type="text" value="<?php echo esc_attr( $google ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'facebook' ); ?>"><?php _e( 'Facebook Url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'facebook' ); ?>" name="<?php echo $this->get_field_name( 'facebook' ); ?>" type="text" value="<?php echo esc_attr( $facebook ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'linkedin' ); ?>"><?php _e( 'Linkedin Url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'linkedin' ); ?>" name="<?php echo $this->get_field_name( 'linkedin' ); ?>" type="text" value="<?php echo esc_attr( $linkedin ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'instagram' ); ?>"><?php _e( 'Instagram Url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'instagram' ); ?>" name="<?php echo $this->get_field_name( 'instagram' ); ?>" type="text" value="<?php echo esc_attr( $instagram ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'catalog' ); ?>"><?php _e( 'Catalog Download url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'catalog' ); ?>" name="<?php echo $this->get_field_name( 'catalog' ); ?>" type="text" value="<?php echo esc_attr( $catalog ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Send Email Url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo esc_attr( $email ); ?>" />
-        </p>
-        <p>
-            <label for="<?php echo $this->get_field_id( 'login' ); ?>"><?php _e( 'Login Url :','itstar' ); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id( 'login' ); ?>" name="<?php echo $this->get_field_name( 'login' ); ?>" type="text" value="<?php echo esc_attr( $login ); ?>" />
-        </p>
-
-        
-        
-        <?php 
-    }
-      
-    // Updating widget replacing old instances with new
-    public function update( $new_instance, $old_instance ) {
-        $instance = array();
-        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-        $instance['google'] = ( ! empty( $new_instance['google'] ) ) ? strip_tags( $new_instance['google'] ) : '';
-        $instance['facebook'] = ( ! empty( $new_instance['facebook'] ) ) ? strip_tags( $new_instance['facebook'] ) : '';
-        $instance['linkedin'] = ( ! empty( $new_instance['linkedin'] ) ) ? strip_tags( $new_instance['linkedin'] ) : '';
-        $instance['instagram'] = ( ! empty( $new_instance['instagram'] ) ) ? strip_tags( $new_instance['instagram'] ) : '';
-        $instance['catalog'] = ( ! empty( $new_instance['catalog'] ) ) ? strip_tags( $new_instance['catalog'] ) : '';
-        $instance['email'] = ( ! empty( $new_instance['email'] ) ) ? strip_tags( $new_instance['email'] ) : '';
-        $instance['login'] = ( ! empty( $new_instance['login'] ) ) ? strip_tags( $new_instance['login'] ) : '';
-        
-        return $instance;
-    }
-} // Class wpb_widget ends here
-
-
 
 // Register and load the widget
 function itstar_widget() {
   register_widget( 'last_video_widget' );
-//  register_widget( 'last_projects_widget' );
   register_widget( 'last_posts_by_cat_widget' );
-  register_widget( 'contact_info_widget' );
-//  register_widget( 'social_widget' );
+  register_widget( 'simple_button_widget' );
 }
 add_action( 'widgets_init', 'itstar_widget' );
 
