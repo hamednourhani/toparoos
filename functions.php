@@ -126,11 +126,11 @@ function itstar_register_required_plugins() {
 //		),
 //
 //		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-//		array(
-//			'name'      => 'BuddyPress',
-//			'slug'      => 'buddypress',
-//			'required'  => false,
-//		),
+		array(
+			'name'      => 'Regenerate Thumbnails',
+			'slug'      => 'regenerate-thumbnails',
+			'required'  => false,
+		),
 //
 //		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 //		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
@@ -305,10 +305,11 @@ add_action( 'after_setup_theme', 'itstar_ahoy' );
 
 // Thumbnail sizes
 add_image_size( 'slider', 960, 500, array( 'center', 'center' ) );
-add_image_size( 'video-thumb', 150, 100, array( 'center', 'center' ) );
-add_image_size( 'video-larg-thumb', 240, 180, array( 'center', 'center' ) );
+add_image_size( 'video-thumb', 150, 80, array( 'center', 'center' ) );
+add_image_size( 'video-larg-thumb', 400, 200, array( 'center', 'center' ) );
 add_image_size( 'page-thumb', 200, 200, array( 'center', 'center' ) );
 add_image_size( 'post-thumb', 150, 150, array( 'center', 'center' ) );
+add_image_size( 'post-banner', 960, 300, array( 'center', 'center' ) );
 add_image_size( 'item-thumb', 80, 80, array( 'center', 'center' ) );
 
 
@@ -321,6 +322,7 @@ function itstar_custom_image_sizes( $sizes ) {
         'video-larg-thumb' => __('240px by 180px'),
         'page-thumb' => __('200px by 200px'),
         'post-thumb' => __('150px by 150px'),
+        'post-banner' => __('960px by 300px'),
         'item-thumb' => __('80px by 80px'),
 
     ) );
@@ -441,22 +443,34 @@ function itstar_pagination(){
   global $wp_query;
 
     if($wp_query->max_num_pages > 1){
-        $big = 999999999; 
-        echo /*__('Page : ','itstar').*/paginate_links( array(
-          'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-          'format' => '?paged=%#%',
-          'current' => max( 1, get_query_var('paged') ),
-          'total' => $wp_query->max_num_pages,
-          'prev_text'    => __('<i class="fa fa-angle-double-left"></i>','itstar'),
-          'next_text'    => __('<i class="fa fa-angle-double-right"></i>','itstar')
-        ) );
-      }
+        if('item' !== get_post_type() ){
+            $big = 999999999;
+            echo /*__('Page : ','itstar').*/paginate_links( array(
+              'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+              'format' => '?paged=%#%',
+              'current' => max( 1, get_query_var('paged') ),
+              'total' => $wp_query->max_num_pages,
+              'prev_text'    => __('<i class="fa fa-angle-double-left"></i>','itstar'),
+              'next_text'    => __('<i class="fa fa-angle-double-right"></i>','itstar')
+            ) );
+        } else {
+             $big = 999999999;
+            echo /*__('Page : ','itstar').*/paginate_links( array(
+              'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+              'format' => '?paged=%#%',
+              'current' => max( 1, get_query_var('paged') ),
+              'total' => $wp_query->max_num_pages,
+              'prev_text'    => __('<i class="fa fa-angle-double-left"></i>','itstar'),
+              'next_text'    => __('<i class="fa fa-angle-double-right"></i>','itstar')
+            ) );
+        }
+     }
 }
 
 
 function itstar_SearchFilter($query) {
     if ($query->is_search) {
-      $query->set('post_type', array('product','project'));
+      $query->set('post_type', array('post','item'));
     }
     return $query;
     }
@@ -960,13 +974,7 @@ class Menu_With_Image extends Walker_Nav_Menu {
 
 }
 
-function itstar_filter_search($query) {
-    if ($query->is_search) {
-  $query->set('post_type', array('product','project'));
-    };
-    return $query;
-};
-add_filter('pre_get_posts', 'itstar_filter_search');
+
 
 // vira club id
 

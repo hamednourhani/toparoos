@@ -2,19 +2,14 @@
 	
 	<main class="site-main">
 		
-				<div class="banner-wrapper">
-					
-							<?php get_template_part('library/banner','maker'); ?>
-						
-				</div><!-- banner-wrapper -->
-				
+
 				<div class="site-content">
 					<section class="layout">
-						
+						<?php get_sidebar("top"); ?>
 						<div class="primary">
 							
 								
-							<article class="hentry page404">
+							<article class="hentry page404 single-article">
 								
 								<main class="article-body">
 									<p><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'itstar' ); ?></p>

@@ -12,48 +12,31 @@
                         <div class="primary">
 
 
-                            <article class="hentry">
-                                <header class="article-title">
+                            <article class="hentry single-article">
+                                <div class="featured-image">
                                     <a href="<?php the_permalink(); ?>">
-                                        <h3><?php the_title(); ?></h3>
+                                        <?php the_post_thumbnail('post-banner'); ?>
                                     </a>
+                                </div>
+
+                                <header class="article-title">
+                                    <h1 class="section-title">
+                                        <?php the_title(); ?>
+                                    </h1>
                                 </header>
                                 <main class="article-body">
-                                    <?php the_content();
-                                    $product_features = get_post_meta(get_the_ID(),'_itstar_group_feature' );?>
-                                    <div class="product-features">
-                                        <?php if(!empty($product_features)){ ?>
-                                            <?php foreach($product_features[0] as $product_feature){?>
-
-                                                <?php $feature_desc = ($product_feature['feature_desc'])?($product_feature['feature_desc']):""; ?>
-
-                                                <h4 class="feature-header"><?php echo $product_feature['feature_name']; ?></h4>
-                                                <p class="feature-desc"><?php echo $feature_desc; ?></p>
-                                                <ul class="feature-images">
-                                                    <?php $counter = 1; ?>
-                                                    <?php if(!empty($product_feature['_itstar_group_image_list'])){ ?>
-                                                        <?php foreach($product_feature['_itstar_group_image_list'] as $image_src){?>
-                                                            <?php $img_thumb_src = itstar_get_image_src($image_src,'53x53'); ?>
-
-                                                            <a href="<?php echo $image_src; ?>" rel="prettyPhoto" title="<?php echo $product_feature['feature_name']; ?>">
-                                                                <img src="<?php echo $img_thumb_src; ?>" width="53" height="53" alt="<?php echo $product_feature['feature_name']; ?>" />
-                                                            </a>
-
-
-                                                        <?php } ?>
-                                                    <?php } ?>
-                                                    <?php $counter++; ?>
-                                                </ul>
-                                            <?php } ?>
-                                        <?php } ?>
-                                    </div>
-                                    <?php get_template_part('library/post','meta'); ?>
-                                    <!-- comments template -->
-
-
+                                    <?php the_content(); ?>
 
                                 </main>
+                                <footer class="article-footer">
+                                    <?php get_template_part('library/post','meta'); ?>
+                                </footer>
+
                             </article>
+
+                            <div class="comment-area">
+                                <?php comments_template(); ?>
+                            </div>
 
                         </div><!-- primary -->
 

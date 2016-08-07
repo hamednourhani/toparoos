@@ -12,24 +12,31 @@
 						<div class="primary">
 							
 								
-							<article class="hentry">
-								<header class="article-title">
+							<article class="hentry single-article">
+								<div class="featured-image">
 									<a href="<?php the_permalink(); ?>">
-										<h3><?php the_title(); ?></h3>
+										<?php the_post_thumbnail('post-banner'); ?>
 									</a>
+								</div>
+								
+								<header class="article-title">
+										<h1 class="section-title">
+											<?php the_title(); ?>
+										</h1>
 								</header>
 								<main class="article-body">
 									<?php the_content(); ?>
-									<?php get_template_part('library/post','meta'); ?>
-									
-									<!-- comments template -->
-									
-										<div class="comment-area">
-											<?php comments_template(); ?>	
-										</div>
-									
+
 								</main>
+								<footer class="article-footer">
+									<?php get_template_part('library/post','meta'); ?>
+								</footer>
+
 							</article>
+
+							<div class="comment-area">
+								<?php comments_template(); ?>
+							</div>
 											
 						</div><!-- primary -->
 

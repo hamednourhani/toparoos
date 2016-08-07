@@ -1,6 +1,14 @@
 <?php get_header(); ?>
 
 <?php
+if ( get_query_var('paged') ) {
+	$paged = get_query_var('paged');
+} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
+	$paged = get_query_var('page');
+} else {
+	$paged = 1;
+}
+
 $item_cat_id = get_queried_object()->term_id;
 $args = array(
 	'posts_per_page' => 20,
@@ -14,6 +22,7 @@ $args = array(
 	'meta_key' => '_itstar_item_pri',
 	'orderby' => 'meta_value',
 	'order'   => 'DESC',
+	'paged' => $paged,
 	'hierarchical' => 1,
 	'exclude' => '',
 	'include' => '',
@@ -24,7 +33,7 @@ $args = array(
 	'parent' => -1,
 	'exclude_tree' => '',
 	'number' => '',
-	'offset' => 0,
+//	'offset' => 0,
 	'post_type' => 'item',
 	'post_status' => 'publish',
 	'suppress_filters' => false
@@ -44,6 +53,9 @@ $items = query_posts($args);
 				<div class="primary">
 
 					<div class="items-block">
+							<h1 class="section-title ">
+								<?php single_term_title();?>
+							</h1>
 						<?php if(have_posts()){ ?>
 							<ul class="items-list">
 								<?php while(have_posts()) { the_post();
@@ -71,6 +83,7 @@ $items = query_posts($args);
 							</ul>
 						<?php } ?>
 					</div>
+
 
 					<nav class="pagination">
 						<?php itstar_pagination(); ?>

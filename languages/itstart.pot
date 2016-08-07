@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Top Aroos 1.0\n"
 "Report-Msgid-Bugs-To: http://itstar.ir/contact-us\n"
-"POT-Creation-Date: 2016-08-04 10:26:28+00:00\n"
+"POT-Creation-Date: 2016-08-07 10:32:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: iTstar <info@itstar.ir>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: 404.php:20
+#: 404.php:15
 msgid "This is somewhat embarrassing, isn&rsquo;t it?"
 msgstr ""
 
-#: 404.php:21
+#: 404.php:16
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
@@ -45,432 +45,343 @@ msgstr ""
 msgid "TopArous © 2016. All rights reserved."
 msgstr ""
 
-#: functions.php:96
+#: functions.php:320
 msgid "960px by 500px"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:321
 msgid "150px by 100px"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:322
 msgid "240px by 180px"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:323
 msgid "200px by 200px"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:324
 msgid "150px by 150px"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:325
+msgid "960px by 300px"
+msgstr ""
+
+#: functions.php:326
 msgid "80px by 80px"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:346
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:122
+#: functions.php:347
 msgid "The first (primary) sidebar."
 msgstr ""
 
-#: functions.php:130
+#: functions.php:355
 msgid "Footer First"
 msgstr ""
 
-#: functions.php:131 functions.php:140 functions.php:149 functions.php:158
+#: functions.php:356 functions.php:365 functions.php:374 functions.php:383
 msgid "The first footer widget area"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:364
 msgid "Footer First Col2"
 msgstr ""
 
-#: functions.php:148
+#: functions.php:373
 msgid "Footer First Col3"
 msgstr ""
 
-#: functions.php:157
+#: functions.php:382
 msgid "Footer First Col4"
 msgstr ""
 
-#: functions.php:166
+#: functions.php:391
 msgid "Ad Sidebar"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:392
 msgid "sidebar for ads"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:423
 msgid "<cite class=\"fn\">%1$s</cite> %2$s"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:423
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:199
+#: functions.php:424
 msgid "F jS, Y"
 msgstr ""
 
-#: functions.php:204
+#: functions.php:429
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:227
+#: functions.php:453 functions.php:463
 msgid "<i class=\"fa fa-angle-double-left\"></i>"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:454 functions.php:464
 msgid "<i class=\"fa fa-angle-double-right\"></i>"
 msgstr ""
 
-#: functions.php:272
+#: functions.php:509
 msgid "Last video Widget"
 msgstr ""
 
-#: functions.php:275
+#: functions.php:512
 msgid "Display Last Products"
 msgstr ""
 
-#: functions.php:308
+#: functions.php:545
 msgid "more videos"
 msgstr ""
 
-#: functions.php:330
+#: functions.php:567
 msgid "Last Video"
 msgstr ""
 
-#: functions.php:345 functions.php:454 functions.php:562 functions.php:672
-#: functions.php:809
+#: functions.php:582 functions.php:693 functions.php:779
 msgid "Title:"
 msgstr ""
 
-#: functions.php:349
+#: functions.php:586
 msgid "video Numbers :"
 msgstr ""
 
-#: functions.php:353
+#: functions.php:590
 msgid "video Category :"
 msgstr ""
 
-#: functions.php:388
-msgid "Last Projects Widget"
-msgstr ""
-
-#: functions.php:391
-msgid "Display Last Projects"
-msgstr ""
-
-#: functions.php:439
-msgid "Last Projects"
-msgstr ""
-
-#: functions.php:458
-msgid "Project Numbers :"
-msgstr ""
-
-#: functions.php:462
-msgid "Project Category :"
-msgstr ""
-
-#: functions.php:494
+#: functions.php:625
 msgid "Last Posts By Category Widget"
 msgstr ""
 
-#: functions.php:497
+#: functions.php:628
 msgid "Display Last Posts in Category"
 msgstr ""
 
-#: functions.php:547 functions.php:642
+#: functions.php:678
 msgid "Last Posts"
 msgstr ""
 
-#: functions.php:566
+#: functions.php:697
 msgid "Post Numbers :"
 msgstr ""
 
-#: functions.php:570
+#: functions.php:701
 msgid "Post Category :"
 msgstr ""
 
-#: functions.php:601
-msgid "Contact Informaion Widget"
+#: functions.php:731
+msgid "Simple Button Widget"
 msgstr ""
 
-#: functions.php:604
-msgid "Display Contact Information"
+#: functions.php:734
+msgid "make simple button"
 msgstr ""
 
-#: functions.php:621
-msgid "Address : "
+#: functions.php:769
+msgid "Advance Search Button"
 msgstr ""
 
-#: functions.php:622
-msgid "Phone : "
+#: functions.php:783
+msgid "Button Title :"
 msgstr ""
 
-#: functions.php:623
-msgid "Fax : "
+#: functions.php:788
+msgid "Button Link :"
 msgstr ""
 
-#: functions.php:624
-msgid "Email : "
-msgstr ""
-
-#: functions.php:676
-msgid "Address :"
-msgstr ""
-
-#: functions.php:680
-msgid "Phone Number :"
-msgstr ""
-
-#: functions.php:685
-msgid "Fax Number :"
-msgstr ""
-
-#: functions.php:690
-msgid "Email Address :"
-msgstr ""
-
-#: functions.php:717
-msgid "Social Networks Widget"
-msgstr ""
-
-#: functions.php:720
-msgid "Social Networks and Important links"
-msgstr ""
-
-#: functions.php:745
-msgid "Download Cataloge"
-msgstr ""
-
-#: functions.php:746
-msgid "Send Email"
-msgstr ""
-
-#: functions.php:747
-msgid "Login"
-msgstr ""
-
-#: functions.php:765
-msgid "Social Links"
-msgstr ""
-
-#: functions.php:813
-msgid "Google Plus Url :"
-msgstr ""
-
-#: functions.php:817
-msgid "Facebook Url :"
-msgstr ""
-
-#: functions.php:821
-msgid "Linkedin Url :"
-msgstr ""
-
-#: functions.php:825
-msgid "Instagram Url :"
-msgstr ""
-
-#: functions.php:829
-msgid "Catalog Download url :"
-msgstr ""
-
-#: functions.php:833
-msgid "Send Email Url :"
-msgstr ""
-
-#: functions.php:837
-msgid "Login Url :"
-msgstr ""
-
-#: functions.php:1138
+#: functions.php:1071
 msgid "Another user have been registered by this User Name or Email"
 msgstr ""
 
-#: functions.php:1142
+#: functions.php:1075
 msgid "Anti Spam is Not correct!"
 msgstr ""
 
-#: functions.php:1146
+#: functions.php:1079
 msgid "Please fill the required fields : User Name - Email - Password"
 msgstr ""
 
-#: functions.php:1192
+#: functions.php:1125
 msgid "Vira Club Registeration"
 msgstr ""
 
-#: functions.php:1193
+#: functions.php:1126
 msgid "Login to Site"
 msgstr ""
 
-#: functions.php:1200
+#: functions.php:1133
 msgid "First Name"
 msgstr ""
 
-#: functions.php:1201
+#: functions.php:1134
 msgid "Last Name"
 msgstr ""
 
-#: functions.php:1202
+#: functions.php:1135
 msgid "UserName"
 msgstr ""
 
-#: functions.php:1203
+#: functions.php:1136
 msgid "Birthday"
 msgstr ""
 
-#: functions.php:1205 functions.php:1397
+#: functions.php:1138 functions.php:1330
 msgid "Birth Month"
 msgstr ""
 
-#: functions.php:1207 functions.php:1405
+#: functions.php:1140 functions.php:1338
 msgid "Birth Year"
 msgstr ""
 
-#: functions.php:1209 functions.php:1421
+#: functions.php:1142 functions.php:1354
 msgid "Job"
 msgstr ""
 
-#: functions.php:1210 functions.php:1413 functions.php:1530
+#: functions.php:1143 functions.php:1346 functions.php:1463
 msgid "Phone"
 msgstr ""
 
-#: functions.php:1212 functions.php:1531
+#: functions.php:1145 functions.php:1464
 msgid "Email"
 msgstr ""
 
-#: functions.php:1213
+#: functions.php:1146
 msgid "Password"
 msgstr ""
 
-#: functions.php:1214
+#: functions.php:1147
 msgid "At least 6 character."
 msgstr ""
 
-#: functions.php:1217
+#: functions.php:1150
 msgid "Submit"
 msgstr ""
 
-#: functions.php:1252
+#: functions.php:1185
 msgid "User Profile"
 msgstr ""
 
-#: functions.php:1256
+#: functions.php:1189
 msgid "first name: "
 msgstr ""
 
-#: functions.php:1257
+#: functions.php:1190
 msgid "last name: "
 msgstr ""
 
-#: functions.php:1258 functions.php:1482 functions.php:1514
+#: functions.php:1191 functions.php:1415 functions.php:1447
 msgid "Username: "
 msgstr ""
 
-#: functions.php:1260
+#: functions.php:1193
 msgid "Birthday: "
 msgstr ""
 
-#: functions.php:1261
+#: functions.php:1194
 msgid "Phone: "
 msgstr ""
 
-#: functions.php:1262
+#: functions.php:1195
 msgid "Email: "
 msgstr ""
 
-#: functions.php:1263
+#: functions.php:1196
 msgid "Job: "
 msgstr ""
 
-#: functions.php:1265
+#: functions.php:1198
 msgid "Vira Club ID: "
 msgstr ""
 
-#: functions.php:1268
+#: functions.php:1201
 msgid "Logout"
 msgstr ""
 
-#: functions.php:1299
+#: functions.php:1232
 msgid "Title"
 msgstr ""
 
-#: functions.php:1386
+#: functions.php:1319
 msgid "Extra profile information"
 msgstr ""
 
-#: functions.php:1389
+#: functions.php:1322
 msgid "birthday"
 msgstr ""
 
-#: functions.php:1393
+#: functions.php:1326
 msgid "Please enter your Birthday."
 msgstr ""
 
-#: functions.php:1401
+#: functions.php:1334
 msgid "Please enter your Birth Month."
 msgstr ""
 
-#: functions.php:1409
+#: functions.php:1342
 msgid "Please enter your Birth Year."
 msgstr ""
 
-#: functions.php:1417
+#: functions.php:1350
 msgid "Please enter your phone."
 msgstr ""
 
-#: functions.php:1425
+#: functions.php:1358
 msgid "Please enter your Job."
 msgstr ""
 
-#: functions.php:1429
+#: functions.php:1362
 msgid "Vira club ID"
 msgstr ""
 
-#: functions.php:1480
+#: functions.php:1413
 msgid "New User Have Registered "
 msgstr ""
 
-#: functions.php:1484 functions.php:1516
+#: functions.php:1417 functions.php:1449
 msgid "Password: "
 msgstr ""
 
-#: functions.php:1486 functions.php:1518
+#: functions.php:1419 functions.php:1451
 msgid "ViraClub ID: "
 msgstr ""
 
-#: functions.php:1509
+#: functions.php:1442
 msgid "Welcome to "
 msgstr ""
 
-#: functions.php:1510
+#: functions.php:1443
 msgid "Hello,"
 msgstr ""
 
-#: functions.php:1512
+#: functions.php:1445
 msgid "Welcome to Our Site"
 msgstr ""
 
-#: functions.php:1529
+#: functions.php:1462
 msgid "ViraClub ID"
 msgstr ""
 
-#: functions.php:1601 functions.php:1608 searchform.php:3
+#: functions.php:1534 functions.php:1541 searchform.php:3
 msgid "Search for:"
 msgstr ""
 
-#: functions.php:1602 functions.php:1609
+#: functions.php:1535 functions.php:1542
 msgid "Search..."
 msgstr ""
 
-#: functions.php:1641
+#: functions.php:1574
 msgid " -- Only registered Users can Download the Catalog -- "
 msgstr ""
 
@@ -484,6 +395,360 @@ msgstr ""
 
 #: library/best-articles.php:31
 msgid "Best Articles"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:337
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:339
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:377
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:393
+#: library/class-tgm-plugin-activation.php:920
+#: library/class-tgm-plugin-activation.php:2626
+#: library/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:394
+#: library/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:395
+#: library/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:397
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:399
+#. translators: 1: plugin name.
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:401
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:1027
+#: library/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2075
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2485
+#. translators: 1: number of plugins.
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:2489
+#. translators: 1: number of plugins.
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:2493
+#. translators: 1: number of plugins.
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2696
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2701
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2707
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3591
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3594
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3596
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take "
+"a while on some hosts, so please be patient."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3602
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3602
+#: library/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3602
+#: library/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3605
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3610
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:3613
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: library/cmb/example-functions.php:82
@@ -1379,7 +1644,7 @@ msgstr ""
 msgid "Our Services"
 msgstr ""
 
-#: library/items-block.php:67
+#: library/items-block.php:72
 msgid "more items"
 msgstr ""
 
@@ -1405,10 +1670,6 @@ msgstr ""
 
 #: library/last-articles.php:31
 msgid "Last Articles"
-msgstr ""
-
-#: library/post-meta.php:11 library/post-meta.php:32 library/post-meta.php:48
-msgid "Tags :"
 msgstr ""
 
 #: page-templates/first-page.php:34 page.php:34
@@ -1449,6 +1710,31 @@ msgstr ""
 
 #. Template Name of the plugin/theme
 msgid "without sidebar"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:1214
+#: library/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2435
+#. translators: 1: install status, 2: update status
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: library/class-tgm-plugin-activation.php:2481
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
 msgstr ""
 
 #: library/cmb/includes/CMB2_JS.php:109

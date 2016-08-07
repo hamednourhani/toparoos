@@ -7,30 +7,39 @@
 			<section class="layout">
 				<?php get_sidebar("top"); ?>
 				<div class="primary">
-					<article>
-						<?php echo get_search_form('true'); ?>
-					</article>
+
+						<div class="archive-title">
+
+								<?php echo get_search_form('true'); ?>
+
+						</div>
+					
+
 					<?php if(have_posts()){ ?>
 						<?php while(have_posts()) { the_post(); ?>
-						
-							<article class="hentry">
-								
-								<header class="article-title">
+
+							<article class="hentry archive-article">
+
+								<div class="featured-image">
 									<a href="<?php the_permalink(); ?>">
+										<?php the_post_thumbnail('video-larg-thumb'); ?>
+									</a>
+								</div>
+
+								<header class="article-title">
+									<a href="<?php echo the_permalink(); ?>">
 										<h3><?php the_title(); ?></h3>
 									</a>
 								</header>
-				
-								
+
 								<main class="article-body">
-									<div class="featured-image single-image">
-										<a href="<?php the_permalink(); ?>">
-											<?php the_post_thumbnail(); ?>
-										</a>
-									</div>
+
 									<?php the_excerpt(); ?>
-									
+
 								</main>
+								<footer class="article-footer">
+									<?php get_template_part('library/post','meta');?>
+								</footer>
 							</article>
 						<?php } ?>
 					<?php } ?>		
