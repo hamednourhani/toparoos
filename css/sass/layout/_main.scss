@@ -282,7 +282,9 @@ article.archive-article{
 				li{
 					displau : inline-block;
 					&.posted-on{
-
+						padding-left: 5px;
+						display : inline-block;
+						overflow: hidden;
 						i::before{
 							color : darken($grey3,15%);
 							vertical-align: middle;
@@ -291,6 +293,9 @@ article.archive-article{
 					}
 					&.meta-tag{
 						float : left;
+						padding-left: 5px;
+						display : inline-block;
+						overflow: hidden;
 						a{
 							color : $red;
 						}
@@ -372,7 +377,9 @@ article.archive-article{
 				li{
 					displau : inline-block;
 					&.posted-on{
-
+						padding-left: 5px;
+						display : inline-block;
+						overflow: hidden;
 						i::before{
 							color : darken($grey3,15%);
 							vertical-align: middle;
@@ -381,7 +388,9 @@ article.archive-article{
 					}
 					&.meta-tag{
 						float : left;
-						padding-left: 10px;
+						padding-left: 5px;
+						display : inline-block;
+						overflow: hidden;
 						a{
 							color : $red;
 						}

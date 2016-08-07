@@ -1,4 +1,5 @@
 /* theme */
+/* fonts */
 @font-face {
   font-family: "Yekan";
   src: url('../fonts/Yekan.eot?1470135171');
@@ -2087,31 +2088,39 @@ article.archive-article {
       /* line 282, ../sass/layout/_main.scss */
       article.archive-article .article-footer .post-meta ul.post-meta-list li {
         displau: inline-block; }
-        /* line 286, ../sass/layout/_main.scss */
-        article.archive-article .article-footer .post-meta ul.post-meta-list li.posted-on i:before {
-          color: #ababab;
-          vertical-align: middle;
-          padding-left: 5px; }
-        /* line 292, ../sass/layout/_main.scss */
+        /* line 284, ../sass/layout/_main.scss */
+        article.archive-article .article-footer .post-meta ul.post-meta-list li.posted-on {
+          padding-left: 5px;
+          display: inline-block;
+          overflow: hidden; }
+          /* line 288, ../sass/layout/_main.scss */
+          article.archive-article .article-footer .post-meta ul.post-meta-list li.posted-on i:before {
+            color: #ababab;
+            vertical-align: middle;
+            padding-left: 5px; }
+        /* line 294, ../sass/layout/_main.scss */
         article.archive-article .article-footer .post-meta ul.post-meta-list li.meta-tag {
-          float: left; }
-          /* line 294, ../sass/layout/_main.scss */
+          float: left;
+          padding-left: 5px;
+          display: inline-block;
+          overflow: hidden; }
+          /* line 299, ../sass/layout/_main.scss */
           article.archive-article .article-footer .post-meta ul.post-meta-list li.meta-tag a {
             color: #FF585B; }
-          /* line 297, ../sass/layout/_main.scss */
+          /* line 302, ../sass/layout/_main.scss */
           article.archive-article .article-footer .post-meta ul.post-meta-list li.meta-tag i:before {
             color: #ababab;
             vertical-align: middle;
             padding-left: 5px; }
-  /* line 310, ../sass/layout/_main.scss */
+  /* line 315, ../sass/layout/_main.scss */
   article.archive-article:hover .featured-image a:after {
     width: 100%;
     left: 0px; }
 
-/* line 317, ../sass/layout/_main.scss */
+/* line 322, ../sass/layout/_main.scss */
 .single-article {
   padding: 0px; }
-  /* line 321, ../sass/layout/_main.scss */
+  /* line 326, ../sass/layout/_main.scss */
   .single-article .featured-image a {
     display: block;
     position: relative;
@@ -2120,10 +2129,10 @@ article.archive-article {
     text-align: center;
     padding: 9px 8px 0px;
     background-color: #eeeeee; }
-    /* line 329, ../sass/layout/_main.scss */
+    /* line 334, ../sass/layout/_main.scss */
     .single-article .featured-image a img {
       max-width: 100%; }
-    /* line 332, ../sass/layout/_main.scss */
+    /* line 337, ../sass/layout/_main.scss */
     .single-article .featured-image a:after {
       -moz-transition: all 2s ease-in-out 0s;
       -o-transition: all 2s ease-in-out 0s;
@@ -2139,47 +2148,54 @@ article.archive-article {
       height: 1px;
       width: 0px;
       background-color: #FF585B; }
-  /* line 347, ../sass/layout/_main.scss */
+  /* line 352, ../sass/layout/_main.scss */
   .single-article .article-title h1 {
     padding: 20px 15px 10px;
     font-size: 140%; }
-    /* line 350, ../sass/layout/_main.scss */
+    /* line 355, ../sass/layout/_main.scss */
     .single-article .article-title h1:after, .single-article .article-title h1:before {
       top: 57%; }
-  /* line 355, ../sass/layout/_main.scss */
+  /* line 360, ../sass/layout/_main.scss */
   .single-article .article-body {
     padding-bottom: 10px; }
-    /* line 357, ../sass/layout/_main.scss */
+    /* line 362, ../sass/layout/_main.scss */
     .single-article .article-body p {
       margin: 8px 15px;
       font-size: 90%; }
-  /* line 362, ../sass/layout/_main.scss */
+  /* line 367, ../sass/layout/_main.scss */
   .single-article .article-footer {
     display: block;
     overflow: hidden;
     background-color: #f3f3f3;
     border-top: 1px solid #d1d1d1; }
-    /* line 368, ../sass/layout/_main.scss */
+    /* line 373, ../sass/layout/_main.scss */
     .single-article .article-footer .post-meta ul.post-meta-list {
       margin: 0px;
       padding: 5px 10px;
       font-size: 90%; }
-      /* line 372, ../sass/layout/_main.scss */
+      /* line 377, ../sass/layout/_main.scss */
       .single-article .article-footer .post-meta ul.post-meta-list li {
         displau: inline-block; }
-        /* line 376, ../sass/layout/_main.scss */
-        .single-article .article-footer .post-meta ul.post-meta-list li.posted-on i:before {
-          color: #ababab;
-          vertical-align: middle;
-          padding-left: 5px; }
-        /* line 382, ../sass/layout/_main.scss */
+        /* line 379, ../sass/layout/_main.scss */
+        .single-article .article-footer .post-meta ul.post-meta-list li.posted-on {
+          padding-left: 5px;
+          display: inline-block;
+          overflow: hidden; }
+          /* line 383, ../sass/layout/_main.scss */
+          .single-article .article-footer .post-meta ul.post-meta-list li.posted-on i:before {
+            color: #ababab;
+            vertical-align: middle;
+            padding-left: 5px; }
+        /* line 389, ../sass/layout/_main.scss */
         .single-article .article-footer .post-meta ul.post-meta-list li.meta-tag {
           float: left;
-          padding-left: 10px; }
-          /* line 385, ../sass/layout/_main.scss */
+          padding-left: 5px;
+          display: inline-block;
+          overflow: hidden; }
+          /* line 394, ../sass/layout/_main.scss */
           .single-article .article-footer .post-meta ul.post-meta-list li.meta-tag a {
             color: #FF585B; }
-          /* line 388, ../sass/layout/_main.scss */
+          /* line 397, ../sass/layout/_main.scss */
           .single-article .article-footer .post-meta ul.post-meta-list li.meta-tag i:before {
             color: #ababab;
             vertical-align: middle;
