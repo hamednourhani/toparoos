@@ -16,18 +16,23 @@
 					
 
 					<?php if(have_posts()){ ?>
-						<?php while(have_posts()) { the_post(); ?>
+						<?php while(have_posts()) { the_post();
+							$post_link = get_post_meta( get_the_ID(), '_itstar_item_link',1 );
+							if($post_link == ""){
+								$post_link =  get_the_permalink();
+							}
+							?>
 
 							<article class="hentry archive-article">
 
 								<div class="featured-image">
-									<a href="<?php the_permalink(); ?>">
+									<a href="<?php echo $post_link; ?>">
 										<?php the_post_thumbnail('video-larg-thumb'); ?>
 									</a>
 								</div>
 
 								<header class="article-title">
-									<a href="<?php echo the_permalink(); ?>">
+									<a href="<?php echo $post_link; ?>">
 										<h3><?php the_title(); ?></h3>
 									</a>
 								</header>
