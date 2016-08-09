@@ -31,7 +31,7 @@ get_header();
                                 if(have_posts()){ ?>
                                 <div class="page-content-desc">
                                     <h4 class="section-title">
-                                        <?php echo __("Top Arous","itstar");?>
+                                        <?php the_title();?>
                                     </h4>
                                         <?php
                                             while(have_posts()) { the_post();
