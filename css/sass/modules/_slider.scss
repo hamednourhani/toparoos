@@ -6,7 +6,7 @@
     padding : 0px;
     overflow: hidden;
     border-bottom: 0px;
-    margin-bottom : 50px;
+    margin-bottom : 20px;
 }
 // _slider.scss
 .sp-caption-container a{
@@ -35,7 +35,7 @@
         }
         &.sp-selected-thumbnail{
             a {
-                background-color: $glassyRed;
+                background-color: $red;
             }
         }
     }
@@ -49,7 +49,7 @@
 }
 #page-slider .sp-thumbnail-image-container {
     width: 100px;
-    height: 80px;
+    height: 50px;
     overflow: hidden;
     float: right;
     padding-right : 5px;
@@ -67,7 +67,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: right;
-    min-height: 80px;
+    min-height: 50px;
 }
 
 #page-slider .sp-thumbnail-title {
@@ -127,7 +127,7 @@
         text-align: center;
     }
     #page-slider .sp-thumbnail-container{
-        height : 100px !important;
+        height : 50px !important;
     }
 
     #page-slider .sp-thumbnail-image-container {

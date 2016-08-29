@@ -40,18 +40,20 @@ if(!empty($items) && $show_item == "yes"){
             <?php echo $block_title;?>
         </h3>
 
-
-                    <ul class="items-list">
-                        <?php foreach( $items as $item ) {
+        <div class="items-list">
+            <section class="layout">
+                 <?php foreach( $items as $item ) {
                             $item_link = get_post_meta( $item->ID, '_itstar_item_link',1 );
+                            $nofollow = 'rel="nofollow"';
                             if($item_link == ""){
                                $item_link =  get_permalink($item->ID);
+                                $nofollow = '';
                             }
                             ?>
-                            <li>
-                                <a href="<?php echo $item_link; ?>">
+
+                                <a class="item-unit" <?php echo $nofollow;?> href="<?php echo $item_link; ?>">
                                     <div class="item-thumb">
-                                        <?php echo get_the_post_thumbnail($item->ID,'post-thumb');?>
+                                        <?php echo get_the_post_thumbnail($item->ID,'page-thumb');?>
                                     </div>
                                     <div class="item-detail">
                                         <h4 class="item-title">
@@ -62,9 +64,10 @@ if(!empty($items) && $show_item == "yes"){
                                          </span>
                                     </div>
                                 </a>
-                            </li>
+
                         <?php } ?>
-                    </ul>
+            </section>
+        </div>
 
 
         <div class="more-items-container">

@@ -13,8 +13,8 @@ body {
 
 	font-family : $web_yekan;
 	direction : rtl;
-	font-size : 100%;
-	line-height : 180%;
+	font-size : 95%;
+	line-height : 170%;
 	font-weight: normal;
 	width : 100%;
 	background-color : $grey2;
@@ -34,7 +34,7 @@ body {
 .body-wrapper{
 
 	width : 100%;
-	background-color: $grey2;
+	background-color: lighten($grey2,10%);
 	margin:auto;
 	overflow : hidden;
 }

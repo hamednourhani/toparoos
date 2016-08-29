@@ -15,11 +15,11 @@
  * Get the bootstrap! If using the plugin from wordpress.org, REMOVE THIS!
  */
 
-if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
-	require_once dirname( __FILE__ ) . '/cmb2/init.php';
-} elseif ( file_exists( dirname( __FILE__ ) . '/CMB2/init.php' ) ) {
-	require_once dirname( __FILE__ ) . '/CMB2/init.php';
-}
+//if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
+//	require_once dirname( __FILE__ ) . '/cmb2/init.php';
+//} elseif ( file_exists( dirname( __FILE__ ) . '/CMB2/init.php' ) ) {
+//	require_once dirname( __FILE__ ) . '/CMB2/init.php';
+//}
 
 
 function ed_metabox_include_front_page( $display, $meta_box ) {
@@ -157,6 +157,19 @@ function itstar_register_is_feature_post_metabox()
 		'options' => array(
 			'No' => __('no', 'itstar'),
 			'yes' => __('Yes', 'itstar'),
+		),
+	));
+
+	$cmb_demo->add_field(array(
+		'name' => __('Related Article', 'itstar'),
+		'desc' => __('is this post an Related Article?', 'itstar'),
+		'id' => $prefix . 'related_post_radio',
+		'type' => 'radio_inline',
+		'show_option_none' => false,
+		'default'          => 'yes',
+		'options' => array(
+			'yes' => __('Yes', 'itstar'),
+			'No' => __('no', 'itstar'),
 		),
 	));
 
@@ -366,7 +379,7 @@ function itstar_register_is_feature_page_metabox()
 
 	$cmb_demo->add_field(array(
 		'name'    => __( 'item Category', 'naiau' ),
-		'desc'    => __( 'Select item Category', 'naiau' ),
+		'desc'    => __( 'Select item Category', 'itstar' ),
 		'id'      => $prefix .'item_term_id',
 		'type'    => 'select',
 		'options' =>  $item_term_array,
@@ -374,6 +387,70 @@ function itstar_register_is_feature_page_metabox()
 
 	) );
 
+	$cmb_demo->add_field(array(
+		'name' => __('Related Articles', 'itstar'),
+		'desc' => __('Show Related Articles?', 'itstar'),
+		'id' => $prefix . 'show_related_article_radio',
+		'type' => 'radio_inline',
+		'show_option_none' => false,
+		'default'          => 'No',
+		'options' => array(
+			'No' => __('no', 'itstar'),
+			'yes' => __('Yes', 'itstar'),
+		),
+	));
+
+	$categories = get_categories( array(
+		'orderby' => 'count',
+	) );
+//	?><!-- <pre style="padding:100px;"> --><?php
+//	var_dump($categories);
+//	?><!-- </pre> --><?php
+
+	$article_terms_array = array();
+	$article_terms_array['none'] = '--';
+
+	foreach ( $categories as $term ) {
+		$article_terms_array[$term->term_id] = $term->name;
+	}
+
+
+
+	$cmb_demo->add_field(array(
+		'name'    => __( 'Article Category', 'naiau' ),
+		'desc'    => __( 'Select Article Category', 'itstar' ),
+		'id'      => $prefix .'related_article_term_id',
+		'type'    => 'select',
+		'options' => $article_terms_array,
+		'default' => 'none',
+
+	) );
+
+	$cmb_demo->add_field(array(
+		'name' => __('Best Articles', 'itstar'),
+		'desc' => __('Show Best Articles?', 'itstar'),
+		'id' => $prefix . 'show_best_article_radio',
+		'type' => 'radio_inline',
+		'show_option_none' => false,
+		'default'          => 'yes',
+		'options' => array(
+			'No' => __('no', 'itstar'),
+			'yes' => __('Yes', 'itstar'),
+		),
+	));
+
+	$cmb_demo->add_field(array(
+		'name' => __('Last Articles', 'itstar'),
+		'desc' => __('Show Last Articles?', 'itstar'),
+		'id' => $prefix . 'show_last_article_radio',
+		'type' => 'radio_inline',
+		'show_option_none' => false,
+		'default'          => 'yes',
+		'options' => array(
+			'No' => __('no', 'itstar'),
+			'yes' => __('Yes', 'itstar'),
+		),
+	));
 
 //
 }

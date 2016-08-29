@@ -1,10 +1,10 @@
 .feature-posts{
   @extend .white-box;
   position: relative;
-  min-height : 400px;
+  min-height : 410px;
 
   @include at-breakpoint($xmedium){
-    min-height : 300px;
+    min-height : 330px;
   }
   margin-bottom : 20px;
   #NextPageBtnLast,#PrevPageBtnLast,
@@ -71,8 +71,9 @@
           color: $grey4;
           padding: 20px 15px 0px;
           margin: 0px;
-          min-height: 60px;
-          font-size : 80%;
+          min-height: 70px;
+          font-size : 90%;
+          font-weight: normal;
         }
         span {
           color: $grey4;

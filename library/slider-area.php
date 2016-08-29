@@ -50,9 +50,18 @@ if($show_slide_boolean == "yes"){
 				<div class="sp-slides">
 				<?php foreach ( $page_list as $page ) :
 					$slide_url = wp_get_attachment_image_src( get_post_thumbnail_id($page->ID), 'slider');
+					$slide_link = get_post_meta( $page->ID, '_itstar_slide_link',1 );
 				?>
 					<div class="sp-slide">
-						<a href="<?php echo get_permalink( $page->ID ); ?> " >
+						<a href="<?php
+							if($slide_link !== ''){
+								echo $slide_link;
+							}else {
+								echo get_permalink($page->ID);
+							}
+						?> "
+							<?php if($slide_link !== ''){echo 'rel="nofollow"';} ?>
+							>
 							<img class="sp-image" src="<?php echo get_template_directory_uri();?>/images/blank.gif"
 								data-src="<?php echo $slide_url[0]; ?>"
 								data-retina="<?php echo $slide_url[0]; ?>"/>
@@ -89,7 +98,7 @@ if($show_slide_boolean == "yes"){
 							buttons: false,
 							waitForLayers: true,
 							thumbnailWidth: 200,
-							thumbnailHeight: 100,
+							thumbnailHeight: 50,
 							thumbnailPointer: true,
 							autoplay: true,
 							loop:true,
@@ -98,7 +107,7 @@ if($show_slide_boolean == "yes"){
 								1200: {
 									thumbnailsPosition: 'bottom',
 									thumbnailWidth: 80,
-									thumbnailHeight: 80
+									thumbnailHeight: 50
 								},
 	//							500: {
 	//								thumbnailsPosition: 'bottom',

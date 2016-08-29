@@ -22,20 +22,10 @@
       position: relative;
       margin:0px;
       padding : 5px 10px;
-      color : $red;
+      color : $grey4;
       border-bottom : 1px solid $grey2;
       display : block;
-      &:after{
-        @include single-transition(all 0.2s ease-out);
-        display : block;
-        content : "";
-        width : 35%;
-        height : 1px;
-        background-color : $red;
-        position : absolute;
-        bottom : 0px;
-        right : 0;
-      }
+
     }
     a{
       @extend .def-transition;
@@ -97,7 +87,11 @@
       @include border-radius(0px);
       @include box-shadow(0px 0px 0px transparent);
       border : 0px;
+      border-bottom : 0px transparent;
       margin-bottom : 5px;
+      &:after{
+        display : none;
+      }
     }
     &.widget_last_video_widget{
       ul{
@@ -130,7 +124,7 @@
             span{
               max-width : 50%;
               float : left ;
-              font-size : 110%;
+              font-size : 100%;
             }
             &:hover{
               color : $white;

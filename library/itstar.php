@@ -155,7 +155,7 @@ function itstar_scripts_and_styles() {
 	  wp_register_style( 'owl-theme', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css', array(), '', 'all' );
 	  wp_register_style( 'sliderproCss', get_stylesheet_directory_uri() . '/css/slider-pro.min.css', array(), '', 'all' );
 
-
+//	  wp_enqueue_style('custom-style',get_template_directory_uri() . '/css/custom-style.css',array(),'','all');
 	  wp_register_style( 'itstar-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 		wp_register_style( 'itstar-ie-stylesheet', get_stylesheet_directory_uri() . '/css/ie/style.css', array(), '', 'all' );
 		wp_register_style( 'itstar-ie-only', get_stylesheet_directory_uri() . '/css/ie/ie.css', array(), '' );
@@ -193,11 +193,13 @@ function itstar_scripts_and_styles() {
 	  wp_enqueue_style( 'owl-theme' );
 	  wp_enqueue_style( 'sliderproCss' );
 	  wp_enqueue_style( 'itstar-stylesheet' );
+//	  wp_enqueue_style( 'custom-style');
 
 
-		
 
-		if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
+
+
+	  if(preg_match('/(?i)msie [5-8]/',$_SERVER['HTTP_USER_AGENT'])){
 			// if IE<=8
 			wp_enqueue_script( 'html5shiv' );
 			
@@ -254,15 +256,15 @@ function itstar_theme_support() {
 	set_post_thumbnail_size(150,150 , true);
 	
 	// wp custom background (thx to @bransonwerner for update)
-	add_theme_support( 'custom-background',
-	    array(
-	    'default-image' => '',    // background image default
-	    'default-color' => '',    // background color default (dont add the #)
-	    'wp-head-callback' => '_custom_background_cb',
-	    'admin-head-callback' => '',
-	    'admin-preview-callback' => ''
-	    )
-	);
+//	add_theme_support( 'custom-background',
+//	    array(
+//	    'default-image' => '',    // background image default
+//	    'default-color' => '',    // background color default (dont add the #)
+//	    'wp-head-callback' => '_custom_background_cb',
+//	    'admin-head-callback' => '',
+//	    'admin-preview-callback' => ''
+//	    )
+//	);
 
 	// rss thingy
 	add_theme_support('automatic-feed-links');

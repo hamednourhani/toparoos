@@ -1,4 +1,6 @@
 <?php
+$show_article = get_post_meta( get_the_ID(), '_itstar_show_last_article_radio',1 );
+if($show_article == 'yes'){
     $args = array(
         'sort_order' => 'asc',
         'sort_column' => 'post_title',
@@ -53,4 +55,6 @@
         </div>
     </section>
 </div>
-<?php } ?>
+<?php }
+}
+?>

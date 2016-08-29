@@ -11,12 +11,20 @@ sidebars, comments, ect.
 // LOAD itstar CORE (if you remove this, the theme will break)
 require_once( 'library/itstar.php' );
 
+//setup Kirki plugin for customizing theme
+if( class_exists("Kirki") ){
+    Kirki::add_config( 'toparoos', array(
+        'capability'    => 'edit_theme_options',
+        'option_type'   => 'theme_mod',
+    ) );
+    require_once('library/kirki_options.php');
+}
 
 //Include and setup custom metaboxes and fields.
-if( !class_exists("CMB2") ){
-    require_once( dirname(__FILE__)."/library/cmb/init.php" );
-}
-require_once( 'library/cmb-functions.php' );
+//if( !class_exists("CMB2") ){
+//    require_once( dirname(__FILE__)."/library/cmb/init.php" );
+//}
+    require_once( 'library/cmb-functions.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
  //require_once( 'library/admin.php' );
@@ -93,6 +101,26 @@ function itstar_register_required_plugins() {
 			'source'             => get_template_directory() . '/plugins/image-widget.4.2.2.zip', // The plugin source.
 			'required'           => true
 			),
+		array(
+			'name'               => 'Kirki', // The plugin name.
+			'slug'               => 'kirki', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/kirki.2.3.6.zip', // The plugin source.
+			'required'           => true
+			),
+//		array(
+//			'name'               => 'Redux Framework', // The plugin name.
+//			'slug'               => 'redux-framework', // The plugin slug (typically the folder name).
+//			'source'             => get_template_directory() . '/plugins/redux-framework.3.6.1.zip', // The plugin source.
+//			'required'           => true
+//			),
+        array(
+			'name'               => 'CMB2', // The plugin name.
+			'slug'               => 'cmb2', // The plugin slug (typically the folder name).
+			'source'             => get_template_directory() . '/plugins/cmb2.zip', // The plugin source.
+			'required'           => true
+			),
+
+
 //		array(
 //			'name'               => 'TGM Example Plugin', // The plugin name.
 //			'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
@@ -274,7 +302,7 @@ function itstar_ahoy() {
   add_filter( 'gallery_style', 'itstar_gallery_style' );
 
   // enqueue base scripts and styles
-  add_action( 'wp_enqueue_scripts', 'itstar_scripts_and_styles', 999 );
+  add_action( 'wp_enqueue_scripts', 'itstar_scripts_and_styles', 998 );
   // ie conditional wrapper
 
   // launching this stuff after theme setup

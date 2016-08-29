@@ -113,7 +113,7 @@ nav.main-menu{
     position : relative;
     &>li{
       display : inline-block;
-      font-size : 18px;
+      font-size : 16px;
       color : $black1;
       &.menu-item-has-children {
         //font: normal normal normal 18px $web_yekan;
@@ -127,7 +127,7 @@ nav.main-menu{
 
       }
       a{
-        padding: 10px 8px;
+        padding: 12px 8px;
         display: inline-block;
 
         &:hover{
@@ -298,7 +298,7 @@ nav.main-menu{
         width: 98%;
         margin: 1%;
         padding: 3px 10px !important;
-        font-size: 120%;
+        font-size: 100%;
         @include at-breakpoint($small){
           @include border-left-radius(0px);
           max-width : 180px;
@@ -319,7 +319,7 @@ nav.main-menu{
           border : 1px solid $grey2;
           color : lighten($grey4,15%);
           font-size : 110%;
-          padding: 10px;
+          padding: 13px;
           vertical-align: middle;
 
 

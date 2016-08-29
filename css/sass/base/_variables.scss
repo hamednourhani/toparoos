@@ -74,8 +74,8 @@ $glassyCream : rgba(230,225,219,0.4);
 $glassyCream2 : rgba(230,225,219,0.8);
 $brown : #89725B;
 
-$red : #FF585B;
-$glassyRed : rgba(255,51,0,0.8);
+$red : #fb2125;
+$glassyRed : rgba(251,33,37,0.8);
 $red2 : desaturate(#FF585B,10%);
 
 $orang : #ff7302;
@@ -136,6 +136,19 @@ $glassyWhite : rgba(255, 255, 255, 0.85);
 	@include border-radius(4px);
 	@include box-shadow(0px 0px 7px $grey3);
 	padding : 10px;
+	overflow: hidden;
+	position: relative;
+	&:after{
+		content : "";
+		position : absolute;
+		display: block;
+		height : 2px;
+		bottom : 0px;
+		left : 0px;
+		right : 0px;
+		width : 100%;
+		background-color: $red;
+	}
 }
 
 

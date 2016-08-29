@@ -67,7 +67,16 @@
 
 						<div class="logo-wrapper">
 							<a class="site-link" href="<?php echo get_bloginfo('url'); ?>">
-								<img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+								<img src="<?php
+										$site_logo_from_option = get_theme_mod('site_logo_from_option');
+
+										if($site_logo_from_option !== ''){
+											echo $site_logo_from_option;
+										} else {
+											echo get_template_directory_uri(); ?>/images/logo.png" alt="<?php echo get_bloginfo('name');
+										}
+									?>
+								"/>
 							</a>
 
 						</div>
@@ -78,7 +87,17 @@
 							</a>
 
 							<a class="responsive-logo" href="<?php echo get_bloginfo('url'); ?>">
-								<img src="<?php echo get_template_directory_uri();?>/images/responsive-logo.png" alt="<?php echo get_bloginfo('name'); ?>"/>
+								<img src="<?php
+									$site_menu_logo_from_option = get_theme_mod('site_menu_logo_from_option');
+
+									if($site_menu_logo_from_option !== ''){
+										echo $site_menu_logo_from_option;
+									} else {
+										echo get_template_directory_uri(); ?>/images/responsive-logo.png" alt="<?php echo get_bloginfo('name');
+									 }
+									?>
+								"/>
+
 							</a>
 							<?php //$responsive_walker = new Viradeco_walker_nav_menu; ?>
 							<?php wp_nav_menu(array(
