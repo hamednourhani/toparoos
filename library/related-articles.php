@@ -1,9 +1,9 @@
 <?php
-$show_article = get_post_meta( get_the_ID(), '_itstar_show_best_article_radio',1 );
-
+$show_article = get_post_meta( get_the_ID(), '_itstar_show_related_article_radio',1 );
+//var_dump('$show_article:'.$show_article);
 if($show_article == 'yes'){
 $article_cat_id = get_post_meta( get_the_ID(), '_itstar_related_article_term_id',1 );
-
+//var_dump('$article_cat_id'.$article_cat_id);
 $args = array(
     'posts_per_page' => 20,
     'category' => $article_cat_id,
@@ -67,6 +67,7 @@ if(!empty($articles) ){
             </a>
         </div>
     </div>
-<?php } 
+<?php }
+
 }
 ?>

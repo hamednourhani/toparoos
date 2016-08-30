@@ -1,5 +1,6 @@
 <?php
 $show_article = get_post_meta( get_the_ID(), '_itstar_show_last_article_radio',1 );
+//var_dump('$show_article:'.$show_article);
 if($show_article == 'yes'){
     $args = array(
         'sort_order' => 'asc',
@@ -19,7 +20,7 @@ if($show_article == 'yes'){
         'post_status' => 'publish',
         'suppress_filters' => false
     );
-                    $pages = get_posts($args);
+    $pages = get_posts($args);
     if(!empty($pages)){
 ?>
 <div class="feature-posts">
@@ -56,5 +57,6 @@ if($show_article == 'yes'){
     </section>
 </div>
 <?php }
+
 }
 ?>

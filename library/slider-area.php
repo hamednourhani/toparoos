@@ -123,7 +123,7 @@ if($show_slide_boolean == "yes"){
 		</div>
 		 <?php
 		}
-		wp_reset_postdata();
+		
 	?>
 
 
