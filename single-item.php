@@ -13,11 +13,7 @@
 
 
                             <article class="hentry single-article">
-                                <div class="featured-image">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail('post-banner'); ?>
-                                    </a>
-                                </div>
+                                
 
                                 <header class="article-title">
                                     <h1 class="section-title">
