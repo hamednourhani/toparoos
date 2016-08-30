@@ -566,7 +566,7 @@ class last_video_widget extends WP_Widget {
           $url = get_post_meta($video->ID,'_itstar_video_link')[0];
           $thumb = get_the_post_thumbnail($video->ID,'video-thumb');
           $name = $video->post_title;
-          $content .='<li><a href="'.$url.'">'.$thumb.'<span>'.$name.'</span></a></li>';
+          $content .='<li><a href="'.$url.'"><div>'.$thumb.'</div><div><span>'.$name.'</span></div></a></li>';
         endforeach;
         $content .= '</ul>';
         $content .='<a class="more-video" href="'.$category_link.'">';

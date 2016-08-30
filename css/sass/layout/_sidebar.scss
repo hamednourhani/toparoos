@@ -113,18 +113,23 @@
             display : none;
           }
           a{
-            display : inline-block;
-
-            img{
+            display : block;
+            div{
+              width : 50%;
               float : right;
-              max-width : 45%;
+            }
+            img{
+              max-width : 100%;
+              height : auto;
               background-color: $grey1;
               padding : 3px;
             }
             span{
-              max-width : 50%;
-              float : left ;
+              max-width : 100%;
+              height : auto;
               font-size : 100%;
+              padding : 3px 8px;
+              display : block;
             }
             &:hover{
               color : $white;

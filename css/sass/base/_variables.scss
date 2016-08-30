@@ -138,17 +138,7 @@ $glassyWhite : rgba(255, 255, 255, 0.85);
 	padding : 10px;
 	overflow: hidden;
 	position: relative;
-	&:after{
-		content : "";
-		position : absolute;
-		display: block;
-		height : 2px;
-		bottom : 0px;
-		left : 0px;
-		right : 0px;
-		width : 100%;
-		background-color: $red;
-	}
+
 }
 
 

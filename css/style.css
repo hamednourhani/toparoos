@@ -782,19 +782,8 @@ p {
   padding: 10px;
   overflow: hidden;
   position: relative; }
-  /* line 141, sass/base/_variables.scss */
-  .white-box:after, .top-ad-area:after, .secondary aside.widget:after, .primary .archive-title:after, .featured-pages-wrap:after, .page-content-desc:after, .items-block:after, .articles-block:after, article.archive-article:after, .single-article:after, .comment-area article .comment-content:after, .slider-wrap:after, .feature-posts:after {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 2px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    width: 100%;
-    background-color: #fb2125; }
 
-/* line 156, sass/base/_variables.scss */
+/* line 146, sass/base/_variables.scss */
 .bottom-tooltip {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -815,7 +804,7 @@ p {
   pointer-events: none;
   top: 70px;
   opacity: 0; }
-  /* line 176, sass/base/_variables.scss */
+  /* line 166, sass/base/_variables.scss */
   .bottom-tooltip::before, .bottom-tooltip::after {
     content: '';
     position: absolute;
@@ -827,7 +816,7 @@ p {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid rgba(0, 0, 0, 0.1); }
-  /* line 188, sass/base/_variables.scss */
+  /* line 178, sass/base/_variables.scss */
   .bottom-tooltip::after {
     top: -14px;
     margin-left: -10px;
@@ -1654,12 +1643,9 @@ nav.main-menu {
   padding: 15px 15px 0px;
   overflow: hidden;
   display: block;
-  width: 100%; }
-  /* line 9, sass/layout/_top.scss */
-  .top-ad-area:after {
-    height: 3px;
-    bottom: 0px; }
-  /* line 13, sass/layout/_top.scss */
+  width: 100%;
+  border-color: #fb2125; }
+  /* line 10, sass/layout/_top.scss */
   .top-ad-area .top-ad.widget {
     text-align: center;
     padding: 0px 10px;
@@ -1667,22 +1653,22 @@ nav.main-menu {
     float: right;
     margin-left: 1.40845%;
     display: inline; }
-    /* line 16, sass/layout/_top.scss */
+    /* line 13, sass/layout/_top.scss */
     .top-ad-area .top-ad.widget a {
       margin-top: -5px;
       display: inline-block; }
-    /* line 20, sass/layout/_top.scss */
+    /* line 17, sass/layout/_top.scss */
     .top-ad-area .top-ad.widget img {
       max-width: 100%;
       text-align: center; }
     @media (min-width: 45em) {
-      /* line 13, sass/layout/_top.scss */
+      /* line 10, sass/layout/_top.scss */
       .top-ad-area .top-ad.widget {
         width: 49.29577%;
         float: right;
         margin-left: 1.40845%; } }
     @media (min-width: 45em) {
-      /* line 28, sass/layout/_top.scss */
+      /* line 25, sass/layout/_top.scss */
       .top-ad-area .top-ad.widget:nth-of-type(2n) {
         width: 49.29577%;
         float: left;
@@ -1805,22 +1791,28 @@ nav.main-menu {
         display: none; }
       /* line 115, sass/layout/_sidebar.scss */
       .secondary aside.widget.widget_last_video_widget ul li a {
-        display: inline-block; }
-        /* line 118, sass/layout/_sidebar.scss */
+        display: block; }
+        /* line 117, sass/layout/_sidebar.scss */
+        .secondary aside.widget.widget_last_video_widget ul li a div {
+          width: 50%;
+          float: right; }
+        /* line 121, sass/layout/_sidebar.scss */
         .secondary aside.widget.widget_last_video_widget ul li a img {
-          float: right;
-          max-width: 45%;
+          max-width: 100%;
+          height: auto;
           background-color: #F2F2F2;
           padding: 3px; }
-        /* line 124, sass/layout/_sidebar.scss */
+        /* line 127, sass/layout/_sidebar.scss */
         .secondary aside.widget.widget_last_video_widget ul li a span {
-          max-width: 50%;
-          float: left;
-          font-size: 100%; }
-        /* line 129, sass/layout/_sidebar.scss */
+          max-width: 100%;
+          height: auto;
+          font-size: 100%;
+          padding: 3px 8px;
+          display: block; }
+        /* line 134, sass/layout/_sidebar.scss */
         .secondary aside.widget.widget_last_video_widget ul li a:hover {
           color: #FFFFFF; }
-    /* line 137, sass/layout/_sidebar.scss */
+    /* line 142, sass/layout/_sidebar.scss */
     .secondary aside.widget.widget_last_video_widget a.more-video {
       display: block;
       width: 90%;
@@ -1834,12 +1826,12 @@ nav.main-menu {
       border-radius: 4px;
       color: #FFFFFF;
       font-size: 110%; }
-      /* line 149, sass/layout/_sidebar.scss */
+      /* line 154, sass/layout/_sidebar.scss */
       .secondary aside.widget.widget_last_video_widget a.more-video i:before {
         padding-right: 8px;
         vertical-align: middle;
         font-size: 120%; }
-      /* line 154, sass/layout/_sidebar.scss */
+      /* line 159, sass/layout/_sidebar.scss */
       .secondary aside.widget.widget_last_video_widget a.more-video:hover {
         color: #fb2125;
         background-color: #FFFFFF; }

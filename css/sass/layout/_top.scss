@@ -6,10 +6,7 @@
   overflow: hidden;
   display: block;
   width: 100%;
-  &:after{
-    height : 3px;
-    bottom : 0px;
-  }
+  border-color : $red;
   .top-ad.widget{
     text-align: center;
     padding: 0px 10px;
