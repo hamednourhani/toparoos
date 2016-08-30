@@ -403,9 +403,7 @@ function itstar_register_is_feature_page_metabox()
 	$categories = get_categories( array(
 		'orderby' => 'count',
 	) );
-//	?><!-- <pre style="padding:100px;"> --><?php
-//	var_dump($categories);
-//	?><!-- </pre> --><?php
+
 
 	$article_terms_array = array();
 	$article_terms_array['none'] = '--';

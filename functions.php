@@ -1557,42 +1557,21 @@ function itstar_search_form( $form ) {
   global $post,$wp_query,$wpdb;
    
 
-  if(ICL_LANGUAGE_CODE == 'en' || ICL_LANGUAGE_CODE == 'it'){
-      $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
-      <div><label class="screen-reader-text" for="s">' . __( 'Search for:','itstar' ) . '</label>
-      <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder'.__("Search...","itstar").'/>
-      <input type="hidden" name="lang" value="'.ICL_LANGUAGE_CODE.'"/>
-      </div>
-      </form>';
-  } else {
+
       $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
       <div><label class="screen-reader-text" for="s">' . __( 'Search for:','itstar' ) . '</label>
       <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.__("Search...","itstar").'"/>
       <i class="fa fa-search" style="display:none;"></i>
       </div>
       </form>';
-  }
+
 
   return $form;
 }
 
 add_filter( 'get_search_form', 'itstar_search_form' );
 
-if ( ICL_LANGUAGE_CODE=='it' || ICL_LANGUAGE_CODE=='en'){ 
-  
-        remove_filter('the_title', 'ztjalali_persian_num');
-        remove_filter('the_content', 'ztjalali_persian_num');
-        remove_filter('the_excerpt', 'ztjalali_persian_num');
-        remove_filter('comment_text', 'ztjalali_persian_num');
-    // change arabic characters
-        remove_filter('the_content', 'ztjalali_ch_arabic_to_persian');
-        remove_filter('the_title', 'ztjalali_ch_arabic_to_persian');
-        remove_filter('the_excerpt', 'ztjalali_ch_arabic_to_persian');
-        remove_filter('comment_text', 'ztjalali_ch_arabic_to_persian');
-    
 
-
-}
 
 function itstar_user_only( $atts, $content = null ){
 if( null != $content && current_user_can('read') ){
