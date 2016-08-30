@@ -166,7 +166,7 @@ function itstar_register_is_feature_post_metabox()
 		'id' => $prefix . 'related_post_radio',
 		'type' => 'radio_inline',
 		'show_option_none' => false,
-		'default'          => 'yes',
+		'default'          => 'No',
 		'options' => array(
 			'yes' => __('Yes', 'itstar'),
 			'No' => __('no', 'itstar'),
@@ -179,7 +179,7 @@ function itstar_register_is_feature_post_metabox()
 		'id' => $prefix . 'article_post_radio',
 		'type' => 'radio_inline',
 		'show_option_none' => false,
-		'default'          => 'yes',
+		'default'          => 'No',
 		'options' => array(
 			'yes' => __('Yes', 'itstar'),
 			'No' => __('no', 'itstar'),
@@ -430,7 +430,7 @@ function itstar_register_is_feature_page_metabox()
 		'id' => $prefix . 'show_best_article_radio',
 		'type' => 'radio_inline',
 		'show_option_none' => false,
-		'default'          => 'yes',
+		'default'          => 'No',
 		'options' => array(
 			'No' => __('no', 'itstar'),
 			'yes' => __('Yes', 'itstar'),
@@ -443,7 +443,7 @@ function itstar_register_is_feature_page_metabox()
 		'id' => $prefix . 'show_last_article_radio',
 		'type' => 'radio_inline',
 		'show_option_none' => false,
-		'default'          => 'yes',
+		'default'          => 'No',
 		'options' => array(
 			'No' => __('no', 'itstar'),
 			'yes' => __('Yes', 'itstar'),
